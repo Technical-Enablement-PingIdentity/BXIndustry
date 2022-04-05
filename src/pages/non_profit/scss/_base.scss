@@ -1,0 +1,10 @@
+@import "./var";
+
+.non-profit {
+  font-family: $main-font;
+  font-weight: 400;
+
+  &.viewport-container {
+    background: #F0F0F0;
+  }
+}

@@ -1,0 +1,65 @@
+@import "../var";
+
+.dialog {
+  max-width: 735px;
+  padding: 30px 0;
+}
+
+.dialog-content-header {  
+  &__title {
+    font-family: $secondary-font;
+    color: #3E4543;
+  }
+}
+
+.dialog-footer-description {
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &__link {
+    color: $primary;
+    transition: 0.2s;
+
+    &:hover {
+      color: #049469;
+    }
+  }
+}
+
+.dialog-form-message {
+  color: #76818B;
+  &__action {
+    color: $primary;
+  }
+}
+
+.auth-flow-picker {
+  &__item {
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}
+
+.dialog-social {
+  border-color: $primary;
+  transition: 0.2s;
+
+  svg {
+    path {
+      fill: $primary;
+      transition: 0.2s;
+    }
+  }
+}
+
+.dialog-link {
+  color: $primary;
+}
+
+.dialog-icon-message {
+  &__action {
+    text-transform: uppercase;
+    color: $primary;
+  }
+}

@@ -1,0 +1,10 @@
+@import "./var";
+
+.pharmacy {
+  font-family: $main-font;
+  font-weight: 400;
+
+  &.viewport-container {
+    background: #ECF0EF;
+  }
+}

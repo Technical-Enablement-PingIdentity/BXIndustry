@@ -1,0 +1,195 @@
+{
+  "title": "BXInsurance",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#F35811",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#C24F1B"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#F35811",
+      "color": "#F35811",
+      "&:hover": {
+        "background": "#F35811",
+        "color": "#fff"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#1D2922",
+        "&:hover": {
+          "color": "#F35811"
+        }
+      }
+    },
+    "icon_button": {
+      "style": {
+        "borderColor": "#F35811",
+        "color": "#F35811"
+      }
+    },
+    "additional_button_text": "SOS. Insured event",
+    "navigation": {
+      "style": {
+        "backgroundColor": "#1C3445"
+      },
+      "links": {
+        "style": {
+          "color": "#fff",
+          "&:hover": {
+            "color": "#F35811"
+          }
+        },
+        "items": [
+          "For private clients",
+          "For Сorporate clients",
+          "For partners",
+          "Insurance cases",
+          "Personal manager",
+          "Contracts",
+          "About",
+          "Career"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#173042"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#F35811"
+        }
+      },
+      "links": [
+        "About",
+        "Site map",
+        "Terms of use",
+        "Insurance rules",
+        "Q&A",
+        "Privacy"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#173042",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_number": "800 568 9678",
+    "copyright": "© BXInsurance, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "icon": {
+        "color": "#F35811"
+      },
+      "title": {
+        "text": "You are protected",
+        "style": {
+          "color": "#1C3445"
+        }
+      },
+      "description": {
+        "text": "Complex solutions for your insurance needs.",
+        "style": {
+          "color": "#1C3445"
+        }
+      }
+    },
+    "services": [
+      {
+        "image": "home.svg",
+        "title": "Home",
+        "description": "Apartments, houses and condos"
+      },
+      {
+        "image": "car.svg",
+        "title": "Car",
+        "description": "All types of auto insurance"
+      },
+      {
+        "image": "travel.svg",
+        "title": "Travel",
+        "description": "Trip insurance"
+      },
+      {
+        "image": "health.svg",
+        "title": "Health",
+        "description": "Your health, family protection"
+      },
+      {
+        "image": "property.svg",
+        "title": "Property",
+        "description": "Personal property, purchase protection"
+      },
+      {
+        "image": "investments.svg",
+        "title": "Investments",
+        "description": "Insurance for a comfortable retirement"
+      }
+    ]
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "title": "My personal area",
+    "title_button": {
+      "text": "Account settings",
+      "style": {
+        "color": "#1C3445",
+        "borderColor": "#1C3445",
+        "&:hover": {
+          "backgroundColor": "#1C3445",
+          "color": "#fff"
+        }
+      }
+    },
+    "dashboard": [
+      {
+        "image": "insurance-policy-icon.svg",
+        "title": "Insurance Policies",
+        "description": "Here you can find all your policies for all types of insurance"
+      },
+      {
+        "image": "calculation-icon.svg",
+        "title": "Calculations",
+        "description": "Here you can see all saved calculations"
+      },
+      {
+        "image": "status-icon.svg",
+        "title": "Insurance Claim Status",
+        "description": "Keep track of your insurance claim status"
+      }
+    ],
+    "info_block": {
+      "image": "car-driver.jpg",
+      "title": "Take care of your car",
+      "description": "50% discount on annual car insurance"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.offers-section {
+  padding: 65px 0 112px;
+
+  @media #{$mobile} {
+    padding: 65px 0 80px;
+  }
+
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 76px;
+    color: #1B1B1B;
+    margin-bottom: 52px;
+
+    @media #{$tablet} {
+      font-size: 52px;
+      line-height: 52px;
+    }
+  }
+}
+
+.offers-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+
+  &__item {
+    width: 25%;
+    padding: 0 11px;
+    margin-bottom: 22px;
+
+    @media #{$tablet} {
+      width: 50%;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.offer-item {
+  &__image {
+    height: 280px;
+    border-radius: 2px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 12px;
+  }
+
+  &__name {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: center;
+  }
+}

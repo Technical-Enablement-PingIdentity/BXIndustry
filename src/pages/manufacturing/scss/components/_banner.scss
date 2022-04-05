@@ -1,0 +1,128 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.banner {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media #{$tablet} {
+    min-height: 690px;
+    display: flex;
+  }
+  
+  @media #{$mobile} {
+    min-height: 530px;
+    background-position: center left;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(8, 20, 38, 0.6);
+
+    @media #{$tablet} {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    min-height: 630px;
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    z-index: 2;
+
+    @media #{$tablet} {
+      min-height: auto;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    @media #{$mobile} {
+      min-height: auto;
+    }
+  }
+
+  &__content-wrapper {
+    @media #{$tablet} {
+      margin-top: auto;
+      width: 100%;
+      background: rgba(8, 20, 38, 0.6);
+      padding: 65px 0;
+    }
+
+    @media #{$mobile} {
+      padding: 28px 0 33px;
+    }
+  }
+}
+
+.banner-content {
+  width: 100%;
+  padding-left: 100px;
+
+  @media #{$hd} {
+    padding-left: 30px;
+  }
+
+  @media #{$tablet} {
+    padding-left: 0;
+  }
+  
+  &__title {
+    margin-bottom: 12px;
+    font-family: $secondary-font;
+    color: #fff;
+    font-size: 76px;
+    line-height: 76px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media #{$hd} {
+      font-size: 56px;
+      line-height: 56px;
+    }
+
+    @media #{$tablet} {
+      max-width: 500px;
+    }
+
+    @media #{$mobile} {
+      font-size: 46px;
+      line-height: 46px;
+    }
+  }
+
+  &__description {
+    max-width: 500px;
+    margin-bottom: 50px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 36px;
+
+    @media #{$hd} {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    @media #{$mobile} {
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__button {
+    min-width: 190px;
+  }
+}

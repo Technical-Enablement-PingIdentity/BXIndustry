@@ -1,0 +1,8 @@
+//sizes
+$hd-max-width: 1199px;
+$mobile-max-width: 767px;
+$tablet-max-width: 991px;
+
+$hd: "only screen and (max-width:#{$hd-max-width})";
+$tablet: "only screen and (max-width:#{$tablet-max-width})";
+$mobile: "only screen and (max-width:#{$mobile-max-width})";

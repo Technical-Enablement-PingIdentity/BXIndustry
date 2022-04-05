@@ -1,0 +1,19 @@
+.hamburger-menu {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 26px;
+  cursor: pointer;
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 6px;
+    border-radius: 1px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
