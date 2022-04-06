@@ -1,0 +1,66 @@
+@import "../var";
+
+.banner {
+  position: relative;
+  height: 790px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media #{$mobile} {
+    height: 534px;
+  }
+
+  &__content {
+    height: 544px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 153px;
+    
+    @media #{$mobile} {
+      height: 354px;
+      padding-bottom: 74px;
+    }
+  }
+}
+
+.banner-content {
+  &__title {
+    max-width: 1050px;
+    margin: 0 auto 26px;
+    font-family: $secondary-font;
+    color: #fff;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 75px;
+    text-align: center;
+
+    @media #{$tablet} {
+      font-size: 62px;
+      line-height: 66px;
+      margin-bottom: 24px;
+    }
+
+    @media #{$mobile} {
+      font-size: 33px;
+      line-height: 44px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sub-title {
+    font-size: 22px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+
+    @media #{$tablet} {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+}
+

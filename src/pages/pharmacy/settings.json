@@ -1,0 +1,173 @@
+{
+  "title": "BXPharmacy",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#27BD90",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#049469"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#27BD90",
+      "color": "#27BD90",
+      "&:hover": {
+        "background": "#27BD90",
+        "color": "#fff"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#3E4543",
+        "&:hover": {
+          "color": "#27BD90"
+        }
+      },
+      "items": [
+        "About Us",
+        "Products",
+        "Sсience",
+        "News",
+        "Contacts"
+      ]
+    },
+    "icon_button": {
+      "style": {
+        "backgroundColor": "#C0E1D7",
+        "color": "#0E264C"
+      }
+    },
+    "auth_buttons": {
+      "style": {
+        "background": "#C0E1D7",
+        "color": "#2C3741",
+        "&:hover": {
+          "background": "#27BD90",
+          "color": "#fff"
+        }
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "text_color": "#3E4543",
+    "navigation": {
+      "style": {
+        "color": "#3E4543",
+        "&:hover": {
+          "color": "#27BD90"
+        }
+      },
+      "links": [
+        "Company",
+        "Careers",
+        "Help and Support",
+        "Privacy Policy"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#fff",
+        "backgroundColor": "#27BD90",
+        "&:hover": {
+          "backgroundColor": "#049469"
+        }
+      }
+    },
+    "copyright": "© BXPharmacy, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "backdrop": {
+        "style": {
+          "background": "linear-gradient(180deg, rgba(0,0,0,0) 0%, #13362C 100%)"
+        }
+      },
+      "title": "A pharmacy company for a new generation",
+      "subtitle": "See how we use cutting-edge science to create quality medicines"
+    },
+    "info_section": [
+      {
+        "image": "pill-icon.svg",
+        "title": "Pharmaceutical Production",
+        "description": "Perfect production means high-quality products, every time",
+        "button": "More"
+      },
+      {
+        "image": "contract-icon.svg",
+        "title": "Contract Production",
+        "description": "When your brand is on the line, it’s important to choose a manufacturer you trust",
+        "button": "More"
+      },
+      {
+        "image": "science-icon.svg",
+        "title": "Research & Development",
+        "description": "Need a solution? Leverage the best brains in the business",
+        "button": "More"
+      }
+    ]
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "title": "Key Directions",
+    "articles": [
+      {
+        "image": "article-1.jpg",
+        "title": "Partnering in Cardiology",
+        "button": "More"
+      },
+      {
+        "image": "article-2.jpg",
+        "title": "Partnering in Women’s Healthcare",
+        "button": "More"
+      },
+      {
+        "image": "article-3.jpg",
+        "title": "Partnering in Oncology",
+        "button": "More"
+      },
+      {
+        "image": "article-4.jpg",
+        "title": "Partnering in Ophthalmology",
+        "button": "More"
+      }
+    ],
+    "sidebar": {
+      "title": "Your applications",
+      "button": "Add application",
+      "items": [
+        {
+          "head": "Accepted",
+          "title": "Registration document N2394",
+          "date": "11/25/2021"
+        },
+        {
+          "head": "Accepted",
+          "title": "October delivery list",
+          "date": "11/20/2021"
+        },
+        {
+          "head": "Accepted",
+          "title": "September delivery list",
+          "date": "10/18/2021"
+        }
+      ]
+    }
+  }
+}

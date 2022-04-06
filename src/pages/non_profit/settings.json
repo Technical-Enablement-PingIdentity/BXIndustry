@@ -1,0 +1,164 @@
+{
+  "title": "BXVolunteer",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#3C7157",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#224434"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#2A292A",
+        "&:hover": {
+          "color": "#3C7157"
+        }
+      },
+      "items": [
+        "Volunteering",
+        "Directions",
+        "About Foundation",
+        "Reports",
+        "News"
+      ]
+    },
+    "icon_button": {
+      "style": {
+        "backgroundColor": "#3C7157",
+        "color": "#fff"
+      }
+    },
+    "auth_buttons": {
+      "style": {
+        "borderColor": "#3C7157",
+        "color": "#3C7157",
+        "&:hover": {
+          "background": "#3C7157",
+          "color": "#fff"
+        }
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#201D1F"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#3C7157"
+        }
+      },
+      "links": [
+        "About",
+        "Our work",
+        "Sponsorship Offers",
+        "Projects",
+        "Privacy"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#201D1F",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_numbers": [
+      "800 568 9678",
+      "800 368 7299"
+    ],
+    "copyright": "© BXVolunteer, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "left_image": "banner-left-side.png",
+      "right_image": "banner-right-side.png",
+      "title": "Let's help each other",
+      "subtitle": "Become a part of our non-profit volunteer organization",
+      "button": "Become a volunteer"
+    },
+    "charity_categories": {
+      "title": "Our Services",
+      "items": [
+        {
+          "image": "child.jpg",
+          "title": "Family Assistance",
+          "description": "Help families affected by the pandemic and recent ecological crises",
+          "button": "Donate"
+        },
+        {
+          "image": "homeless-person.jpg",
+          "title": "Fight Homelessness",
+          "description": "We proudly support all members of our community. Help us connect those in need with valuable assistance and resources",
+          "button": "Donate"
+        },
+        {
+          "image": "animal.jpg",
+          "title": "Support Local Animal Shelters",
+          "description": "By giving local animal shelters manpower & support, we help our furry friends find loving homes",
+          "button": "Donate"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Alex Lowson",
+    "title": "Thanks Alex. We appreciate your contributions.",
+    "dashboard": [
+      {
+        "image": "money-icon.svg",
+        "title": "$534",
+        "description": "You sent to charity."
+      },
+      {
+        "image": "user-icon.svg",
+        "title": "25",
+        "description": "People felt better because of you."
+      },
+      {
+        "image": "animal-icon.svg",
+        "title": "15",
+        "description": "Animals felt better because of you."
+      }
+    ],
+    "articles": [
+      {
+        "image": "article-1.jpg",
+        "title": "Help for traumatized homeless animals"
+      },
+      {
+        "image": "article-2.jpg",
+        "title": "Help with warm clothes for homeless people"
+      },
+      {
+        "image": "article-3.jpg",
+        "title": "Help with food for homeless people"
+      },
+      {
+        "image": "article-4.jpg",
+        "title": "Help orphans get ready for school"
+      }
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.programs-section {
+  padding: 84px 0 108px;
+
+  @media #{$tablet} {
+    padding: 71px 0 108px;
+  }
+
+  @media #{$mobile} {
+    padding: 66px 0 80px;
+  }
+
+  &__title {
+    margin-bottom: 42px;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    color: #0A1D39;
+
+    @media #{$tablet} {
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 40px;
+    }
+
+    @media #{$mobile} {
+      font-size: 42px;
+      line-height: 42px;
+      margin-bottom: 33px;
+    }
+  }
+}
+
+.programs-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$tablet} {
+    padding: 0 8px;
+  }
+
+  @media #{$mobile} {
+    display: block;
+  }
+
+  &__item {
+    width: 33.33%;
+    padding: 0 16px;
+    margin-bottom: 32px;
+
+    @media #{$tablet} {
+      padding: 0 8px;
+      margin-bottom: 16px;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.image-info-block {
+  height: 290px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding-top: 52px;
+  border-radius: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  @media #{$mobile} {
+    height: 230px;
+  }
+
+  &:hover {
+    padding-top: 0;
+  }
+
+  &__name {
+    width: 100%;
+    padding: 26px 16px;
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 2px;
+    background: linear-gradient(0.59deg, rgba(12, 35, 68, 0.8) 9.94%, rgba(10, 29, 57, 0) 94.52%);
+    transition: 0.2s;
+
+    @media #{$tablet} {
+      font-size: 24px;
+    }
+  }
+
+  &--small {
+    height: 206px;
+    padding-top: 0;
+    border-radius: 6px;
+
+    @media #{$tablet} {
+      height: 240px;
+    }
+
+    @media #{$mobile} {
+      height: 206px;
+    }
+
+    .image-info-block__name {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      border-radius: 6px;
+    }
+  }
+}

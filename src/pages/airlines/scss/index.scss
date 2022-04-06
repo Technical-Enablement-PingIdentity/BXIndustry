@@ -1,0 +1,16 @@
+@import "./base";
+
+.airlines {
+  @import "./components/button";
+  @import "./components/form-group";
+  @import "./components/icon-button";
+  @import "./components/header";
+  @import "./components/banner";
+  @import "./components/home-page-categories";
+  @import "./components/offers-section";
+  @import "./components/footer";
+  @import "./components/socials";
+  @import "./components/admin";
+  @import "./components/dialog";
+  @import "./components/dialog-example-actions";
+}

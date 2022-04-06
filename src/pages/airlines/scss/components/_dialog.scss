@@ -1,0 +1,86 @@
+@import "../var";
+
+.dialog {
+  max-width: 735px;
+  padding: 30px 0;
+}
+
+.dialog-content-header {  
+  &__title {
+    font-family: $secondary-font;
+    color: #182237;
+  }
+}
+
+.dialog-footer-description {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #2C3741;
+
+  &__link {
+    color: $primary;
+    transition: 0.2s;
+
+    &:hover {
+      color: #912958;
+    }
+  }
+}
+
+.dialog-form-message {
+  color: #76818B;
+  &__action {
+    color: $primary;
+  }
+}
+
+.auth-flow-picker {
+  &__item {
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}
+
+.dialog-social {
+  &--fb {
+    border-color: #275FAB;
+
+    svg {
+      path {
+        fill: #275FAB;
+      }
+    }
+  }
+
+  &--in {
+    border-color: #0C61B8;
+
+    svg {
+      path {
+        fill:#0C61B8;
+      }
+    }
+  }
+
+  &--apple {
+    border-color: #050708;
+
+    svg {
+      path {
+        fill:#050708;
+      }
+    }
+  }
+}
+
+.dialog-link {
+  color: $primary;
+}
+
+.dialog-icon-message {
+  &__action {
+    text-transform: uppercase;
+    color: $primary;
+  }
+}

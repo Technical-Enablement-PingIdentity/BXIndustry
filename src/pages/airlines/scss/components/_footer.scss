@@ -1,0 +1,163 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.footer {
+  padding: 47px 0 0;
+  background: #182237;
+
+  @media #{$mobile} {
+    padding: 16px 0 0;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+
+  @media #{$mobile} {
+    display: none;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 8px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  padding-bottom: 24px;
+  padding-left: 16px;
+
+  @media #{$tablet} {
+   flex-wrap: wrap;
+  }
+
+  @media #{$mobile} {
+    padding-right: 16px;
+  }
+
+  &__col {
+    width: 186px;
+    margin-right: 68px;
+
+    @media #{$tablet} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 26px;
+      margin-right: 0;
+    }
+  }
+
+  &__tel {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 17px;
+
+    @media #{$mobile} {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 9px 27px;
+
+    @media #{$mobile} {
+      margin: 0 auto;
+      max-width: 186px;
+      display: block;
+    }
+  }
+
+  &__copyright {
+    margin-top: auto;
+    margin-left: auto;
+
+    @media #{$tablet} {
+      position: relative;
+      left: -16px;
+      margin-left: 0;
+      width: calc(100% + 16px);
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.footer-socials {
+  
+  &__title {
+    margin-bottom: 17px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fff;
+
+    @media #{$mobile} {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @media #{$mobile} {
+      display: flex;
+      justify-content: center;
+    }
+
+    .socials__item {
+      margin-right: 30px;
+      padding: 0;
+
+      @media #{$mobile} {
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+.copyright-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$mobile} {
+    flex-direction: column;
+  }
+
+  &__glitch-btn {
+    background: #fff;
+    height: 33px;
+    margin-left: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+
+    @media #{$mobile} {
+      margin-bottom: 12px;
+    }
+  }
+}

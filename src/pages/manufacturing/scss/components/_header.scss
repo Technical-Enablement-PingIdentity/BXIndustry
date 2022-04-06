@@ -1,0 +1,168 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+
+  &__auth-actions {
+    margin-left: auto;
+
+    @media #{$mobile} {
+      margin-left: 0;
+    }
+  }
+
+  &__menu-trigger {
+    display: none;
+    margin-right: 20px;
+
+    @media #{$tablet} {
+      display: block;
+    }
+
+    @media #{$mobile} {
+      margin-right: 3px;
+    }
+  }
+
+  &__logo-wrapper {
+    @media #{$mobile} {
+      margin: 0 auto;
+    }
+  }
+}
+
+.hamburger-menu {
+  &__line {
+    background: $primary;
+  }
+}
+
+.logo-wrapper {
+  &__img {
+    display: block;
+    max-width: 150px;
+  }
+}
+
+.header-auth-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .header-auth-actions__actions-wrapper {
+      @media #{$mobile} {
+        display: block;
+      }
+    }
+  }
+
+  &__actions-wrapper {
+    display: flex;
+    align-items: center;
+
+    @media #{$mobile} {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      z-index: 10;
+      padding: 12px;
+      width: 170px;
+      box-shadow: 1px 4px 11px rgba(0, 0, 0, 0.14);
+    }
+  }
+
+  &__info {
+    font-family: $secondary-font;
+    padding: 0 12px;
+    color: $primary;
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media #{$mobile} {
+      display: none;
+    }
+
+    &--action {
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s;
+
+      @media #{$mobile} {
+        display: block;
+        margin-bottom: 3px;
+        padding: 0;
+      }
+
+      &:last-child {
+        @media #{$mobile} {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__separator {
+    height: 20.5px;
+    width: 2px;
+    background: $secondary;
+
+    @media #{$mobile} {
+      display: none;
+    }
+
+    &:first-child {
+      display: none;
+    }
+  }
+
+  &__user-icon {
+    flex-shrink: 0;
+  }
+}
+
+.navigation-wrapper {
+  background: $primary;
+  padding: 16px 0;
+
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: 0 8px;
+  }
+}
+
+.navigation-item-link {
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &__icon {
+    position: relative;
+    top: 1px;
+  }
+}

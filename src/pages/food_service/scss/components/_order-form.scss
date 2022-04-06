@@ -1,0 +1,124 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.order-form-section {
+  position: relative;
+  padding: 34px 0;
+  margin-bottom: 86px;
+
+  @media #{$tablet} {
+    margin-bottom: 40px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: $primary;
+
+    @media #{$mobile} {
+      height: 320px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.order-form-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 64px 84px 84px;
+  max-width: 1012px;
+  background: #fff;
+  background: linear-gradient(180deg, #FDFDFF 46.24%, #F1F5F7 100%);
+  box-shadow: 6px 6px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
+
+  @media #{$tablet} {
+    padding: 64px 30px 84px;
+  }
+
+  @media #{$mobile} {
+    padding: 49px 16px 193px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 65px;
+    font-family: $secondary-font;
+    font-size: 54px;
+    line-height: 76px;
+    font-weight: 700;
+    text-align: center;
+    color: #1D2922;
+    z-index: 2;
+
+    @media #{$tablet} {
+      font-size: 42px;
+      line-height: 52px;
+    }
+
+    @media #{$mobile} {
+      font-size: 42px;
+      line-height: 48px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    max-width: 343px;
+    z-index: 2;
+
+    @media #{$mobile} {
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 561px;
+    height: 390px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    @media #{$tablet} {
+      width: 435px;
+    }
+
+    @media #{$mobile} {
+      width: 308px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}
+
+.order-form {
+  &__form-control {
+    margin-bottom: 38px;
+
+    .form-group__input {
+      border: 1px solid #CECECE;
+    }
+  }
+
+  &__form-controls {
+    margin-bottom: 53px;
+  }
+
+  &__button {
+    min-width: 254px;
+    margin: 0 auto;
+    display: block;
+  }
+}

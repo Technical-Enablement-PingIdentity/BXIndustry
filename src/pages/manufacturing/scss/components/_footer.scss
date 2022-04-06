@@ -1,0 +1,161 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.footer {
+  padding: 50px 0;
+  background: #2C3741;
+
+  @media #{$mobile} {
+   padding: 22px 0;
+  }
+}
+
+.footer-content {
+  display: flex;
+
+  @media #{$mobile} {
+    display: block;
+  }
+
+  &__menu {
+    margin-right: auto;
+
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  @media #{$tablet} {
+    display: block;
+  }
+
+  &__item {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    color: #fff;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 30px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+}
+
+.footer-info {
+  display: flex;
+
+  @media #{$mobile} {
+    display: block;
+  }
+
+  &__side {
+    margin-left: 60px;
+
+    @media #{$mobile} {
+      margin: 0;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+.footer-info-block {
+  &__title {
+    display: block;
+    margin-bottom: 16px;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+
+    @media #{$mobile} {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    width: 186px;
+    padding: 8px 24px;
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+
+    @media #{$mobile} {
+      margin: 0 auto 15px;
+      display: block;
+    }
+  }
+
+  &__socials {
+    @media #{$mobile} {
+      display: flex;
+      justify-content: center;
+    }
+
+    .socials__item {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.copyright-secton {
+  background: $primary;
+  padding: 22px 0;
+}
+
+.copyright-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$mobile} {
+    flex-direction: column;
+  }
+
+  &__glitch-btn {
+    background: #fff;
+    height: 33px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+
+    @media #{$mobile} {
+      margin-bottom: 10px;
+    }
+  }
+}

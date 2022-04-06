@@ -1,0 +1,162 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.banner {
+  &__image {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+
+    @media #{$mobile} {
+      height: 300px;
+    }
+  }
+}
+
+.banner-content {
+  background: $secondary;
+  padding: 60px 0;
+
+  @media #{$mobile} {
+    padding: 25px 0 60px;
+  }
+
+  &__head {
+    margin-bottom: 51px;
+
+    @media #{$tablet} {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__footer {
+    padding: 0 5px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    font-size: 82px;
+    line-height: 76px;
+    font-family: $secondary-font;
+    color: #fff;
+    font-weight: 700;
+
+    @media #{$tablet} {
+      font-size: 62px;
+      line-height: 76px;
+    }
+
+    @media #{$mobile} {
+      font-size: 52px;
+      line-height: 62px;
+      margin-bottom: 19px;
+    }
+  }
+
+  &__sub-title {
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+  }
+}
+
+.banner-form {
+  display: flex;
+
+  @media #{$tablet} {
+    flex-wrap: wrap;
+  }
+  
+  &__item {
+    width: 25%;
+    padding: 0 11px;
+    
+    @media #{$tablet} {
+      width: 33.33%;
+      margin-bottom: 32px;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    &--button {
+      display: flex;
+
+      @media #{$tablet} {
+        margin: 0 auto;
+        min-height: 60px;
+      }
+
+      @media #{$mobile} {
+        max-width: 215px;
+        margin: 40px auto 0;
+      }
+    }
+  }
+
+  &__button {
+    padding: 10px;
+    width: 100%;
+    background: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.03em;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+}
+
+.banner-input-wrapper {
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 2px;
+
+  @media #{$tablet} {
+    padding: 9px 14px 5px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    color: #3B3C42;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 7px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    line-height: 12px;
+
+    @media #{$tablet} {
+      padding: 5px 0;
+    }
+
+    &::placeholder {
+      color: #8C90A0;
+    }
+  }
+}
+
+.banner-input-icon-wrapper {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    flex-shrink: 0;
+  }
+}

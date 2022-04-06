@@ -1,0 +1,50 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.home-page-categories {
+  display: flex;
+
+  @media #{$tablet} {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    min-height: 85px;
+    border-bottom: 1px solid #DBDBDB;
+    border-right: 1px solid #DBDBDB;
+    font-size: 20px;
+    line-height: 36px;
+    color: #0E2742;
+    transition: 0.2s;
+    cursor: pointer;
+
+    @media #{$tablet} {
+      width: 50%;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      border-right: none;
+    }
+    
+    &:nth-child(2n){
+      @media #{$tablet} {
+        border-right: none;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+}

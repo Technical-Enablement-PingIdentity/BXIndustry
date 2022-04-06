@@ -1,0 +1,171 @@
+{
+  "title": "BXAirlines",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#C83E7D",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#902958"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#0E264C",
+        "&:hover": {
+          "color": "#C83E7D"
+        }
+      },
+      "items": [
+        "Plan & book",
+        "Discover destinations",
+        "Miles & more",
+        "Help center"
+      ]
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#182237"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#C83E7D"
+        }
+      },
+      "links": [
+        "Passenger rights",
+        "Cargo shipments",
+        "Customer services",
+        "Corporate customers",
+        "Privacy & Cookie Policy",
+        "Accessibility"
+      ]
+    },
+    "socials": {
+      "style": {
+        "borderColor": "#C83E7D",
+        "color": "#C83E7D",
+        "&:hover": {
+          "color": "#182237",
+          "backgroundColor": "#C83E7D"
+        }
+      }
+    },
+    "phone_number": "800 568 9678",
+    "copyright": "© BXAirlines, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "title": {
+        "text": "Fly Like a Dream",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "subtitle": {
+        "text": "Travel comfortably and safely to thousands of destinations around the globe",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "button": {
+        "text": "Show"
+      }
+    },
+    "categories_section": {
+      "category_styles": {
+        "color": "#0E2742",
+        "&:hover": {
+          "color": "#C83E7D"
+        }
+      },
+      "items": [
+        {
+          "image": "check-in-icon.svg",
+          "text": "Check In"
+        },
+        {
+          "image": "aircraft-icon.svg",
+          "text": "Flight Status"
+        },
+        {
+          "image": "check-icon.svg",
+          "text": "Your Bookings"
+        },
+        {
+          "image": "bordered-aircraft-icon.svg",
+          "text": "Priority Pass"
+        }
+      ]
+    },
+    "offers_section": {
+      "title": "Hot offers for popular destination",
+      "button_styles": {
+        "background": "#fff",
+        "color": "#0A1D39",
+        "&:hover": {
+          "backgroundColor": "#C83E7D",
+          "color": "#fff"
+        }
+      },
+      "items": [
+        {
+          "image": "offer-1.jpg",
+          "title": "New-York — Paris",
+          "price": "$90.99",
+          "button_text": "Book a ticket"
+        },
+        {
+          "image": "offer-2.jpg",
+          "title": "New-York — Paris",
+          "price": "$179.99",
+          "button_text": "Book a ticket"
+        },
+        {
+          "image": "offer-3.jpg",
+          "title": "London — Berlin",
+          "price": "$45.99",
+          "button_text": "Book a ticket"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "subtitle": "Welcome on Board",
+    "title": "Mr. Edward Lowson",
+    "sidebar": {
+      "title": "Personal Offers",
+      "items": [
+        {
+          "image": "offer-1.jpg",
+          "title": "New-York — Toronto",
+          "price": "$90.99",
+          "button_text": "Book a ticket"
+        },
+        {
+          "image": "offer-2.jpg",
+          "title": "New-York — Paris",
+          "price": "$179.99",
+          "button_text": "Book a ticket"
+        }
+      ]
+    }
+  }
+}

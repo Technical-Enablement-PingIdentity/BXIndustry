@@ -1,0 +1,286 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 22px 0;
+
+  &__logo {
+    margin-right: 35px;
+  }
+
+  &__navigation {
+    margin-right: 35px;
+
+    @media #{$hd} {
+      display: none;
+    }
+  }
+
+  &__actions {
+    margin-left: auto;
+  }
+
+  &__menu-trigger {
+    display: none;
+    margin-right: 20px;
+
+    @media #{$hd} {
+      display: block;
+    }
+
+    @media #{$mobile} {
+      margin-right: 10px;
+    }
+  }
+
+  &--admin {
+    padding: 18px 0;
+
+    .header__actions {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 0;
+
+      @media #{$hd} {
+        width: auto;
+        margin-left: auto;
+      }
+
+      @media #{$tablet} {
+        
+        min-width: auto;
+      }
+    }
+
+    .header__logo {
+      margin-right: 0;
+      width: 100%;
+
+      @media #{$hd} {
+        width: auto;
+      }
+      
+      @media #{$tablet} {
+        min-width: auto;
+      }
+    }
+    
+    .header__admin-nav {
+      margin: 0;
+
+      @media #{$hd} {
+        display: none;
+      }
+    }
+  }
+}
+
+.logo-wrapper {
+  &__img {
+    display: block;
+    max-width: 150px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    position: relative;
+    margin-right: 28px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #474645;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+
+    path {
+      transition: ease-out 0.3s;
+    }
+  }
+
+  &--admin {
+    justify-content: center;
+
+    .header-nav__item {
+      color: #fff;
+      margin: 0;
+      padding: 0 18px;
+    }
+  }
+}
+
+.header-nav-item {
+  &__arrow {
+    margin-left: 6px;
+  }
+  
+  &--sub_menu {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+
+.header-auth-actions {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    .header-auth-actions__actions-wrapper {
+      @media #{$mobile} {
+        display: block;
+      }
+    }
+  }
+
+  &__actions-wrapper {
+    display: flex;
+    align-items: center;
+
+    @media #{$mobile} {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      z-index: 10;
+      padding: 12px;
+      width: 170px;
+      box-shadow: 1px 4px 11px rgba(0, 0, 0, 0.14);
+    }
+  }
+
+  &__button {
+    margin-left: 12px;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+    min-width: 80px;
+
+    @media #{$mobile} {
+      display: block;
+      margin: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      @media #{$mobile} {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__user-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #0E264C;
+    margin-right: 20px;
+
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1E2738;
+    transition: ease-out 0.3s;
+    cursor: pointer;
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #595754;
+    margin-right: 12px;
+
+    @media #{$mobile} {
+      margin-right: 0;
+    }
+
+    &--auth_trigger {
+      display: none;
+
+      @media #{$mobile} {
+        display: flex;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__location {
+    @media #{$tablet} {
+      display: none!important;
+    }
+  }
+}
+
+.location-btn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+
+  &__mark {
+    margin-right: 6px;
+  }
+
+  &__arrow {
+    margin-left: 5px;
+  }
+}
+
+.admin-header-nav {
+  background: #070402;
+  padding: 18px 0;
+
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+.admin-header-main-menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+
+  &__item {
+    padding: 0 33px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #192130;
+    transition: ease-out 0.3s;
+    cursor: pointer;
+
+    &--active {
+      color: $primary;
+    }
+  }
+}

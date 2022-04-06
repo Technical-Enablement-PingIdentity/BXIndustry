@@ -1,0 +1,149 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.products-section {
+  margin-bottom: 118px;
+
+  @media #{$tablet} {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    text-align: center;
+    color: #1D2922;
+
+    @media #{$tablet} {
+      font-size: 52px;
+      line-height: 52px;
+      margin-bottom: 30px;
+    }
+
+    @media #{$mobile} {
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 25%;
+    padding: 0 16px;
+    margin-bottom: 32px;
+    display: flex;
+
+    @media #{$tablet} {
+      width: 50%;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 22px;
+    }
+
+    .product-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.product-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 22px;
+  background: #fff;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+
+  &__image {
+    height: 164px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #1D2922
+  }
+
+  &__description {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #A7A7A7;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+}
+
+.product-footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__old-price {
+    position: relative;
+    margin-bottom: 4px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #D61111;
+    font-weight: 600;
+    
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 8px);
+      height: 1px;
+      background: #1D2922;
+    }
+  }
+
+  &__new-price {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 22px;
+    color: #1D2922;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    background: $primary;
+    border-radius: 50%;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+    path: {
+      transition: 0.2s;
+    }
+  }
+}

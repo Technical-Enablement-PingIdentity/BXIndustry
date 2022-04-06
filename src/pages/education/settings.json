@@ -1,0 +1,153 @@
+{
+  "title": "BXEducation",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#4C6BF7",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#354BAE"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#474645",
+        "&:hover": {
+          "color": "#4C6BF6"
+        }
+      },
+      "items": [
+        "Programs",
+        "Knowledge Base",
+        "For Students",
+        "For Teachers"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#2C3741",
+        "backgroundColor": "#DDE6FD",
+        "&:hover": {
+          "backgroundColor": "#4C6BF6",
+          "color": "#fff"
+        }
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#0A1D39"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#4C6BF6"
+        }
+      },
+      "links": [
+        "Programs",
+        "Careers",
+        "Blog",
+        "Help and Support"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#0A1D39",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_number": "800 568 9678",
+    "copyright": "© BXEducation, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "style": {
+        "backgroundColor": "#0A1D39"
+      },
+      "title": "Learn the skills you need to take your career to new heights",
+      "subtitle": "Take online courses, expand your skillset and connect with fellow students",
+      "button": "Try for Free",
+      "text_color": "#fff",
+      "circle_color_1": "#4C6BF6",
+      "circle_color_2": "rgba(76, 107, 246, 0.3)"
+    },
+    "programs_section": {
+      "title": "Popular Programs",
+      "items": [
+        {
+          "title": "Finance",
+          "image": "program-1.jpg"
+        },
+        {
+          "title": "Analytics",
+          "image": "program-2.jpg"
+        },
+        {
+          "title": "Development",
+          "image": "program-3.jpg"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "navigation": {
+      "style": {
+        "backgroundColor": "#0A1D39"
+      },
+      "links": {
+        "style": {
+          "color": "#fff",
+          "&:hover": {
+            "color": "#4C6BF6"
+          }
+        },
+        "items": [
+          "Applications",
+          "Taxes & Fees",
+          "Programs",
+          "Utilities",
+          "Initiatives",
+          "Your City"
+        ]
+      }
+    },
+    "sidebar": {
+      "title": "Articles",
+      "items": [
+        {
+          "title": "5 Outside the Box Strategies for Successful Financial Analysis",
+          "image": "article-1.jpg"
+        },
+        {
+          "title": "How to Make a Successful Career Jump",
+          "image": "article-2.jpg"
+        },
+        {
+          "title": "How Businesses Can Save Time and Money with Smart Purchasing",
+          "image": "article-3.jpg"
+        }
+      ]
+    }
+  }
+}

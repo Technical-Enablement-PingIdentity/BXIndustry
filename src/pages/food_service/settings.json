@@ -1,0 +1,166 @@
+{
+  "title": "BXEats",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#32B668",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#25874D"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#1D2922",
+        "&:hover": {
+          "color": "#25874D"
+        }
+      },
+      "items": [
+        "Delivery",
+        "Express",
+        "Shops",
+        "Promos",
+        "Recipes"
+      ]
+    },
+    "icon": {
+      "style": {
+        "color": "#1D2922",
+        "&:hover": {
+          "color": "#32B668"
+        }
+      }
+    },
+    "button": {
+      "style": {
+        "color": "#32B668",
+        "borderColor": "#32B668",
+        "&:hover": {
+          "color": "#fff",
+          "backgroundColor": "#32B668"
+        }
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#181818;"
+    },
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#32B668"
+        }
+      },
+      "links": [
+        "About",
+        "Customer Service",
+        "Partners",
+        "Collaboration",
+        "Contacts"
+      ]
+    },
+    "button": {
+      "style": {
+        "backgroundColor": "#fff",
+        "color": "#181818",
+        "&:hover": {
+          "color": "#182237",
+          "backgroundColor": "#32B668"
+        }
+      }
+    }
+  },
+  "copyright": {
+    "info": {
+      "style": {
+        "color": "#817D73"
+      },
+      "text": "© BXEats, 2022.  All rights reserved."
+    }
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "title": "Groceries from our store to your door in 30 minutes",
+      "subtitle": "Order your favorite products online, and we'll deliver them to your home"
+    },
+    "form_section": {
+      "title": "$10 Promo code for your first order",
+      "button_text": "Get promo code",
+      "background_color": "#32B668",
+      "image": "order-form-image.jpg"
+    },
+    "products_section": {
+      "title": "Discounts on fresh fruit and vegetables",
+      "items": [
+        {
+          "image": "product-1.jpg",
+          "title": "Fresh apples",
+          "description": "1 lb",
+          "old_price": "$2.99",
+          "price": "$1.99"
+        },
+        {
+          "image": "product-2.jpg",
+          "title": "Juicy oranges",
+          "description": "3 lb bag",
+          "old_price": "$6.00",
+          "price": "$4.99"
+        },
+        {
+          "image": "product-3.jpg",
+          "title": "Bananas",
+          "description": "each",
+          "old_price": "$0.40",
+          "price": "$0.25"
+        },
+        {
+          "image": "product-4.jpg",
+          "title": "Tomatoes",
+          "description": "1 lb",
+          "old_price": "$2.99",
+          "price": "$1.50"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Linda Lowson",
+    "title": "Hello Linda",
+    "subtitle": "Choose a category below for increased cashback",
+    "products_section": [
+      {
+        "image": "product-category-1.jpg",
+        "title": "4%",
+        "subtitle": "Fresh Vegetables",
+        "button": "Choose"
+      },
+      {
+        "image": "product-category-2.jpg",
+        "title": "2%",
+        "subtitle": "Fresh Meat",
+        "button": "Choose"
+      },
+      {
+        "image": "product-category-3.jpg",
+        "title": "5%",
+        "subtitle": "Local Сheese",
+        "button": "Choose"
+      }
+    ]
+  }
+}
