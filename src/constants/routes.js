@@ -9,6 +9,7 @@ export const REAL_ESTATE_URL = '/real_estate';
 export const FOOD_SERVICE_URL = '/food_service';
 export const INSURANCE_URL = '/insurance';
 export const NON_PROFIT_URL = '/non_profit';
+export const BXFINANCE_URL = '/bxfinance';
 export const VERTICAL_ROUTES = [
   {
     name: 'government',
@@ -59,5 +60,10 @@ export const VERTICAL_ROUTES = [
     name: 'non_profit',
     displayName: 'Non-Profit',
     url: NON_PROFIT_URL,
-  }
+  }, 
+  {
+    name: 'bxfinance',
+    displayName: 'BXFinance',
+    url: BXFINANCE_URL,
+  },
 ];

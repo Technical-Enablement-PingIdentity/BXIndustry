@@ -12,6 +12,7 @@ import { REAL_ESTATE_ROUTES } from '@Pages/real_estate/constants';
 import { FOOD_SERVICE_ROUTES } from '@Pages/food_service/constants';
 import { INSURANCE_ROUTES } from '@Pages/insurance/constants';
 import { NON_PROFIT_ROUTES } from '@Pages/non_profit/constants';
+import { BXFINANCE_ROUTES } from '@Pages/bxfinance/constants';
 //vertical settings.json files
 import airlinesSettings from '@Pages/airlines/settings.json';
 import educationSettings from '@Pages/education/settings.json';
@@ -23,6 +24,7 @@ import manufacturingSettings from '@Pages/manufacturing/settings.json';
 import nonProfitSettings from '@Pages/non_profit/settings.json';
 import pharmacySettings from '@Pages/pharmacy/settings.json';
 import realEstateSettings from '@Pages/real_estate/settings.json';
+import bxFinanceSettings from '@Pages/bxfinance/settings.json';
 import './scss/index.scss';
 
 const VERTICAL_ROWS = [
@@ -95,6 +97,13 @@ const VERTICAL_ROWS = [
     homePageUrl: NON_PROFIT_ROUTES.HOME,
     adminPageUrl: NON_PROFIT_ROUTES.ADMIN,
     dialogExamplesUrl: NON_PROFIT_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    Name: 'BXFinance',
+    logo: getImagePath('bxfinance', bxFinanceSettings.common_images.dialog_logo),
+    homePageUrl: BXFINANCE_ROUTES.HOME,
+    adminPageUrl: BXFINANCE_ROUTES.ADMIN,
+    dialogExampleUrl: BXFINANCE_ROUTES.DIALOG_EXAMPLES
   }
 ]
 

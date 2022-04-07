@@ -1,0 +1,182 @@
+{
+  "title": "BXFinance",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo-white.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#4abaa3",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#456059"
+      }
+    }
+  },
+  "header": {
+    "style": {},
+    "links": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "hsla(0,0%,100%,.75)"
+        }
+      },
+      "items": [
+        "Banking",
+        "Credit Cards",
+        "Investment",
+        "Loans & Mortgages",
+        "Business Banking"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#fff",
+        "minWidth": "0",
+        "background": "none",
+        "fontWeight": "400",
+        "fontSize": "16px",
+        "&:hover": {
+          "backgroundColor": "none",
+          "color": "hsla(0,0%,100%,.75)"
+        }
+      }
+    },
+    "banner": {
+      "image": "banner.jpg",
+      "title": "We’re redefining everything a bank can be.",
+      "sub_title": "Modern banking tools meets personalized service.",
+      "button": "Learn More",
+      "rewards_card": {
+        "style": {
+          "backgroundColor": "#fff"
+        },
+        "title": "Meet SHINE.",
+        "sub_title": "It's a new standard of credit card. Amazing rewards. Remarkable rates.",
+        "image": "rewards-card.png"
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#1f0f11"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "opacity": 0.6
+        }
+      },
+      "links": [
+        "Our Company",
+        "Investor Relations",
+        "Corporate Citizenship",
+        "News",
+        "Locations",
+        "Privacy & Security",
+        "Terms of Use",
+        "Disclosures",
+        "Accessibility"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#1f0f11",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_number": "800.543.2276",
+    "email": "help@bxfinance.com",
+    "chat": "Chat with Us",
+    "copyright": "© BXFinance, 2022 Member FDIC, Member SIPC Equal Housing Lender"
+  },
+  "home_page": {
+    "alert_banner": {
+      "style": {
+        "backgroundColor": "#456059",
+        "color": "#fff"
+      },
+      "message": "Ready to get started?",
+      "link": "Talk to a Banking Advisor >"
+    },
+    "programs_section": {
+      "links": {
+        "style": {
+          "color": "#66b0c0",
+          "&:hover": {
+            "color": "#3b8190"
+          } 
+        }
+      },
+      "items": [
+        {
+          "title": "It's never been a better time to refinance.",
+          "description": "Find value in your home.",
+          "link": "Check Rates"
+        },
+        {
+          "title": "Technology, tuned to the way you live and work.",
+          "description": "Try our newest account management tools.",
+          "link": "Explore Tools"
+        },
+        {
+          "title": "Investing 101: Basics to make more of your future.",
+          "description": "Tuning your strategy to your goals.",
+          "link": "Learn More"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "navigation": {
+      "style": {
+        "backgroundColor": "#0A1D39"
+      },
+      "links": {
+        "style": {
+          "color": "#fff",
+          "&:hover": {
+            "color": "#4C6BF6"
+          }
+        },
+        "items": [
+          "Applications",
+          "Taxes & Fees",
+          "Programs",
+          "Utilities",
+          "Initiatives",
+          "Your City"
+        ]
+      }
+    },
+    "sidebar": {
+      "title": "Articles",
+      "items": [
+        {
+          "title": "5 Outside the Box Strategies for Successful Financial Analysis",
+          "image": "article-1.jpg"
+        },
+        {
+          "title": "How to Make a Successful Career Jump",
+          "image": "article-2.jpg"
+        },
+        {
+          "title": "How Businesses Can Save Time and Money with Smart Purchasing",
+          "image": "article-3.jpg"
+        }
+      ]
+    }
+  }
+}

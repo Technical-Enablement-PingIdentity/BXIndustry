@@ -9,3 +9,4 @@ export * from './real_estate';
 export * from './food_service';
 export * from './insurance';
 export * from './non_profit';
+export * from './bxfinance';

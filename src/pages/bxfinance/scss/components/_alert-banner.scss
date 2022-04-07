@@ -1,0 +1,16 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.alert-banner {
+    padding: 2rem 0;
+
+    &__message,
+    &__link {
+        font-size: 24px;
+    }
+    
+    &__link {
+        margin-left: 1rem;
+        font-weight: 500;
+    }
+}
