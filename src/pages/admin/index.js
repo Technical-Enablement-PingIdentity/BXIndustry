@@ -103,7 +103,7 @@ const VERTICAL_ROWS = [
     logo: getImagePath('bxfinance', bxFinanceSettings.common_images.dialog_logo),
     homePageUrl: BXFINANCE_ROUTES.HOME,
     adminPageUrl: BXFINANCE_ROUTES.ADMIN,
-    dialogExampleUrl: BXFINANCE_ROUTES.DIALOG_EXAMPLES
+    dialogExamplesUrl: BXFINANCE_ROUTES.DIALOG_EXAMPLES
   }
 ]
 
