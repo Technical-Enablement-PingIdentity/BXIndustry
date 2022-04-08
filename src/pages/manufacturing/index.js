@@ -101,7 +101,7 @@ const useStyles = makeStyles({
         }
       }
     },
-    '& .copyright-secton': copyright.style,
+    '& .copyright-section': copyright.style,
     '& .copyright-content__text': copyright.info.style,
     '& .manufacturing__admin': admin.style
   },

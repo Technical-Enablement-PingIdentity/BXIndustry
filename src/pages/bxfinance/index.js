@@ -9,7 +9,7 @@ import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, button, links, admin, common_images, rewards_card } = settings;
+const { title, header, home_page, footer, button, copyright, links, admin, common_images, rewards_card } = settings;
 
 function getImage(image) {
   return getImagePath('bxfinance', image)
@@ -83,6 +83,7 @@ const useStyles = makeStyles({
     '& .admin-sidebar__link': admin.sidebar.style,
     '& .admin-dashboard .dashboard-content__tile': admin.dashboard_tiles.style,
     '& .bxfinance-link': links.style,
+    '& .copyright-section': copyright.style,
   },
 });
 

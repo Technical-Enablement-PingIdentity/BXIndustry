@@ -112,6 +112,11 @@
     "chat": "Chat with Us",
     "copyright": "© BXFinance, 2022 Member FDIC, Member SIPC Equal Housing Lender"
   },
+  "copyright": {
+    "style": {
+      "backgroundColor": "#1f0f11"
+    }
+  },
   "home_page": {
     "alert_banner": {
       "style": {
