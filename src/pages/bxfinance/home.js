@@ -5,6 +5,7 @@ import { Footer } from './components';
 import settings from './settings.json';
 import { globalSettings } from '../../global-settings';
 import { NotificationIcon } from './components/icons';
+import { RewardsCard } from './components/rewards-card';
 
 const { header, home_page } = settings;
 
@@ -71,11 +72,7 @@ export const BxfinanceHome = ({ images }) => {
                 <button className='button'>{header.banner.button}</button>
               </div>
               <div className='banner__right'>
-                <div className='rewards-card'>
-                  <h2 className='rewards-card__title'>{header.banner.rewards_card.title}</h2>
-                  <h6 className='rewards-card__subtitle'>{header.banner.rewards_card.sub_title}</h6>
-                  <img src={images.rewards_card} alt="Rewards card" />
-                </div>
+                <RewardsCard cardImage={images.rewards_card} />
               </div>
             </div>
           </div>
@@ -97,7 +94,7 @@ export const BxfinanceHome = ({ images }) => {
                 <div className="program-info-block">
                   <h3 className="program-info-block__title">{title}</h3>
                   <p className="program-info-block__description">{description}</p>
-                  <span className='program-info-block__link'>{link}</span>
+                  <span className='program-info-block__link bxfinance-link'>{link}</span>
                 </div>
               </div>
             ))}

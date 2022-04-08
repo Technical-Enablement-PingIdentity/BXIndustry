@@ -16,8 +16,18 @@
       }
     }
   },
+  "links": {
+    "style": {
+      "color": "#66b0c0",
+      "&:hover": {
+        "color": "#3b8190"
+      } 
+    }
+  },
   "header": {
-    "style": {},
+    "style": {
+      "backgroundColor": "#456059"
+    },
     "links": {
       "style": {
         "color": "#fff",
@@ -50,16 +60,17 @@
       "image": "banner.jpg",
       "title": "We’re redefining everything a bank can be.",
       "sub_title": "Modern banking tools meets personalized service.",
-      "button": "Learn More",
-      "rewards_card": {
-        "style": {
-          "backgroundColor": "#fff"
-        },
-        "title": "Meet SHINE.",
-        "sub_title": "It's a new standard of credit card. Amazing rewards. Remarkable rates.",
-        "image": "rewards-card.png"
-      }
+      "button": "Learn More"
     }
+  },
+  "rewards_card": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "title": "Meet SHINE.",
+    "sub_title": "It's a new standard of credit card. Amazing rewards. Remarkable rates.",
+    "link": "Apply Today",
+    "image": "rewards-card.png"
   },
   "footer": {
     "style": {
@@ -111,14 +122,7 @@
       "link": "Talk to a Banking Advisor >"
     },
     "programs_section": {
-      "links": {
-        "style": {
-          "color": "#66b0c0",
-          "&:hover": {
-            "color": "#3b8190"
-          } 
-        }
-      },
+      "links": { },
       "items": [
         {
           "title": "It's never been a better time to refinance.",
@@ -142,39 +146,92 @@
     "user_name": "Edward Lowson",
     "navigation": {
       "style": {
-        "backgroundColor": "#0A1D39"
+        "backgroundColor": "#456059"
       },
       "links": {
         "style": {
           "color": "#fff",
+          "fontWeight": 400,
+          "&:first-child": {
+            "fontWeight": 500
+          },
           "&:hover": {
-            "color": "#4C6BF6"
+            "color": "hsla(0, 0%, 100%, .75)"
           }
         },
         "items": [
-          "Applications",
-          "Taxes & Fees",
-          "Programs",
-          "Utilities",
-          "Initiatives",
-          "Your City"
+          "Banking",
+          "Credit Cards",
+          "Investments",
+          "Loans & Mortgages",
+          "Business Banking"
         ]
       }
     },
+    "welcome": "Welcome, Edward",
+    "dashboard_title": "Accounts Dashboard",
     "sidebar": {
-      "title": "Articles",
-      "items": [
+      "style": {
+        "backgroundColor": "#fff",
+        "color": "#000"
+      },
+      "links": [
+        "Pay & Transfer",
+        "Banking & Credit Accounts",
+        "Loans & Lines of Credit",
+        "Investment Accounts",
+        "Profile & Settings",
+        "Messages"
+      ]
+    },
+    "dashboard_tiles": {
+      "style": {
+        "borderTop": "2px solid #456159",
+        "border-radius": "0 0 12px 12px",
+        "backgroundColor": "#fff"
+      },
+      "tiles": [
         {
-          "title": "5 Outside the Box Strategies for Successful Financial Analysis",
-          "image": "article-1.jpg"
+          "title": "Banking Account Balances",
+          "action": "See All Activity",
+          "accounts": [
+            {
+              "name": "Checking (...8585)",
+              "amount": "$45,135.01"
+            },
+            {
+              "name": "Savings (...0231)",
+              "amount": "$40,068.44"
+            }
+          ]
         },
         {
-          "title": "How to Make a Successful Career Jump",
-          "image": "article-2.jpg"
+          "title": "Investment Account Balances",
+          "action": "See All Activity",
+          "accounts": [
+            {
+              "name": "IRA (...2842)",
+              "amount": "$45,135.01"
+            },
+            {
+              "name": "Mutual Funds (...3021)",
+              "amount": "$40,068.44"
+            }
+          ]
         },
         {
-          "title": "How Businesses Can Save Time and Money with Smart Purchasing",
-          "image": "article-3.jpg"
+          "title": "Credit Account Balances",
+          "action": "See All Activity",
+          "accounts": [
+            {
+              "name": "BXFinance Rewards Visa (...1337)",
+              "amount": "$45,135.01"
+            },
+            {
+              "name": "HELOC (...1258)",
+              "amount": "$40,068.44"
+            }
+          ]
         }
       ]
     }

@@ -1,1 +1,2 @@
-export * from './Footer';
+export * from './footer';
+export * from './rewards-card';

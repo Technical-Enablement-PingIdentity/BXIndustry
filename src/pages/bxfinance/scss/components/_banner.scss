@@ -36,51 +36,6 @@
       width: 100%;
       justify-content: center;
     }
-
-    .rewards-card {
-      color: black;
-      padding: 2rem;
-      border-radius: 13px;
-      height: 480px;
-      max-width: 350px;
-      position: relative;
-      overflow: hidden;
-
-      @media #{$tablet} {
-        height: 460px;
-      }
-
-      @media #{$mobile} {
-        width: 100%;
-        max-width: 400px;
-        height: 280px;
-        margin-top: 2rem;
-      }
-
-      &__title {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 1rem;
-      }
-
-      &__subtitle {
-        font-size: 14px;
-        line-height: 1.4;
-        font-weight: 400;
-      }
-
-      img {
-        width: 400px;
-        bottom: -5px;
-        right: -5px;
-        position: absolute;
-
-        @media #{$mobile} {
-          width: 300px;
-          bottom: -100px;
-        }
-      }
-    }
   }
 
   &__title {

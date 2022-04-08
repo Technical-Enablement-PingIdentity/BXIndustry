@@ -13,4 +13,9 @@
   @import "./components/admin";
   @import "./components/dialog";
   @import "./components/dialog-example-actions";
+  @import "./components/rewards-card";
+
+  &.bxfinance-admin {
+    background-color: #f3f3f3;
+  }
 }

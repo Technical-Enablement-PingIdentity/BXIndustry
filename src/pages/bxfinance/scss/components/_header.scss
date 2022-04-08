@@ -1,5 +1,6 @@
 @import "../var";
 @import '@Styles/common/var.scss';
+@import '@Styles/common/mixins.scss';
 
 .header {
   display: flex;
@@ -125,7 +126,7 @@
       position: absolute;
       top: 100%;
       right: 0;
-      background: black;
+      background-color: #456059;
       z-index: 10;
       padding: 12px;
       width: 170px;
@@ -213,11 +214,21 @@
 }
 
 .admin-header-nav {
-  background: #0A1D39;
-  padding: 25px 0;
+  background: #456059;
+  padding-bottom: 1.5rem;
 
   @media #{$mobile} {
     display: none;
+  }
+
+  .header-nav__item:first-child {
+    position: relative; 
+    &::after {
+      @include triangle(15px, #456059, 'down') {
+        left: 20%;
+        bottom: -2.2rem;
+      }
+    }
   }
 }
 
