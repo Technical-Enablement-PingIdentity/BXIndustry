@@ -42,7 +42,7 @@ export function Footer() {
                 </li>
               </ul>
             </div>
-            <section className="copyright-secton footer-contacts__copyright">
+            <section className="copyright-section footer-contacts__copyright">
               <Copyright text={footer.copyright} />
             </section>
           </div>

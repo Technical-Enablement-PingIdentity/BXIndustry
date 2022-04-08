@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
       </footer>
-      <section className="copyright-secton">
+      <section className="copyright-section">
         <Copyright text={footer.copyright} />
       </section>
     </>

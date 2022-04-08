@@ -3,10 +3,20 @@
 
 .footer {
   padding: 50px 0;
-  background: #2C3741;
+  background: #0A1D39;
 
   @media #{$mobile} {
-   padding: 22px 0;
+    padding: 22px 0;
+   }
+}
+
+.footer-info-block,
+.footer-content__menu,
+.footer-info {
+  width: 33.33%;
+
+  @media #{$mobile} {
+   width: 100%;
   }
 }
 
@@ -21,34 +31,51 @@
     margin-right: auto;
 
     @media #{$mobile} {
-      display: none;
+      text-align: center;
     }
   }
 }
 
+.footer-copyright {
+  color: #fff;
+  padding-right: 1rem;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 250px;
+  margin-top: 1.5rem;
+
+  @media #{$mobile} {
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 1rem 0 2rem;
+  }
+}
+
 .footer-menu {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
-  
-  @media #{$tablet} {
-    display: block;
-  }
 
+  @media #{$mobile} {
+    margin-bottom: 2rem;
+  }
+  
   &__item {
-    font-family: $secondary-font;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 8px;
     color: #fff;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
     font-weight: 500;
     margin-right: 30px;
-    transition: 0.2s;
     cursor: pointer;
+    transition: 0.2s;
+
+    @media #{$mobile} {
+      margin-right: 0;
+    }
   }
 }
 
@@ -77,37 +104,13 @@
     display: block;
     margin-bottom: 16px;
     font-family: $secondary-font;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     line-height: 24px;
     color: #fff;
 
     @media #{$mobile} {
       text-align: center;
-    }
-  }
-
-  &__button {
-    width: 186px;
-    padding: 8px 24px;
-    font-family: $secondary-font;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    border-radius: 2px;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    text-align: center;
-    transition: 0.2s;
-    cursor: pointer;
-
-    @media #{$mobile} {
-      margin: 0 auto 15px;
-      display: block;
     }
   }
 
@@ -129,7 +132,7 @@
 }
 
 .copyright-section {
-  background: $primary;
+  background: #fff;
   padding: 22px 0;
 }
 
@@ -147,15 +150,5 @@
     height: 33px;
     border-radius: 6px;
     cursor: pointer;
-  }
-
-  &__text {
-    color: #fff;
-    font-size: 12px;
-    line-height: 14px;
-
-    @media #{$mobile} {
-      margin-bottom: 10px;
-    }
   }
 }
