@@ -5,6 +5,17 @@
 .admin-welcome {
   background-color: #fff;
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$mobile} {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  }
+
   &__message {
     padding: 1.25rem 0;
     font-size: 36px;
@@ -12,6 +23,12 @@
 
     @media #{$mobile} {
       font-size: 24px;
+    }
+  }
+
+  &__buttons {
+    .button:not(:first-child) {
+      margin-left: 1rem;
     }
   }
 }

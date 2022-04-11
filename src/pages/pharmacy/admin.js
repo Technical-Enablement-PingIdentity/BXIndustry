@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { UserIcon } from '@Components/icons';
 import { ArrowIcon, PdfDocument } from './components/icons';
 import { PHARMACY_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { admin, header } = settings;
 
 export const PharmacyAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -54,6 +59,15 @@ export const PharmacyAdmin = ({ images }) => {
         </div>
       </header>
       <section className="admin">
+        {admin.sk_buttons?.length &&
+          <div className="container admin__actions">
+            <div className="container__col">
+              {admin.sk_buttons.map((skData, index) => 
+                <button className="button" key={index} onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+              )}
+            </div>
+          </div>
+        }
         <div className="container">
           <div className="admin-content">
             <div className="admin-articles-wrapper admin-content__articles">
@@ -109,6 +123,7 @@ export const PharmacyAdmin = ({ images }) => {
         )}
       </section>
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

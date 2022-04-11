@@ -1,5 +1,20 @@
 @import "../var";
 
+.admin__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -3rem;
+  margin-top: 2rem;
+
+  @media #{$mobile} {
+    justify-content: center;
+  }
+
+  .button:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
+
 .objects-section {
   padding: 88px 0 52px;
 

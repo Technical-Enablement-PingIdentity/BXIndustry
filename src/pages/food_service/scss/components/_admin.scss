@@ -36,6 +36,29 @@
       line-height: 28px;
     }
   }
+
+  &__actions {
+    white-space: nowrap;
+
+    @media #{$tablet} {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .admin-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$tablet} {
+      flex-direction: column;
+    }
+
+    .button:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
 }
 
 .product-categories {

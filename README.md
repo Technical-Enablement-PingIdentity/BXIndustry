@@ -13,6 +13,7 @@ For this release, there are 10 verticals available in Glitch for you to remix:
 8. [Real Estate](https://demo.bxindustry.org/real_estate)
 9. [Pharmacy](https://demo.bxindustry.org/pharmacy)
 10. [Manufacturing](https://demo.bxindustry.org/manufacturing)
+11. [BXFinance](https://demo.bxindustry.org/bxfinance)
 
 With BXIndustry, you can choose a vertical you would like to use, build your workflows and forms in DaVinci, and update the settings.json file to change text colors, text, images, configure buttons, and more! HTML templates are available for different modal forms for use in DaVinci (e.g., **src/components/AuthDialogExamples**).
 
@@ -56,6 +57,7 @@ The default vertical should be one value from the list:
 - non_profit
 - pharmacy
 - real_estate
+- bxfinance
 
 ## An (IMPORTANT!!) Note on Versioning
 
@@ -155,6 +157,29 @@ To enable the Admin DV flow, the **global-settings.json** or **settings.json** (
 ```
 
 Note: If `policy_key, company_key, api_key` are empty, appropriate values will be provided from the `.env` file.
+
+Similarly, sk_buttons are available on the admin page as well, it takes in an optional array of button configurations just like the home page for each vertical
+
+```sh
+{
+  "admin": {
+    "sk_buttons": [
+      {
+        "text": "",
+        "policy_key": "",
+        "company_key": "",
+        "api_key": ""
+      },
+      {
+        "text": "",
+        "policy_key": "",
+        "company_key": "",
+        "api_key": ""
+      }
+    ],
+  }
+}
+```
 
 The Admin section in the file includes the `"user_name"` key, which will be displayed in the admin page header.
 

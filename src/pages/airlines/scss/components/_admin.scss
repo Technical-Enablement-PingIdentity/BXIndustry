@@ -10,13 +10,33 @@
   display: flex;
   justify-content: space-between;
 
+  @media #{$tablet} {
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    .user-actions {
+      justify-content: center;
+    }
+
+    .button {
+      margin-bottom: 1rem;
+    }
+  }
+
   &__side {
+    display: flex;
+    align-items: center;
+
     &:first-child {
       margin-right: 16px;
 
       @media #{$mobile} {
         margin: 0;
       }
+    }
+
+    .button:not(:first-child) {
+      margin-left: 1rem;
     }
   }
 }

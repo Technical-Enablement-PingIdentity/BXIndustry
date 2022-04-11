@@ -14,10 +14,10 @@ export const globalSettings = {
         }
     ],
     admin: {
-        sk_widget: {
-            policy_key: process.env.REACT_APP_ADMIN_POLICY_KEY,
-            company_key: process.env.REACT_APP_COMPANY_KEY,
-            api_key: process.env.REACT_APP_API_KEY
-        }
+        // sk_widget: {
+        //     policy_key: process.env.REACT_APP_ADMIN_POLICY_KEY,
+        //     company_key: process.env.REACT_APP_COMPANY_KEY,
+        //     api_key: process.env.REACT_APP_API_KEY
+        // },
     }
 };

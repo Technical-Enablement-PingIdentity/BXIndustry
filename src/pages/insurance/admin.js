@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import { UserIcon, SettingsIcon } from './components/icons';
 import { Footer } from './components';
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { INSURANCE_URL } from '@Constants';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { header, admin } = settings;
 const { title, title_button, dashboard, info_block } = admin;
 let { sk_widget } = admin;
 
 export const InsuranceAdmin = ({ images }) => {
-  if (!sk_widget && globalSettings.admin?.sk_widget) {
-    sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
+
 
   return (
     <>
@@ -70,10 +76,17 @@ export const InsuranceAdmin = ({ images }) => {
             <div className="admin-title-wrapper admin-content__header">
               <h1 className="admin-title-wrapper__title">{title}</h1>
               <div className="admin-title-actions admin-title-wrapper__actions">
-                <button className="admin-title-actions__btn">
-                  <SettingsIcon className="admin-title-actions__btn-icon" fill={title_button.style.color} />
-                  {title_button.text}
-                </button>
+                {admin.sk_buttons?.length && admin.sk_buttons.map((skData, index) =>
+                  <button className="admin-title-actions__btn" key={index} onClick={handleSKButtonClick(skData)}>
+                    {skData.text}
+                  </button>
+                )}
+                {!admin.sk_buttons?.length &&
+                  <button className="admin-title-actions__btn">
+                    <SettingsIcon className="admin-title-actions__btn-icon" fill={title_button.style.color} />
+                    {title_button.text}
+                  </button>
+                }
               </div>
             </div>
           </div>
@@ -114,6 +127,7 @@ export const InsuranceAdmin = ({ images }) => {
         )}
       </main>
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

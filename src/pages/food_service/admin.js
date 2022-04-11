@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { CheckIcon } from '@Components/icons';
 import { CartIcon, FavoriteIcon, UserIcon, NotificationIcon, DocumentIcon } from './components/icons';
 import { FOOD_SERVICE_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { admin, header } = settings;
 
 export const FoodServiceAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -72,9 +77,19 @@ export const FoodServiceAdmin = ({ images }) => {
       </header>
       <main className="admin-content">
         <div className="container">
-          <div className="container__col">
-            <h1 className="admin-content__title">{admin.title}</h1>
-            <p className="admin-content__description">{admin.subtitle}</p>
+          <div className="container__col admin-header__wrapper">
+            <div>
+              <h1 className="admin-content__title">{admin.title}</h1>
+              <p className="admin-content__description">{admin.subtitle}</p>
+            </div>
+            {admin.sk_buttons?.length && 
+              <div className="admin-content__actions">
+                {admin.sk_buttons.map((skData, index) => 
+                  <button className="button" key={index}
+                    onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                )}
+              </div>
+            }
           </div>
           <section className="product-categories">
             {admin.products_section.map(({ title, subtitle, button }, index) => (
@@ -208,6 +223,7 @@ export const FoodServiceAdmin = ({ images }) => {
         )}
       </main>
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }
