@@ -1,0 +1,71 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.dialog {
+  max-width: 735px;
+  padding: 30px 0;
+}
+
+.dialog-content {
+  &__header {
+    border-bottom: 1px solid #E7E7E7;
+  }
+}
+
+.dialog-content-header {  
+  &__title {
+    font-family: $secondary-font;
+
+    @media #{$mobile} {
+      padding: 0 15px 22px;
+    }
+  }
+}
+
+.dialog-footer-description {
+  font-weight: 500;
+
+  &__link {
+    text-transform: uppercase;
+    color: $primary;
+    transition: 0.2s;
+
+    &:hover {
+      color: $primary-hover;
+    }
+  }
+}
+
+.dialog-form-message {
+  &__action {
+    color: $primary;
+  }
+}
+
+.auth-flow-picker {
+  &__item {
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}
+
+.dialog-social {
+  border-color: $primary;
+  svg {
+    path {
+      fill: $primary;
+    }
+  }
+}
+
+.dialog-link {
+  color: $primary;
+}
+
+.dialog-icon-message {
+  &__action {
+    text-transform: uppercase;
+    color: $primary;
+  }
+}

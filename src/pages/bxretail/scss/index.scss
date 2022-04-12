@@ -1,0 +1,20 @@
+@import "./base";
+
+.bxretail {
+  @import "./components/banner";
+  @import "./components/button";
+  @import "./components/form-group";
+  @import "./components/header";
+  @import "./components/icon-button";
+  @import "./components/jumbotron";
+  @import "./components/features-section";
+  @import "./components/footer";
+  @import "./components/socials";
+  @import "./components/admin";
+  @import "./components/dialog";
+  @import "./components/dialog-example-actions";
+
+  &.bxretail-admin {
+    background-color: #f3f3f3;
+  }
+}

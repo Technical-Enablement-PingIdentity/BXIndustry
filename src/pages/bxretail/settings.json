@@ -1,0 +1,251 @@
+{
+  "title": "BXRetail",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo-white.svg",
+    "dialog_logo": "auth-dialog-logo.svg"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#177de7",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#146ac4"
+      }
+    }
+  },
+  "links": {
+    "style": {
+      "color": "#177de7",
+      "&:hover": {
+        "color": "#146ac4"
+      } 
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#177de7"
+    },
+    "links": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "hsla(0,0%,100%,.75)"
+        }
+      },
+      "items": [
+        "My Account",
+        "Weekly Deals",
+        "Extraordinary Club",
+        "Departments",
+        "The BXCard"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#fff",
+        "minWidth": "0",
+        "background": "none",
+        "fontWeight": "400",
+        "fontSize": "16px",
+        "&:hover": {
+          "backgroundColor": "none",
+          "color": "hsla(0,0%,100%,.75)"
+        }
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#262626"
+    },
+    "text_color": "#d8d8d8",
+    "navigation": {
+      "style": {
+        "color": "#d8d8d8",
+        "&:hover": {
+          "opacity": 0.6
+        }
+      },
+      "links": [
+        "Our Company",
+        "Investor Relations",
+        "Corporate Citizenship",
+        "News",
+        "Locations",
+        "Privacy & Security",
+        "Terms of Use",
+        "Disclosures",
+        "Accessibility"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#d8d8d8",
+        "color": "#d8d8d8",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#1f0f11",
+          "backgroundColor": "#d8d8d8"
+        }
+      }
+    },
+    "phone_number": "800.543.2276",
+    "email": "help@bxretail.com",
+    "chat": "Chat with Us",
+    "copyright": "© BXRetail, 2022"
+  },
+  "copyright": {
+    "style": {
+      "backgroundColor": "#262626"
+    }
+  },
+  "home_page": {
+    "jumbotron": {
+      "left": {
+        "title": "Electronics Sale",
+        "description": "Major savings on favorite brands",
+        "button": "Browser Deals",
+        "image": "home-hero-electronics-bg.jpg"
+      },
+      "right": {
+        "title": "Shop Manolo Blahniks",
+        "subtitle": "Jimmy Choo, Gucci, Miu Miu and more",
+        "description": "Swap somthing new for the season",
+        "button": "What's New",
+        "image": "home-hero-office-bg.png"
+      }
+    },
+    "banner": {
+      "style": {
+        "backgroundColor": "#f9c646"
+      },
+      "text": "Shop at our Extraordinary Club Partners",
+      "logos": [
+        "logo-bxclothes.svg",
+        "logo-bxhome.svg",
+        "logo-bxoffice.svg",
+        "logo-bxtech.svg"
+      ]
+    },
+    "features_section": {
+      "links": { },
+      "items": [
+        {
+          "title": "The BXRetail App",
+          "description": "Shop, browse and manage your account.",
+          "link": "Coming Soon",
+          "image": "home-features-app.png"
+        },
+        {
+          "title": "Join the Extraordinary Club",
+          "description": "Exclusive savings and services across all our BXRetail partners.",
+          "link": "Meet Our People",
+          "image": "home-features-club.png"
+        },
+        {
+          "title": "We Install Anything",
+          "description": "Choose professional partner services for any product we sell.",
+          "link": "Learn More",
+          "image": "home-features-service.png"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "navigation": {
+      "style": {
+        "backgroundColor": "#456059"
+      },
+      "links": {
+        "style": {
+          "color": "#fff",
+          "fontWeight": 400,
+          "&:first-child": {
+            "fontWeight": 500
+          },
+          "&:hover": {
+            "color": "hsla(0, 0%, 100%, .75)"
+          }
+        },
+        "items": [
+          "Banking",
+          "Credit Cards",
+          "Investments",
+          "Loans & Mortgages",
+          "Business Banking"
+        ]
+      }
+    },
+    "welcome": "Welcome, Edward",
+    "dashboard_title": "Accounts Dashboard",
+    "sidebar": {
+      "style": {
+        "backgroundColor": "#fff",
+        "color": "#000"
+      },
+      "links": [
+        "Pay & Transfer",
+        "Banking & Credit Accounts",
+        "Loans & Lines of Credit",
+        "Investment Accounts",
+        "Profile & Settings",
+        "Messages"
+      ]
+    },
+    "dashboard_tiles": {
+      "style": {
+        "borderTop": "2px solid #456159",
+        "border-radius": "0 0 12px 12px",
+        "backgroundColor": "#fff"
+      },
+      "tiles": [
+        {
+          "title": "Banking Account Balances",
+          "action": "See All Activity",
+          "accounts": [
+            {
+              "name": "Checking (...8585)",
+              "amount": "$45,135.01"
+            },
+            {
+              "name": "Savings (...0231)",
+              "amount": "$40,068.44"
+            }
+          ]
+        },
+        {
+          "title": "Investment Account Balances",
+          "action": "See All Activity",
+          "accounts": [
+            {
+              "name": "IRA (...2842)",
+              "amount": "$45,135.01"
+            },
+            {
+              "name": "Mutual Funds (...3021)",
+              "amount": "$40,068.44"
+            }
+          ]
+        },
+        {
+          "title": "Credit Account Balances",
+          "action": "See All Activity",
+          "accounts": [
+            {
+              "name": "BXFinance Rewards Visa (...1337)",
+              "amount": "$45,135.01"
+            },
+            {
+              "name": "HELOC (...1258)",
+              "amount": "$40,068.44"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -10,3 +10,4 @@ export * from './food_service';
 export * from './insurance';
 export * from './non_profit';
 export * from './bxfinance';
+export * from './bxretail';
