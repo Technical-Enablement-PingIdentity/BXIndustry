@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { UserIcon, InfoIcon } from './components/icons';
 import { NON_PROFIT_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { header, admin } = settings;
 
 export const NonProfitAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -53,7 +58,16 @@ export const NonProfitAdmin = ({ images }) => {
       <section className="dashboard">
         <div className="container">
           <div className="container__col">
-            <h1 className="dashboard__title">{admin.title}</h1>
+            <div className="dashboard__header">
+              <h1 className="dashboard__title">{admin.title}</h1>
+              {admin.sk_buttons?.length &&
+                <div className="dashboard__actions">
+                  {admin.sk_buttons.map((skData, index) => 
+                    <button className="button" key={index} onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                  )}
+                </div>
+              }
+            </div>
           </div>
           <div className="dashboard-info">
             {admin.dashboard.map(({ title, description }, index) => (
@@ -119,6 +133,7 @@ export const NonProfitAdmin = ({ images }) => {
         )}
       </section>
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

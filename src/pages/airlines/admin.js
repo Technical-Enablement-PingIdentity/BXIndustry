@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { UserIcon, BorderedAircraftIcon, CalendarIcon, TimeIcon } from './components/icons';
 import { AIRLINES_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { admin, header } = settings;
 
 export const AirlinesAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
   
   return (
@@ -64,16 +69,25 @@ export const AirlinesAdmin = ({ images }) => {
                 <p className="user-info__text">{admin.subtitle}</p>
                 <p className="user-info__title">{admin.title}</p>
               </div>
-              <div className="admin-user-info__side">
-                <div className="user-info-label">
-                  <div className="user-info-label__side">
-                    <BorderedAircraftIcon className="user-info-label__icon" />
+              <div className="admin-user-info__side user-actions">
+                {admin.sk_buttons?.length &&
+                  <div className="admin-user-buttons">
+                    {admin.sk_buttons.map((skData, index) => 
+                      <button className="button" key={index}
+                        onClick={handleSKButtonClick(skData)}>{skData.text}</button>)}
                   </div>
-                  <div className="user-info-label__side">
-                    <p className="user-info-label__text">Your Miles:</p>
-                    <p className="user-info-label__text user-info-label__text--md">3458</p>
+                }
+                {(!admin.sk_buttons?.length) && 
+                  <div className="user-info-label">
+                    <div className="user-info-label__side">
+                      <BorderedAircraftIcon className="user-info-label__icon" />
+                    </div>
+                    <div className="user-info-label__side">
+                      <p className="user-info-label__text">Your Miles:</p>
+                      <p className="user-info-label__text user-info-label__text--md">3458</p>
+                    </div>
                   </div>
-                </div>
+                }
               </div>
             </div>
           </div>
@@ -236,6 +250,7 @@ export const AirlinesAdmin = ({ images }) => {
         </div>
       )}
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

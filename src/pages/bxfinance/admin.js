@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { UserIcon } from '@Components/icons';
 import { NotificationIcon } from './components/icons';
 import { BXFINANCE_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
 import { RewardsCard } from './components/rewards-card';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { admin } = settings;
 
 export const BxfinanceAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -65,8 +70,15 @@ export const BxfinanceAdmin = ({ images }) => {
       </header>
       <section className="admin-welcome">
         <div className="container">
-          <div className="container__col">
+          <div className="container__col admin-welcome__wrapper">
             <h1 className="admin-welcome__message">{admin.welcome}</h1>
+            {admin.sk_buttons?.length && 
+              <div className="admin-welcome__buttons">
+                {admin.sk_buttons.map((skData, index) => 
+                  <button className="button" key={index}
+                   onClick={handleSKButtonClick(skData)}>{skData.text}</button>)}
+              </div>
+            }
           </div>
         </div>
       </section>
@@ -127,6 +139,7 @@ export const BxfinanceAdmin = ({ images }) => {
         </div>
       )}
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

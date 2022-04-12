@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { SearchIcon, UserIcon } from '@Components/icons';
 import { LocationIcon, DocumentIcon } from './components/icons';
 import { REAL_ESTATE_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { admin } = settings;
 
 export const RealEstateAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -53,6 +58,15 @@ export const RealEstateAdmin = ({ images }) => {
           </div>
         </div>
       </header>
+      {admin.sk_buttons?.length && 
+        <div className="container">
+          <div className="container__col admin__actions">
+            {admin.sk_buttons.map((skData, index) => 
+              <button className="button" key={index} onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+            )}
+          </div>
+        </div>
+      }
       <section className="objects-section">
         <div className="container">
           <div className="container__col">
@@ -144,6 +158,7 @@ export const RealEstateAdmin = ({ images }) => {
         )}
       </section>
       <Footer />
-    </div >
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
+    </div>
   )
 }

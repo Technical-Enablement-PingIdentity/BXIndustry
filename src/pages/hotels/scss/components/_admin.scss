@@ -5,22 +5,22 @@
   padding: 50px 0 86px;
 
   &__title {
-    margin-bottom: 68px;
+    margin: 30px 0;
     font-family: $secondary-font;
-    font-size: 62px;
+    font-size: 40px;
     line-height: 76px;
     font-weight: 700;
     color: #1B1B1B;
 
     @media #{$tablet} {
       display: none;
-      font-size: 52px;
+      font-size: 36px;
       line-height: 62px;
       margin-bottom: 48px;
     }
 
     @media #{$mobile} {
-      font-size: 42px;
+      font-size: 30px;
       line-height: 52px;
       margin-bottom: 25px;
     }
@@ -31,6 +31,21 @@
       @media #{$tablet} {
         display: block;
       }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$tablet} {
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .button:not(:first-child) {
+      margin-left: 1rem;
     }
   }
 }

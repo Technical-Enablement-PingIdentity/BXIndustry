@@ -9,6 +9,23 @@
   }
 }
 
+.admin-actions {
+  margin: 1rem 0;
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    @media #{$mobile} {
+      justify-content: space-around;
+    }
+
+    .button:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+}
+
 .admin-content {
   display: flex;
 

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import {
   UserIcon, CalendarIcon, FoodIcon, PriceIcon, ErrorIcon, StarIcon
 } from './components/icons';
@@ -8,15 +8,22 @@ import { HOTELS_URL } from '@Constants';
 import { getDateInFuture } from '@Helpers';
 import { Footer } from './components';
 import settings from './settings.json';
-import apartmentImg from './img/apartment.jpg'
-import { globalSettings } from '../../global-settings';
+import apartmentImg from './img/apartment.jpg';
+import { consolidateAdminSettings } from '@Helpers';
+
 
 const { admin, header } = settings;
 
 export const HotelsAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
+
   return (
     <>
       <header className="header-wrapper">
@@ -58,7 +65,17 @@ export const HotelsAdmin = ({ images }) => {
       <section className="dashboard-section">
         <div className="container">
           <div className="container__col">
-            <h1 className="dashboard-section__title">{admin.title}</h1>
+            <div className="dashboard-section__header">
+              <h1 className="dashboard-section__title">{admin.title}</h1>
+              {admin.sk_buttons?.length &&
+                <div>
+                  {admin.sk_buttons.map((skData, index) => 
+                    <button className="button" key={index}
+                      onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                  )}
+                </div>
+              }
+            </div>
           </div>
           <div className="dashboard-info">
             <div className="dashboard-info__side dashboard-info__side--main_info">
@@ -174,6 +191,7 @@ export const HotelsAdmin = ({ images }) => {
         </div>
       )}
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { UserIcon, CheckIcon } from '@Components/icons';
 import { NotificationIcon, ClockIcon } from './components/icons';
 import { EDUCATION_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { admin, header } = settings;
 
 export const EducationAdmin = ({ images }) => {
-  if (!admin.sk_widget && globalSettings.admin?.sk_widget) {
-    admin.sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -61,7 +66,7 @@ export const EducationAdmin = ({ images }) => {
       <section className="admin-nav-wrapper">
         <nav className="admin-header-nav">
           <div className="container">
-            <div className="container__col">
+            <div className="container__col admin-header-nav__wrapper">
               <ul className="header-nav header-nav--admin">
                 {admin.navigation.links.items.map((item, index) => (
                   <li key={index} className="header-nav-item header-nav__item">
@@ -73,6 +78,20 @@ export const EducationAdmin = ({ images }) => {
           </div>
         </nav>
       </section>
+      {admin.sk_buttons?.length &&
+        <section className="admin-actions">
+          <div className="container">
+            <div className="container__col">
+              <div className="admin-actions__buttons">
+                {admin.sk_buttons.map((skData, index) => 
+                  <button className="button" key={index} 
+                    onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+      }
       <section className="admin-section">
         <div className="container">
           <div className="container__col">
@@ -175,6 +194,7 @@ export const EducationAdmin = ({ images }) => {
         </div>
       )}
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

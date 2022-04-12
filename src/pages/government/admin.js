@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import classnames from 'classnames';
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { UserIcon, ArrowRight, PdfDocument } from './components/icons';
 import { ExpandArrow } from '@Components/icons';
 import { Copyright } from '@Components';
 import { GOVERNMENT_URL } from '@Constants';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
 const { admin, copyright } = settings;
 const { header, title, applications_section, footer, dashboard } = admin;
 let { sk_widget } = admin;
 
 export const GovernmentAdmin = ({ images }) => {
-  if (!sk_widget && globalSettings.admin?.sk_widget) {
-    sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -75,7 +80,16 @@ export const GovernmentAdmin = ({ images }) => {
       <section className="admin-dashboard">
         <div className="container">
           <div className="container__col">
-            <h1 className="admin-dashboard__title">{title}</h1>
+            <div className="admin-dashboard-title__container">
+              <h1 className="admin-dashboard__title">{title}</h1>
+              <div class="admin-dashboard__actions">
+                {admin.sk_buttons?.length && 
+                  admin.sk_buttons.map((skData, index) => 
+                  <button className="button" key={index}
+                    onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                )}
+              </div>
+            </div>
             <div className="admin-dashboard-categories">
               {dashboard.map(({ title, description_items, button }, index) => (
                 <div key={index} className="admin-dashboard-category admin-dashboard-categories__item">
@@ -156,6 +170,7 @@ export const GovernmentAdmin = ({ images }) => {
           </div>
         </div>
         <Copyright text={copyright.text} />
+        <AuthDialog ref={authRef} logo={images.dialog_logo} />
       </footer>
     </>
   )

@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import { UserIcon } from './components/icons';
 import { Footer } from './components';
-import { SKWidget } from '@Components';
+import { AuthDialog, SKWidget } from '@Components';
 import { MANUFACTURING_URL } from '@Constants';
 import settings from './settings.json';
-import { globalSettings } from '../../global-settings';
+import { consolidateAdminSettings } from '@Helpers';
 
-const { header, user_name, title, services } = settings.admin;
-let { sk_widget } = settings.admin;
+const { admin } = settings;
+const { header, user_name, title, services, sk_widget } = admin;
 
 export const ManufacturingAdmin = ({ images }) => {
-  if (!sk_widget && globalSettings.admin?.sk_widget) {
-    sk_widget = globalSettings.admin?.sk_widget;
+  const authRef = useRef(null);
+  consolidateAdminSettings(admin);
+
+  const handleSKButtonClick = (skData) => {
+    return () => {
+      authRef.current.openDialog(skData);
+    }
   }
 
   return (
@@ -56,12 +61,22 @@ export const ManufacturingAdmin = ({ images }) => {
             <div className="admin-title-wrapper admin-content__header">
               <h1 className="admin-title-wrapper__title">{title}</h1>
               <div className="admin-title-actions admin-title-wrapper__actions">
-                <button className="admin-title-actions__btn button button--outlined">
-                  Factory information
-                </button>
-                <button className="admin-title-actions__btn button button--outlined">
-                  INDUSTRY BENCHMARKS
-                </button>
+                {admin.sk_buttons?.length && admin.sk_buttons.map((skData, index) =>
+                  <button className="admin-title-actions__btn button button--outlined" key={index}
+                    onClick={handleSKButtonClick(skData)}>
+                    {skData.text}
+                  </button>
+                )}
+                {!admin.sk_buttons?.length &&
+                  <>
+                    <button className="admin-title-actions__btn button button--outlined">
+                      Factory information
+                    </button>
+                    <button className="admin-title-actions__btn button button--outlined">
+                      INDUSTRY BENCHMARKS
+                    </button>
+                  </>
+                }
               </div>
             </div>
             <div className="admin-services-list">
@@ -92,6 +107,7 @@ export const ManufacturingAdmin = ({ images }) => {
         )}
       </section>
       <Footer />
+      <AuthDialog ref={authRef} logo={images.dialog_logo} />
     </>
   )
 }

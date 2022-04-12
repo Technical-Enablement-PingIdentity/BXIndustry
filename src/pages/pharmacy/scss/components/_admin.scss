@@ -7,6 +7,22 @@
   @media #{$tablet} {
     padding: 46px 0 70px;
   }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -3rem;
+
+    @media #{$tablet} {
+      justify-content: center;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
+
+    .button:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
 }
 
 .admin-content {
