@@ -2,7 +2,7 @@
 
 BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are 10 different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
  
-For this release, there are 10 verticals available in Glitch for you to remix:
+For this release, there are 12 verticals available in Glitch for you to remix:
 1. [Hotel](https://demo.bxindustry.org/hotels)
 2. [Airline](https://demo.bxindustry.org/airlines)
 3. [Government](https://demo.bxindustry.org/government)
@@ -14,6 +14,7 @@ For this release, there are 10 verticals available in Glitch for you to remix:
 9. [Pharmacy](https://demo.bxindustry.org/pharmacy)
 10. [Manufacturing](https://demo.bxindustry.org/manufacturing)
 11. [BXFinance](https://demo.bxindustry.org/bxfinance)
+12. [BXRetail](https://demo.bxindustry.org/bxretail)
 
 With BXIndustry, you can choose a vertical you would like to use, build your workflows and forms in DaVinci, and update the settings.json file to change text colors, text, images, configure buttons, and more! HTML templates are available for different modal forms for use in DaVinci (e.g., **src/components/AuthDialogExamples**).
 
@@ -58,6 +59,7 @@ The default vertical should be one value from the list:
 - pharmacy
 - real_estate
 - bxfinance
+- bxretail
 
 ## An (IMPORTANT!!) Note on Versioning
 
