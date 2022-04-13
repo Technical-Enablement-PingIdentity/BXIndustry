@@ -2,16 +2,15 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthDialog, SKWidget } from '@Components';
 import { UserIcon } from '@Components/icons';
-import { NotificationIcon } from './components/icons';
-import { BXFINANCE_URL } from '@Constants';
+import { CartIcon, NotificationIcon } from './components/icons';
+import { BXRETAIL_URL } from '@Constants';
 import { Footer } from './components';
 import settings from './settings.json';
-import { RewardsCard } from './components/rewards-card';
 import { consolidateAdminSettings } from '@Helpers';
 
 const { admin } = settings;
 
-export const BxfinanceAdmin = ({ images }) => {
+export const BxretailAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
@@ -47,7 +46,7 @@ export const BxfinanceAdmin = ({ images }) => {
                     <UserIcon fill="#0E264C" />
                   </div>
                   <div className="header-auth-actions__actions-wrapper">
-                    <Link to={BXFINANCE_URL} className="header-auth-actions__link">Log Out</Link>
+                    <Link to={BXRETAIL_URL} className="header-auth-actions__link">Log Out</Link>
                   </div>
                 </div>
               </div>
@@ -92,44 +91,64 @@ export const BxfinanceAdmin = ({ images }) => {
                     <li key={index} className="admin-sidebar__link">{link}</li>
                   ))}
                 </ul>
-                <RewardsCard cardImage={images.rewards_card} withLink={true} />
+                <div className="admin-sidebar__footer">
+                    <div>{admin.sidebar.text}</div>
+                    <div className="admin-sidebar__logos">
+                      {images.sidebar_logos.map((logo, index) => 
+                        <img key={index} src={logo} alt="" />
+                      )}
+                    </div>
+                </div>
               </div>
               <div className="admin-content">
                 <div className="dashboard-header">
-                  <h1 className="dashboard-header__title">{admin.dashboard_title}</h1>
-                  <div className="dashboard-header__things"><div>{admin.dashboard_dropdown}</div></div>
+                  <h1 className="dashboard-header__title">{admin.dashboard.title}</h1>
+                  <div className="dashboard-header__action"><div>{admin.dashboard.dropdown_placeholder}</div></div>
                 </div>
                 <div className="dashboard-content">
-                  {admin.dashboard_tiles.tiles.map((tile, tileIndex) => (
-                    <div key={tileIndex} className="dashboard-content__tile">
-                      <div className="tile-header">
-                        <div className="tile-header__title">{tile.title}</div>
-                        <button className='button button--sm tile-header__button'>{tile.action}</button>
+                  <div className="products">
+                    {admin.dashboard.products.map((product, index) => 
+                      <div key={index} className="product">
+                        {product.badge && <div className="product__badge">{product.badge}</div>}
+                        <img className="product__image" src={images.product_images[index]} alt={product.title} />
+                        <div className="product__title">{product.title}</div>
+                        <img className="product__rating-image" src={images.product_rating_images[index]} alt="Rating" />
+                        <p className="product__price">{product.price} <small>{product.price_subtext}</small></p>
+                        {product.delivery_options.map((option, deliveryIndex) => 
+                          <div key={deliveryIndex} className="product__delivery"><small>{option}</small></div>
+                        )}
+                        {product.add_sk_flow &&
+                          <button className="button button--sm product__add" onClick={handleSKButtonClick(product.add_sk_flow)}>
+                            <CartIcon className="product__add--icon" />
+                            {product.add_sk_flow.text}
+                          </button>
+                        }
+                        {!product.add_sk_flow &&
+                          <button className="button button--sm product__add"><CartIcon className="product__add--icon" /> Add</button>
+                        }
                       </div>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Accounts</th>
-                            <th>Balance</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {tile.accounts.map((account, accountIndex) => (
-                            <tr key={accountIndex}>
-                              <td><span className="bxfinance-link">{account.name}</span></td>
-                              <td>{account.amount}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                    )}
+                  </div>
+                  <div className="products-pagination">
+                    <div>Showing 1-6 of 234 results</div>
+                    <div>Items per Page: <span className="products-pagination__per-page">6</span></div>
+                    <div>
+                      <span className="products-pagination__pages">
+                          {[1,2,3,4].map((page, index) => 
+                            <span key={index}>{page}</span>
+                          )}
+                      </span>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div className="admin-help-button">
+        <button className="button">{admin.help_button}</button>
+      </div>
       {admin.sk_widget && (
         <div className="container">
           <div className="container__col">

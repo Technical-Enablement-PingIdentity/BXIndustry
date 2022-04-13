@@ -19,5 +19,13 @@ export const globalSettings = {
         //     company_key: process.env.REACT_APP_COMPANY_KEY,
         //     api_key: process.env.REACT_APP_API_KEY
         // },
+        // sk_buttons: [
+        //     {
+        //         "text": "Test Action",
+        //         "policy_key": process.env.REACT_APP_REGISTRATION_POLICY_KEY,
+        //         "company_key": process.env.REACT_APP_COMPANY_KEY,
+        //         "api_key": process.env.REACT_APP_API_KEY
+        //     }
+        // ]
     }
 };

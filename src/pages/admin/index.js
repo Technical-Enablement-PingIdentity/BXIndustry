@@ -13,6 +13,7 @@ import { FOOD_SERVICE_ROUTES } from '@Pages/food_service/constants';
 import { INSURANCE_ROUTES } from '@Pages/insurance/constants';
 import { NON_PROFIT_ROUTES } from '@Pages/non_profit/constants';
 import { BXFINANCE_ROUTES } from '@Pages/bxfinance/constants';
+import { BXRETAIL_ROUTES } from '@Pages/bxretail/constants';
 //vertical settings.json files
 import airlinesSettings from '@Pages/airlines/settings.json';
 import educationSettings from '@Pages/education/settings.json';
@@ -25,6 +26,7 @@ import nonProfitSettings from '@Pages/non_profit/settings.json';
 import pharmacySettings from '@Pages/pharmacy/settings.json';
 import realEstateSettings from '@Pages/real_estate/settings.json';
 import bxFinanceSettings from '@Pages/bxfinance/settings.json';
+import bxRetailSettings from '@Pages/bxretail/settings.json';
 import './scss/index.scss';
 
 const VERTICAL_ROWS = [
@@ -104,7 +106,14 @@ const VERTICAL_ROWS = [
     homePageUrl: BXFINANCE_ROUTES.HOME,
     adminPageUrl: BXFINANCE_ROUTES.ADMIN,
     dialogExamplesUrl: BXFINANCE_ROUTES.DIALOG_EXAMPLES
-  }
+  },
+  {
+    Name: 'BXRetail',
+    logo: getImagePath('bxretail', bxRetailSettings.common_images.dialog_logo),
+    homePageUrl: BXRETAIL_ROUTES.HOME,
+    adminPageUrl: BXRETAIL_ROUTES.ADMIN,
+    dialogExamplesUrl: BXRETAIL_ROUTES.DIALOG_EXAMPLES
+  },
 ]
 
 export const Admin = () => {
