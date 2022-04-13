@@ -25,6 +25,12 @@ const logos = {
   dialog_logo: getImage(common_images.dialog_logo),
 }
 
+const adminImages = {
+  sidebar_logos: admin.sidebar.logos.map(logo => getImage(logo)),
+  product_images: admin.dashboard.products.map(product => getImage(product.image)),
+  product_rating_images: admin.dashboard.products.map(product => getImage(product.rating_image)),
+}
+
 const homeImages = {
   features: home_page.features_section.items.map(({ image }) => getImage(image)),
   jumbotron: {
@@ -83,9 +89,10 @@ const useStyles = makeStyles({
     '& .header-nav--admin .header-nav__item': admin.navigation.links.style,
     '& .features-info-block__link': home_page.features_section.links.style,
     '& .admin-sidebar__link': admin.sidebar.style,
-    '& .admin-dashboard .dashboard-content__tile': admin.dashboard_tiles.style,
     '& .bxretail-link': links.style,
     '& .copyright-section': copyright.style,
+    '& .dashboard-content .product__badge': admin.dashboard.product_badges.style,
+    '& .dashboard-content .product__title': admin.dashboard.product_titles.style,
   },
 });
 
@@ -109,7 +116,7 @@ export function Bxretail() {
           <BxretailHome images={{ ...logos, ...homeImages }} />
         )} />
         <Route exact path={BXRETAIL_ROUTES.ADMIN} component={() => (
-          <BxretailAdmin images={{ ...logos }} />
+          <BxretailAdmin images={{ ...logos, ...adminImages }} />
         )} />
         <Route exact path={BXRETAIL_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

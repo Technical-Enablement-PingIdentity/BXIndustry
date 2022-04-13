@@ -1,3 +1,6 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
 .socials {
   display: flex;
   align-items: center;
@@ -6,6 +9,17 @@
   list-style: none;
 
   &__item {
-    padding: 0 15px;
+    padding: 0 1rem;
+
+    @media #{$tablet} {
+      padding: 0 .5rem;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }

@@ -35,7 +35,7 @@ export function Footer() {
             </div>
             <div className="footer-content__menu">
               <ul className="footer-menu">
-                {footer.navigation.links.map((item, index) => (
+                {footer.navigation.links_left.map((item, index) => (
                   <li key={index} className="footer-menu__item">{item}</li>
                 ))}
               </ul>
@@ -46,6 +46,13 @@ export function Footer() {
                 <span className="footer-info-block__title">{footer.email}</span>
                 <span className="footer-info-block__title">{footer.chat}</span>
               </div>
+            </div>
+            <div className="footer-content__menu">
+              <ul className="footer-menu">
+                {footer.navigation.links_right.map((item, index) => (
+                  <li key={index} className="footer-menu__item">{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

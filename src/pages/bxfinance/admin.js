@@ -97,7 +97,7 @@ export const BxfinanceAdmin = ({ images }) => {
               <div className="admin-content">
                 <div className="dashboard-header">
                   <h1 className="dashboard-header__title">{admin.dashboard_title}</h1>
-                  <div className="dashboard-header__things"><div>Things I Can Do</div></div>
+                  <div className="dashboard-header__things"><div>{admin.dashboard_dropdown}</div></div>
                 </div>
                 <div className="dashboard-content">
                   {admin.dashboard_tiles.tiles.map((tile, tileIndex) => (

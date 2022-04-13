@@ -14,6 +14,8 @@
 
         img:not(:last-child) {
             margin-right: 2rem;
+            width: auto;
+            height: 30px;
             
             @media #{$mobile} {
                 margin-right: 0;
@@ -44,7 +46,8 @@
             flex-direction: column;
 
             img {
-                max-width: 150px;
+                width: auto;
+                height: 30px;
                 margin-bottom: 1rem;
             }
         }

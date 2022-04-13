@@ -118,15 +118,6 @@
       display: flex;
       justify-content: center;
     }
-
-    .socials__item {
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        padding-right: 0;
-      }
-    }
   }
 }
 

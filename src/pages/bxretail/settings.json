@@ -69,12 +69,14 @@
           "opacity": 0.6
         }
       },
-      "links": [
+      "links_left": [
         "Our Company",
         "Investor Relations",
         "Corporate Citizenship",
         "News",
-        "Locations",
+        "Locations"
+      ],
+      "links_right": [
         "Privacy & Security",
         "Terms of Use",
         "Disclosures",
@@ -158,7 +160,7 @@
     "user_name": "Edward Lowson",
     "navigation": {
       "style": {
-        "backgroundColor": "#456059"
+        "backgroundColor": "#177de7"
       },
       "links": {
         "style": {
@@ -172,78 +174,101 @@
           }
         },
         "items": [
-          "Banking",
-          "Credit Cards",
-          "Investments",
-          "Loans & Mortgages",
-          "Business Banking"
+          "My Account",
+          "Weekly Deals",
+          "Extraordinary Club",
+          "Departments",
+          "The BXCard"
         ]
       }
     },
     "welcome": "Welcome, Edward",
-    "dashboard_title": "Accounts Dashboard",
+    "help_button": "Chat with us",
     "sidebar": {
       "style": {
         "backgroundColor": "#fff",
         "color": "#000"
       },
       "links": [
-        "Pay & Transfer",
-        "Banking & Credit Accounts",
-        "Loans & Lines of Credit",
-        "Investment Accounts",
-        "Profile & Settings",
-        "Messages"
+        "Clothing",
+        "Home Decor",
+        "Entertainment",
+        "Electronics",
+        "Personal Care & Pharmacy",
+        "Accessories"
+      ],
+      "text": "Shop at our Extraordinary Club Partners",
+      "logos": [
+        "logo-bxclothes.svg",
+        "logo-bxhome.svg",
+        "logo-bxoffice.svg",
+        "logo-bxtech.svg"
       ]
     },
-    "dashboard_tiles": {
-      "style": {
-        "borderTop": "2px solid #456159",
-        "border-radius": "0 0 12px 12px",
-        "backgroundColor": "#fff"
+    "dashboard": {
+      "title": "Electronics",
+      "dropdown_placeholder": "See Other Electronics",
+      "product_titles": {
+        "style": {
+          "color": "#177de7"
+        }
       },
-      "tiles": [
+      "product_badges": {
+        "style": {
+          "color": "#177de7",
+          "borderColor": "#177de7"
+        }
+      },
+      "products": [
         {
-          "title": "Banking Account Balances",
-          "action": "See All Activity",
-          "accounts": [
-            {
-              "name": "Checking (...8585)",
-              "amount": "$45,135.01"
-            },
-            {
-              "name": "Savings (...0231)",
-              "amount": "$40,068.44"
-            }
-          ]
+          "badge": "Best Value",
+          "image": "bxmanufacturing-clera.jpg",
+          "rating_image": "stars-4.svg",
+          "title": "BXManufacturing Clera 65\" 4K UHD LED TV",
+          "price": "$1,270.00",
+          "price_subtext": "(excl. tax)",
+          "delivery_options": [ "2-day Delivery", "Free pickup" ]
         },
         {
-          "title": "Investment Account Balances",
-          "action": "See All Activity",
-          "accounts": [
-            {
-              "name": "IRA (...2842)",
-              "amount": "$45,135.01"
-            },
-            {
-              "name": "Mutual Funds (...3021)",
-              "amount": "$40,068.44"
-            }
-          ]
+          "image": "streamstick.jpg",
+          "rating_image": "stars-5.svg",
+          "title": "Streamstick Video Streaming Player with 4K, Full HD",
+          "price": "$99.99",
+          "price_subtext": "(excl. tax)",
+          "delivery_options": [ "2-day Delivery", "Free pickup" ]
         },
         {
-          "title": "Credit Account Balances",
-          "action": "See All Activity",
-          "accounts": [
-            {
-              "name": "BXFinance Rewards Visa (...1337)",
-              "amount": "$45,135.01"
-            },
-            {
-              "name": "HELOC (...1258)",
-              "amount": "$40,068.44"
-            }
-          ]
+          "image": "adventex.jpg",
+          "rating_image": "stars-5.svg",
+          "title": "Adventex 27\" LED PC Monitor with HDMI",
+          "price": "$253.00",
+          "price_subtext": "(excl. tax)",
+          "delivery_options": [ "2-day Delivery", "Free pickup" ]
+        },
+        {
+          "image": "touchpad.jpg",
+          "rating_image": "stars-5.svg",
+          "title": "TouchPad 16-inch tablet with cellular, WiFi, 64GB storage",
+          "price": "$256.99",
+          "price_subtext": "(excl. tax)",
+          "delivery_options": [ "2-day Delivery", "Free pickup" ]
+        },
+        {
+          "image": "bxmanufacturing-silva.jpg",
+          "rating_image": "stars-5.svg",
+          "title": "BXManufacturing Silva Laptop",
+          "price": "$959.99",
+          "price_subtext": "(excl. tax)",
+          "delivery_options": [ "2-day Delivery", "Free pickup" ]
+        },
+        {
+          "badge": "Best Value",
+          "rating_image": "stars-4.svg",
+          "image": "widera.jpg",
+          "title": "Widera Tri-Band Mesh WiFi Router",
+          "price": "$152.99",
+          "price_subtext": "(excl. tax)",
+          "delivery_options": [ "2-day Delivery", "Free pickup" ]
         }
       ]
     }

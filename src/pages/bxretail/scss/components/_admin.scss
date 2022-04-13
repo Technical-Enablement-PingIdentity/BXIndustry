@@ -2,6 +2,19 @@
 @import '@Styles/common/var.scss';
 @import '@Styles/common/mixins.scss';
 
+
+&.bxretail-admin {
+  .header-wrapper {
+    padding-bottom: 0;
+  }
+
+  .admin-help-button {
+    position: fixed;
+    bottom: .75rem;
+    right: 4rem;
+  }
+}
+
 .admin-welcome {
   background-color: #fff;
 
@@ -64,7 +77,7 @@
         font-weight: 500;
       }
 
-      &__things {
+      &__action {
         width: 247px;
         height: 38px;
         padding: .5rem 1rem;
@@ -75,17 +88,6 @@
         background-color: white;
         position: relative;
         cursor: pointer;
-
-        @media #{$tablet} {
-          width: 150px;
-
-          div {
-            width: 100px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-        }
 
         &:hover {
           div, 
@@ -101,96 +103,11 @@
           }
         }
       }
-    }
-
-    .dashboard-content {
-      &__tile {
-        margin: 1.5rem 0;
-        position: relative;
-
-        &::before {
-          @include triangle(5px, #000, 'down') {
-            top: 30px;
-            left: 14px;
-          }
-        }
-        
-        .tile-header {
-          padding: .75rem .75rem 0 2.25rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-
-          &__title {
-            width: 70%;
-          }
-
-          &__button {
-            width: 30%;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            margin-left: 2rem;
-          }
-        }
-
-        table {
-          width: 100%;
-          padding-bottom: 1.5rem;
-          padding-left: 2.25rem;
-
-          thead th {
-            text-align: left;
-            font-size: 12px;
-            font-weight: 100;
-            line-height: 22px;
-            padding: .5rem 0;
-          }
-
-          tbody {
-            tr {
-              td {
-                padding: .5rem 0;
-                border-bottom: 1px solid #c6cdcf;
-
-                &:first-child {
-                  width: 70%;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                  max-width: 70px;
-                }
-
-                &:last-child {
-                  width: 100%;
-                  display: block;
-                  margin-left: -2px;
-                  font-weight: 500;
-                }
-              }
-
-              &:last-child {
-                td {
-                  border-bottom: none;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    }         
   }
 
   .admin-sidebar {
-    width: 324px;
-
-    .rewards-card {
-      margin-right: 2rem;
-
-      @media #{$mobile} {
-        margin-right: 0;
-      }
-    }
+    min-width: 324px;
 
     ul {
       list-style: none;
@@ -204,6 +121,26 @@
     
     @media #{$mobile} {
       width: 100%;
+    }
+
+    &__footer {
+      text-align: center;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    &__logos {
+      margin-top: 1rem;
+
+      img {
+        width: auto;
+        height: 24px;
+        margin-top: 1rem;
+        
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
     }
 
     &__link {

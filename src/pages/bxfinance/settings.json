@@ -175,6 +175,7 @@
     },
     "welcome": "Welcome, Edward",
     "dashboard_title": "Accounts Dashboard",
+    "dashboard_dropdown": "Things I Can Do",
     "sidebar": {
       "style": {
         "backgroundColor": "#fff",

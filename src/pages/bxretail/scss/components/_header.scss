@@ -123,7 +123,7 @@
       position: absolute;
       top: 100%;
       right: 0;
-      background-color: #456059;
+      background-color: #177de7;
       z-index: 10;
       padding: 12px;
       width: 170px;
@@ -211,17 +211,17 @@
 }
 
 .admin-header-nav {
-  background: #456059;
+  background: #177de7;
   padding-bottom: 1.5rem;
 
   @media #{$mobile} {
     display: none;
   }
 
-  .header-nav__item:first-child {
+  .header-nav__item:nth-child(2) {
     position: relative; 
     &::after {
-      @include triangle(15px, #456059, 'down') {
+      @include triangle(15px, #177de7, 'down') {
         left: 20%;
         bottom: -2.2rem;
       }
