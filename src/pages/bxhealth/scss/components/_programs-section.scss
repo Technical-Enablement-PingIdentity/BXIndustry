@@ -1,0 +1,56 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.programs-section {
+  font-family: $secondary-font;
+
+  .programs-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+
+    @media #{$tablet} {
+      padding: 3rem 8px;
+    }
+
+    @media #{$mobile} {
+      display: block;
+    }
+
+    &__item {
+      width: 33.33%;
+      padding: 0 16px;
+      margin-bottom: 32px;
+
+      @media #{$tablet} {
+        padding: 0 8px;
+        margin-bottom: 16px;
+      }
+
+      @media #{$mobile} {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .program-info-block {
+    @media #{$mobile} {
+      margin-bottom: 3rem;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+      width: 100%;
+      color: #000;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &__description {
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+@import '@Styles/common/mixins.scss';
+
+.alert-banner {
+    padding: 2rem 0;
+
+    &__message,
+    &__link {
+        font-size: 24px;
+    }
+    
+    &__link {
+        font-family: $secondary-font;
+        font-size: 20px;
+        margin-left: 1rem;
+        margin-right: 2rem;
+        font-weight: 300;
+        position: relative;
+
+        &::after {
+            @include triangle(6px, #fff, 'right') {
+                right: -20px;
+                top: 6px;
+            }
+        }
+    }
+}
