@@ -188,7 +188,7 @@
         }
 
         img {
-          width: 55px;
+          height: 55px;
         }
 
         &-title {
@@ -196,7 +196,7 @@
           font-weight: 700;
           font-size: 24px;
           text-align: center;
-          padding: 1rem 0;
+          padding: 1.5rem 0;
         }
 
         p {
@@ -206,7 +206,7 @@
         }
 
         button {
-          margin-top: 1rem;
+          margin-top: 2rem;
           width: 100%;
           max-width: 320px;
         }
@@ -215,7 +215,7 @@
   }
 
   .admin-sidebar {
-    width: 324px;
+    min-width: 324px;
 
     &__tile {
       font-family: $secondary-font;
