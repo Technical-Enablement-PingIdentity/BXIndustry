@@ -14,6 +14,7 @@ import { INSURANCE_ROUTES } from '@Pages/insurance/constants';
 import { NON_PROFIT_ROUTES } from '@Pages/non_profit/constants';
 import { BXFINANCE_ROUTES } from '@Pages/bxfinance/constants';
 import { BXRETAIL_ROUTES } from '@Pages/bxretail/constants';
+import { BXHEALTH_ROUTES } from '@Pages/bxhealth/constants';
 //vertical settings.json files
 import airlinesSettings from '@Pages/airlines/settings.json';
 import educationSettings from '@Pages/education/settings.json';
@@ -27,6 +28,7 @@ import pharmacySettings from '@Pages/pharmacy/settings.json';
 import realEstateSettings from '@Pages/real_estate/settings.json';
 import bxFinanceSettings from '@Pages/bxfinance/settings.json';
 import bxRetailSettings from '@Pages/bxretail/settings.json';
+import bxHealthSettings from '@Pages/bxhealth/settings.json';
 import './scss/index.scss';
 
 const VERTICAL_ROWS = [
@@ -113,6 +115,13 @@ const VERTICAL_ROWS = [
     homePageUrl: BXRETAIL_ROUTES.HOME,
     adminPageUrl: BXRETAIL_ROUTES.ADMIN,
     dialogExamplesUrl: BXRETAIL_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    Name: 'BXHealth',
+    logo: getImagePath('bxhealth', bxHealthSettings.common_images.dialog_logo),
+    homePageUrl: BXHEALTH_ROUTES.HOME,
+    adminPageUrl: BXHEALTH_ROUTES.ADMIN,
+    dialogExamplesUrl: BXHEALTH_ROUTES.DIALOG_EXAMPLES
   },
 ]
 
