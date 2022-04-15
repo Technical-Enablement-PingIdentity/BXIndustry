@@ -20,7 +20,7 @@ export const BxhealthHome = ({ images }) => {
 
   const handleSKButtonClick = (skData) => {
     return () => {
-      if (skData.policy_key && skData.api_key && skData.company_key) {
+      if (skData.policy_key) {
         authRef.current.openDialog(skData);
       }
     }
