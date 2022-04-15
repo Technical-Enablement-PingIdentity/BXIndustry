@@ -180,6 +180,7 @@
       },
       "links": {
         "style": {
+          "backgroundColor": "#163657",
           "color": "#fff",
           "fontWeight": 300,
           "&:hover": {

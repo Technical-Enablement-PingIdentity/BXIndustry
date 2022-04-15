@@ -98,6 +98,7 @@ const useStyles = makeStyles({
         },
       }
     },
+    '& .header-wrapper--admin .header-auth-actions__actions-wrapper': admin.navigation.links.style,
     '& .admin-header-nav': admin.navigation.style,
     '& .header-nav--admin .header-nav__item': admin.navigation.links.style,
     '& .telemed': telemed.style,

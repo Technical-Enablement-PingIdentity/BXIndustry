@@ -131,10 +131,26 @@
       }
 
       &__patient-links {
+        display: flex;
+
+        @media #{$mobile} {
+          flex-direction: column;
+          text-align: right;
+          margin-top: -28px;
+        }
+
         span {
           padding: 0 .5rem;
           &:not(:last-child) {
             border-right: 1px solid $primary;
+          }
+
+          @media #{$mobile} {
+            padding: 0;
+            &:not(:last-child) {
+              border-right: none;
+              padding-bottom: .5rem;
+            }
           }
         }
       }
@@ -283,6 +299,7 @@
       padding-left: 2.5rem;
       border-radius: 12px;
       position: relative;
+      cursor: pointer;
 
       &::before {
         @include triangle(4px, #000, 'down') {
