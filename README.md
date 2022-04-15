@@ -15,6 +15,7 @@ For this release, there are 12 verticals available in Glitch for you to remix:
 10. [Manufacturing](https://demo.bxindustry.org/manufacturing)
 11. [BXFinance](https://demo.bxindustry.org/bxfinance)
 12. [BXRetail](https://demo.bxindustry.org/bxretail)
+13. [BXHealth](https://demo.bxindustry.org/bxhealth)
 
 With BXIndustry, you can choose a vertical you would like to use, build your workflows and forms in DaVinci, and update the settings.json file to change text colors, text, images, configure buttons, and more! HTML templates are available for different modal forms for use in DaVinci (e.g., **src/components/AuthDialogExamples**).
 
@@ -60,6 +61,7 @@ The default vertical should be one value from the list:
 - real_estate
 - bxfinance
 - bxretail
+- bxhealth
 
 ## An (IMPORTANT!!) Note on Versioning
 
