@@ -15,7 +15,11 @@ export const RemixOnGlitchDialog = React.forwardRef((_, ref) => {
   const openDialog = () => {
     dialog.current.open();
     gaEvent('remix_on_glitch_clicked');
-    startSKFlowPolicy(process.env.REACT_APP_COMPANY_KEY, process.env.REACT_APP_REMIX_POLICY_KEY, process.env.REACT_APP_API_KEY);
+    startSKFlowPolicy(
+      process.env.REACT_APP_COMPANY_KEY, 
+      process.env.REACT_APP_REMIX_POLICY_KEY, 
+      process.env.REACT_APP_API_KEY,
+      {GlitchProject: process.env.REACT_APP_GLITCH_REMIX_PROJECT});
   }
 
   const closeDialog = () => {

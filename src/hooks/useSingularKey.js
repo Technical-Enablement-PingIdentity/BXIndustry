@@ -12,7 +12,7 @@ export function useSingularKey({ containerId }) {
   const [state, changeState] = React.useState(DEFAULT_STATE);
 
   //fetch data logic
-  const startSKFlowPolicy = React.useCallback(async (companyKey, policyKey, apiKey) => {
+  const startSKFlowPolicy = React.useCallback(async (companyKey, policyKey, apiKey, params) => {
     if (!policyKey) {
       return false;
     }
@@ -44,6 +44,10 @@ export function useSingularKey({ containerId }) {
         policyId: policyKey
       },
       useModal: false,
+    };
+
+    if (params) {
+      props.config.parameters = params;
     }
 
     const widgetContainer = document.getElementById(containerId);
