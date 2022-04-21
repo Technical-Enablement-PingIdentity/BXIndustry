@@ -9,9 +9,9 @@ export const REAL_ESTATE_URL = '/real_estate';
 export const FOOD_SERVICE_URL = '/food_service';
 export const INSURANCE_URL = '/insurance';
 export const NON_PROFIT_URL = '/non_profit';
-export const BXFINANCE_URL = '/bxfinance';
-export const BXRETAIL_URL = '/bxretail';
-export const BXHEALTH_URL = '/bxhealth';
+export const FINANCE_URL = '/finance';
+export const RETAIL_URL = '/retail';
+export const HEALTH_URL = '/health';
 export const VERTICAL_ROUTES = [
   {
     name: 'government',
@@ -64,18 +64,18 @@ export const VERTICAL_ROUTES = [
     url: NON_PROFIT_URL,
   }, 
   {
-    name: 'bxfinance',
-    displayName: 'BXFinance',
-    url: BXFINANCE_URL,
+    name: 'finance',
+    displayName: 'Finance',
+    url: FINANCE_URL,
   },
   {
-    name: 'bxretail',
-    displayName: 'BXRetail',
-    url: BXRETAIL_URL,
+    name: 'retail',
+    displayName: 'Retail',
+    url: RETAIL_URL,
   },
   {
-    name: 'bxhealth',
-    displayName: 'BXHealth',
-    url: BXHEALTH_URL,
+    name: 'health',
+    displayName: 'Health',
+    url: HEALTH_URL,
   },
 ];

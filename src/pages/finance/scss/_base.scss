@@ -1,0 +1,11 @@
+@import "./var";
+
+.finance {
+  font-family: $main-font;
+  font-weight: 400;
+
+  .finance-link {
+    cursor: pointer;
+    font-weight: 500;
+  }
+}

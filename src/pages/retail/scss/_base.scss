@@ -1,0 +1,11 @@
+@import "./var";
+
+.retail {
+  font-family: $main-font;
+  font-weight: 400;
+
+  .retail-link {
+    cursor: pointer;
+    font-weight: 500;
+  }
+}

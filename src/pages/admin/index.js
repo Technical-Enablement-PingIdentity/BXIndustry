@@ -12,9 +12,9 @@ import { REAL_ESTATE_ROUTES } from '@Pages/real_estate/constants';
 import { FOOD_SERVICE_ROUTES } from '@Pages/food_service/constants';
 import { INSURANCE_ROUTES } from '@Pages/insurance/constants';
 import { NON_PROFIT_ROUTES } from '@Pages/non_profit/constants';
-import { BXFINANCE_ROUTES } from '@Pages/bxfinance/constants';
-import { BXRETAIL_ROUTES } from '@Pages/bxretail/constants';
-import { BXHEALTH_ROUTES } from '@Pages/bxhealth/constants';
+import { FINANCE_ROUTES } from '@Pages/finance/constants';
+import { RETAIL_ROUTES } from '@Pages/retail/constants';
+import { HEALTH_ROUTES } from '@Pages/health/constants';
 //vertical settings.json files
 import airlinesSettings from '@Pages/airlines/settings.json';
 import educationSettings from '@Pages/education/settings.json';
@@ -26,9 +26,9 @@ import manufacturingSettings from '@Pages/manufacturing/settings.json';
 import nonProfitSettings from '@Pages/non_profit/settings.json';
 import pharmacySettings from '@Pages/pharmacy/settings.json';
 import realEstateSettings from '@Pages/real_estate/settings.json';
-import bxFinanceSettings from '@Pages/bxfinance/settings.json';
-import bxRetailSettings from '@Pages/bxretail/settings.json';
-import bxHealthSettings from '@Pages/bxhealth/settings.json';
+import financeSettings from '@Pages/finance/settings.json';
+import retailSettings from '@Pages/retail/settings.json';
+import healthSettings from '@Pages/health/settings.json';
 import './scss/index.scss';
 
 const VERTICAL_ROWS = [
@@ -104,24 +104,24 @@ const VERTICAL_ROWS = [
   },
   {
     Name: 'BXFinance',
-    logo: getImagePath('bxfinance', bxFinanceSettings.common_images.dialog_logo),
-    homePageUrl: BXFINANCE_ROUTES.HOME,
-    adminPageUrl: BXFINANCE_ROUTES.ADMIN,
-    dialogExamplesUrl: BXFINANCE_ROUTES.DIALOG_EXAMPLES
+    logo: getImagePath('finance', financeSettings.common_images.dialog_logo),
+    homePageUrl: FINANCE_ROUTES.HOME,
+    adminPageUrl: FINANCE_ROUTES.ADMIN,
+    dialogExamplesUrl: FINANCE_ROUTES.DIALOG_EXAMPLES
   },
   {
     Name: 'BXRetail',
-    logo: getImagePath('bxretail', bxRetailSettings.common_images.dialog_logo),
-    homePageUrl: BXRETAIL_ROUTES.HOME,
-    adminPageUrl: BXRETAIL_ROUTES.ADMIN,
-    dialogExamplesUrl: BXRETAIL_ROUTES.DIALOG_EXAMPLES
+    logo: getImagePath('retail', retailSettings.common_images.dialog_logo),
+    homePageUrl: RETAIL_ROUTES.HOME,
+    adminPageUrl: RETAIL_ROUTES.ADMIN,
+    dialogExamplesUrl: RETAIL_ROUTES.DIALOG_EXAMPLES
   },
   {
     Name: 'BXHealth',
-    logo: getImagePath('bxhealth', bxHealthSettings.common_images.dialog_logo),
-    homePageUrl: BXHEALTH_ROUTES.HOME,
-    adminPageUrl: BXHEALTH_ROUTES.ADMIN,
-    dialogExamplesUrl: BXHEALTH_ROUTES.DIALOG_EXAMPLES
+    logo: getImagePath('health', healthSettings.common_images.dialog_logo),
+    homePageUrl: HEALTH_ROUTES.HOME,
+    adminPageUrl: HEALTH_ROUTES.ADMIN,
+    dialogExamplesUrl: HEALTH_ROUTES.DIALOG_EXAMPLES
   },
 ]
 
