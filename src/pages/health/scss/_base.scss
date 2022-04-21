@@ -1,0 +1,11 @@
+@import "./var";
+
+.health {
+  font-family: $main-font;
+  font-weight: 400;
+
+  .health-link {
+    cursor: pointer;
+    font-weight: 500;
+  }
+}

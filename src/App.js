@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect, Link } from 'react-router-dom';
 import {
   Government, Manufacturing, Education, Pharmacy, Airlines, Hotels, RealEstate,
-  FoodService, Insurance, Admin, NonProfit, Bxfinance, Bxretail, Bxhealth
+  FoodService, Insurance, Admin, NonProfit, Finance, Retail, Health
 } from '@Pages';
 import {
   GOVERNMENT_URL, MANUFACTURING_URL, EDUCATION_URL, PHARMACY_URL, AIRLINES_URL,
   VERTICAL_ROUTES, HOTELS_URL, REAL_ESTATE_URL, FOOD_SERVICE_URL, INSURANCE_URL,
-  ADMIN_URL, NON_PROFIT_URL, BXFINANCE_URL, BXRETAIL_URL, BXHEALTH_URL
+  ADMIN_URL, NON_PROFIT_URL, FINANCE_URL, RETAIL_URL, HEALTH_URL
 } from '@Constants';
 import { SettingsIcon } from '@Components/icons'
 import { findInArrayBy, initGA, gaPageView } from '@Helpers';
@@ -37,9 +37,9 @@ function App() {
           <Route path={FOOD_SERVICE_URL} component={FoodService} />
           <Route path={INSURANCE_URL} component={Insurance} />
           <Route path={NON_PROFIT_URL} component={NonProfit} />
-          <Route path={BXFINANCE_URL} component={Bxfinance} />
-          <Route path={BXRETAIL_URL} component={Bxretail} />
-          <Route path={BXHEALTH_URL} component={Bxhealth} />
+          <Route path={FINANCE_URL} component={Finance} />
+          <Route path={RETAIL_URL} component={Retail} />
+          <Route path={HEALTH_URL} component={Health} />
           <Redirect from='*' to={activeVertical.url} />
           <Redirect exact from="/" to={activeVertical.url} />
         </Switch>
