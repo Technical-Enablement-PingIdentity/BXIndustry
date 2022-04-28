@@ -1,0 +1,40 @@
+@import "../var";
+
+.button {
+  padding: 6px 27px;
+  border: none;
+  background: $primary;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+
+  path {
+    transition: 0.2s;
+  }
+
+  &--outlined {
+    padding: 8px 24px;
+    background: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+
+  &--white {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &--md {
+    padding: 13px 26px;
+  }
+
+  &__icon {
+    margin-left: 9px;
+  }
+}

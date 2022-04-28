@@ -1,0 +1,39 @@
+@import "../var";
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: $primary;
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+
+  path {
+    transition: 0.2s;
+  }
+
+  &--outlined {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    border-color: #000;
+  }
+
+  &--white {
+    border-color: #fff;
+  }
+
+  &--primary {
+    border-color: $primary
+  }
+
+  &--md {
+    width: 52px;
+    height: 52px;
+  }
+}

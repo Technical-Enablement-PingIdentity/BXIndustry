@@ -1,0 +1,18 @@
+@import '@Styles/common/var.scss';
+
+.container {
+  max-width: 1232px;
+  margin: 0 auto;
+
+  @media #{$hd} {
+    max-width: 991px;
+  }
+
+  @media #{$tablet} {
+    max-width: 767px;
+  }
+  
+  &__col {
+    padding: 0 16px;
+  }
+}

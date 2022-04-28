@@ -1,0 +1,40 @@
+/** 
+Used to create a triangle, typically included in 
+::before or ::after, pass positioning in through @content
+
+Valid options for $direction are up, down, left or right
+
+Usage example:
+@include triangle (5px, #000, 'down') {
+    top: 1rem;
+    left: .5rem;
+}
+*/
+@mixin triangle($size, $color, $direction) {
+    clear: both;
+    content: "";
+    height: 0;
+    position: absolute;
+    width: 0;
+    @content;
+
+    @if ($direction == 'down') {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    } @else if ($direction == 'up') {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    } @else if ($direction == 'left') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    } @else if ($direction == 'right') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    } @else {
+        @error 'Invalid $direction ' + $direction + ', valid directions are up, down, left or right.'
+    }
+}

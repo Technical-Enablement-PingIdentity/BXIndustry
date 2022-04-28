@@ -1,0 +1,6 @@
+@import "./base";
+
+.admin-main-section {
+  @import "./components/container";
+  @import "./components/admin";
+}

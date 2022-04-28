@@ -1,0 +1,70 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.rewards-card {
+  color: black;
+  padding: 2rem;
+  border-radius: 13px;
+  height: 480px;
+  max-width: 350px;
+  position: relative;
+  overflow: hidden;
+
+  @media #{$tablet} {
+    height: 460px;
+  }
+
+  @media #{$mobile} {
+    width: 100%;
+    max-width: 400px;
+    height: 280px;
+    margin-top: 2rem;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 400px;
+    bottom: -5px;
+    right: -5px;
+    position: absolute;
+    pointer-events: none;
+
+    @media #{$mobile} {
+      width: 300px;
+      bottom: -100px;
+    }
+  }
+}
+
+&.finance-admin {
+  .rewards-card {
+    height: 340px;
+    
+    img {
+      bottom: -150px;
+      right: -100px;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      max-width: 100%;
+      
+      img {
+        bottom: -50px;
+        right: -100px;
+      }
+    }
+  }
+}

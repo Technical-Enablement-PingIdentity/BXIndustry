@@ -1,0 +1,143 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.footer {
+  padding: 30px 0 24px;
+  background: #201D1F;
+
+  @media #{$mobile} {
+    padding: 22px 0;
+   }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+
+  @media #{$mobile} {
+    display: block;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  @media #{$tablet} {
+    display: block;
+  }
+
+  @media #{$mobile} {
+    display: none;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    margin-right: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+}
+
+.footer-phone-numbers {
+  &__number {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #fff;
+
+    @media #{$mobile} {
+      text-align: center;
+    }
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: flex-end;
+
+  @media #{$mobile} {
+    display: block;
+    margin-bottom: 34px;
+  }
+
+  &__phone-numbers {
+    @media #{$mobile} {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.footer-contacts-socials {
+  margin-left: 60px;
+
+  @media #{$mobile} {
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+
+    @media #{$mobile} {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @media #{$mobile} {
+      display: flex;
+      justify-content: center;
+    }
+
+    .socials__item {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+
+.copyright-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$mobile} {
+    flex-direction: column;
+  }
+
+  &__glitch-btn {
+    background: #fff;
+    height: 33px;
+    margin-left: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &__text {
+    color: #817D73;
+    font-size: 12px;
+    line-height: 14px;
+
+    @media #{$mobile} {
+      margin-bottom: 10px;
+    }
+  }
+}

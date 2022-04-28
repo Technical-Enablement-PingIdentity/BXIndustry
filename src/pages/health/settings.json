@@ -1,0 +1,272 @@
+{
+  "title": "BXHealth",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.svg",
+    "dialog_logo": "logo.svg",
+    "admin_logo": "logo-white.svg"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#332842",
+      "color": "#fff",
+      "borderRadius": "25px",
+      "&:hover": {
+        "backgroundColor": "#163657"
+      },
+      "&:active": {
+        "backgroundColor": "#1a1522"
+      }
+    }
+  },
+  "links": {
+    "style": {
+      "color": "#163657",
+      "fontWeight": 500,
+      "&:hover": {
+        "fontWeight": 700
+      } 
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#163657"
+    },
+    "links": {
+      "style": {
+        "color": "#163657"
+      },
+      "items": [
+        "Patient Care",
+        "Health Plans",
+        "Education",
+        "Tools & Resources",
+        "Learning"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#163657",
+        "minWidth": "0",
+        "background": "none",
+        "fontWeight": 500,
+        "fontSize": "16px",
+        "&:hover": {
+          "backgroundColor": "none",
+          "fontWeight": 700
+        }
+      }
+    },
+    "banner": {
+      "image": "banner.jpg",
+      "title": "Advanced medicine. Personal care.",
+      "sub_title": "",
+      "button": "Learn More"
+    }
+  },
+  "telemed": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "title": "Anywhere, any time.",
+    "sub_title": "Try the new BXHealth online/telemed. 24/7 access for patients.",
+    "link": "Learn More",
+    "image": "home-hero-card.jpg"
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#1d1d1d"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff"
+      },
+      "links_left": [
+        "Our Company",
+        "Investor Relations",
+        "Corporate Citizenship",
+        "News",
+        "Locations"
+      ],
+      "links_right": [
+        "Privacy & Security",
+        "Terms of Use",
+        "Disclosures",
+        "Accessibility"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#332842",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_number": "800.543.2276",
+    "email": "help@bxhealth.com",
+    "chat": "Chat with Us",
+    "copyright": "© BXHealth, 2022"
+  },
+  "copyright": {
+    "style": {
+      "backgroundColor": "#1d1d1d"
+    }
+  },
+  "home_page": {
+    "alert_banner": {
+      "style": {
+        "backgroundColor": "#163657",
+        "color": "#fff"
+      },
+      "message": "Ready to get started? I'm a:",
+      "link": {
+        "style": {
+          "fontWeight": 300,
+          "color": "#fff",
+          "&:hover": {
+            "fontWeight": 400
+          }
+        }
+      },
+      "links": [
+        {
+          "text": "Patient",
+          "policy_key": "",
+          "company_key": "",
+          "api_key": ""
+        },
+        {
+          "text": "Caregiver"
+        }
+      ]
+    },
+    "programs_section": {
+      "links": { },
+      "items": [
+        {
+          "title": "Your account, our app.",
+          "description": "Access your acccount with myBXHealth app for your mobile or tablet device.",
+          "link": "Get the App"
+        },
+        {
+          "title": "Incredible people.",
+          "description": "BXHealth’s 8,000 professionals are working hard for you.",
+          "link": "Meet Our People"
+        },
+        {
+          "title": "Innovation at work.",
+          "description": "Pacing the industry with advances in healthcare and technology.",
+          "link": "Learn More"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "navigation": {
+      "style": {
+        "backgroundColor": "#163657",
+        "color": "#fff",
+        "&:hover": {
+          "color": "#fff"
+        }
+      },
+      "links": {
+        "style": {
+          "backgroundColor": "#163657",
+          "color": "#fff",
+          "fontWeight": 300,
+          "&:hover": {
+            "fontWeight": 500,
+            "color": "#fff"
+          }
+        },
+        "items": [
+          "Patient Care",
+          "Health Plans",
+          "Education",
+          "Tools & Resources",
+          "Learning"
+        ]
+      }
+    },
+    "welcome": "Welcome, Edward",
+    "dashboard_title": "Your BXHealth Homebase",
+    "dashboard_dropdown": "Things I Can Do",
+    "sidebar": {
+      "style": {
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "font-weight": 200
+      },
+      "links": [
+        "Coverage & Benefits",
+        "Claims & Accounts",
+        "Prescriptions & Pharmacies",
+        "Health Resources",
+        "My Settings",
+        "Messages"
+      ],
+      "tile": {
+        "image": "classes-events.png",
+        "title": "Classes & Events",
+        "description": "See and sign up for patient only opportunities",
+        "link": "Learn More"
+      }
+    },
+    "dashboard": {
+      "header": "My Account Info",
+      "subheader": "My BXHealth Patient Number:",
+      "patient_number": "123456",
+      "header_links": [
+        "Coverage Details",
+        "Provider Info"
+      ],
+      "quick_links": [
+        {
+          "text": "Find a Physician", 
+          "icon": "icon-sthescope.svg"
+        },
+        {
+          "text": "Family Records", 
+          "icon": "icon-person.svg"
+        },
+        {
+          "text": "Manage Your Claims", 
+          "icon": "icon-brief-case.svg"
+        },
+        {
+          "text": "More Resources", 
+          "icon": "icon-gear.svg"
+        }
+      ],
+      "action_tiles": [
+        {
+          "icon": "icon-virtual-visit.svg",
+          "title": "Schedule a Virtual Visit",
+          "description": "With AnyVirtualHealth, visit online or by phone.",
+          "button": "Book Appointment"
+        },
+        {
+          "icon": "icon-rx.svg",
+          "title": "RX Delivery",
+          "description": "Get your prescriptions filled or renewed via home delivery, for BXHealth patients.",
+          "button": "Learn More"
+        },
+        {
+          "icon": "icon-document.svg",
+          "title": "Symptom Checker",
+          "description": "Our online tools help you check common symptoms for everyday ailments.",
+          "button": "Try It"
+        }
+      ]
+    }
+  }
+}

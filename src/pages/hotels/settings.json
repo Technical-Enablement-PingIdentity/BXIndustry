@@ -1,0 +1,158 @@
+{
+  "title": "BXHotels",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#B49732",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#8A7427"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#B49732",
+      "color": "#B49732",
+      "&:hover": {
+        "background": "#B49732",
+        "color": "#fff"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#08152B"
+    },
+    "links": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#B49732"
+        }
+      },
+      "items": [
+        "Hotels",
+        "Destinations",
+        "Experiences",
+        "Offers",
+        "Loyalty Program"
+      ]
+    },
+    "icon_button": {
+      "style": {
+        "backgroundColor": "#B49732",
+        "color": "#08152A"
+      }
+    },
+    "auth_links": {
+      "style": {
+        "color": "#B49732",
+        "&:hover": {
+          "color": "#fff"
+        }
+      }
+    },
+    "auth_separator": {
+      "color": "#fff"
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#08152B"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#B49732"
+        }
+      },
+      "links": [
+        "Hotels",
+        "Customer Service",
+        "Corporate",
+        "Legal",
+        "Help"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#1B1B1B",
+        "backgroundColor": "#B49732",
+        "&:hover": {
+          "color": "#182237",
+          "backgroundColor": "#8A7427"
+        }
+      }
+    },
+    "copyright": {
+      "text": "© BXHotels, 2022.  All rights reserved.",
+      "style": {
+        "color": "#817D73"
+      }
+    }
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "style": {
+        "backgroundColor": "#08152B"
+      },
+      "title": {
+        "text": "Stay awhile, and relax!",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "subtitle": {
+        "text": "Book your visit to our hotel",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "button": {
+        "text": "Check Availability"
+      }
+    },
+    "offers_section": {
+      "title": "The very best, all for you",
+      "items": [
+        {
+          "image": "offer-1.jpg",
+          "title": "12 Hotels in the World's Best Places"
+        },
+        {
+          "image": "offer-2.jpg",
+          "title": "Rooms with a unique interior. From Standard to VIP suites"
+        },
+        {
+          "image": "offer-3.jpg",
+          "title": "Premium restaurants in our hotels"
+        },
+        {
+          "image": "offer-4.jpg",
+          "title": "Spa and lounge zones"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "John Lowson",
+    "title": "Welcome back Mr. Lowson",
+    "sidebar": {
+      "title": "BXHotels Loyalty Program"
+    },
+    "offer_section": {
+      "image": "admin-ad.jpg",
+      "title": "50% off spa packages",
+      "button": "Show details"
+    }
+  }
+}

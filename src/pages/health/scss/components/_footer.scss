@@ -1,0 +1,155 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.footer {
+  font-family: $secondary-font;
+  padding: 50px 0;
+  background: #0A1D39;
+
+  @media #{$mobile} {
+    padding: 22px 0;
+   }
+}
+
+.footer-info-block,
+.footer-content__menu,
+.footer-info {
+  width: 33.33%;
+
+  @media #{$mobile} {
+   width: 100%;
+  }
+}
+
+.footer-content {
+  display: flex;
+
+  @media #{$mobile} {
+    display: block;
+  }
+
+  &__menu {
+    margin-right: auto;
+
+    @media #{$mobile} {
+      text-align: center;
+    }
+  }
+}
+
+.footer-copyright {
+  color: #fff;
+  padding-right: 1rem;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 250px;
+  margin-top: 1.5rem;
+
+  @media #{$mobile} {
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 1rem 0 2rem;
+  }
+}
+
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media #{$mobile} {
+    margin-bottom: 2rem;
+  }
+  
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    color: #fff;
+    letter-spacing: 0.03em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    @media #{$mobile} {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-info {
+  display: flex;
+
+  @media #{$mobile} {
+    display: block;
+  }
+
+  &__side {
+    margin-left: 60px;
+
+    @media #{$mobile} {
+      margin: 0;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+.footer-info-block {
+  &__title {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    white-space: nowrap;
+
+    @media #{$mobile} {
+      text-align: center;
+    }
+  }
+
+  &__socials {
+    @media #{$mobile} {
+      display: flex;
+      justify-content: center;
+    }
+
+    .socials__item {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.copyright-section {
+  background: #fff;
+  padding: 22px 0;
+}
+
+.copyright-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$mobile} {
+    flex-direction: column;
+  }
+
+  &__glitch-btn {
+    background: #fff;
+    height: 33px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}

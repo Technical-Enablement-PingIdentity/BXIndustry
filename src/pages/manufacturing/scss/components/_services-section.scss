@@ -1,0 +1,114 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.services-section {
+  background: #EFF0F1;
+  padding: 70px 0 130px;
+
+  @media #{$tablet} {
+    padding: 52px 0 90px;
+  }
+
+  @media #{$mobile} {
+    padding: 52px 0 60px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media #{$tablet} {
+      font-size: 56px;
+      margin-bottom: 19px;
+    }
+
+    @media #{$mobile} {
+      font-size: 50px;
+      line-height: 64px;
+      margin-bottom: 34px;
+    }
+  }
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 33.33%;
+    padding: 0 20px;
+    margin-bottom: 40px;
+
+    @media #{$tablet} {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    @media #{$mobile} {
+      padding: 0;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.service-item-wrapper {
+  display: flex;
+
+  &__item {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.service-block {
+  background: $primary;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__body {
+    width: 100%;
+    margin-bottom: auto;
+    padding: 28px 26px;
+
+    @media #{$tablet} {
+      padding: 28px 28px 36px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__description {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__button {
+    width: 100%;
+    height: 60px;
+    display: block;
+    margin-top: auto;
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $secondary;
+    border: none;
+    border-top: 2px solid $secondary;
+    background: transparent;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+}

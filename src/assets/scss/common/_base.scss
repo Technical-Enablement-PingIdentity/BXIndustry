@@ -1,0 +1,112 @@
+@import '@Styles/common/var.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+p {
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a:focus {
+  outline: none;
+}
+
+input,textarea,button{
+  outline: none;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  border-radius: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+//rewrite singular key form styles
+.reactSingularKey_hftMainContainer > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  margin: 0 auto;
+
+  @media #{$mobile} {
+    width: 100%;
+  }
+}
+
+
+
+label {
+  height: auto!important;
+}
+
+.admin-sk-widget {
+  margin-bottom: 32px;
+}
+
+.app {
+  &__admin-link-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: 20;
+  }
+}
+
+.app-settings-link-wrapper {
+  background: #fff;
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+
+  &__link {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Make the footer stick to the bottom or below content
+.viewport-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  footer {
+    margin-top: auto;
+  }
+}
+
+.input-error-msg, .required-field {
+    color: red;
+}

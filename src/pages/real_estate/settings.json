@@ -1,0 +1,230 @@
+{
+  "title": "BXRealty",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#1F99D3",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#156388"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#1F99D3",
+      "color": "#1F99D3",
+      "&:hover": {
+        "background": "#1F99D3",
+        "color": "#fff"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "transparent"
+    },
+    "links": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#1F99D3"
+        }
+      },
+      "items": [
+        "About",
+        "Projects",
+        "For buyers",
+        "News",
+        "Contacts"
+      ]
+    },
+    "icon_button": {
+      "style": {
+        "backgroundColor": "#fff",
+        "color": "#366880"
+      }
+    },
+    "auth_buttons": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "&:hover": {
+          "background": "#fff",
+          "color": "#1E3E4D"
+        }
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#273039"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#1F99D3"
+        }
+      },
+      "links": [
+        "About",
+        "For Partners",
+        "Terms of use",
+        "Contacts"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#fff",
+        "borderColor": "#fff",
+        "&:hover": {
+          "backgroundColor": "#fff",
+          "color": "#273039"
+        }
+      }
+    },
+    "phone_number": "800 568 9678",
+    "copyright": "© BXRealty, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "title": "Your real estate developer",
+      "text_color": "#fff",
+      "banner_information": {
+        "box_style": {
+          "backgroundColor": "#fff",
+          "color": "#1F99D3"
+        },
+        "blocks": [
+          {
+            "value": "85",
+            "description": "homes built over 25 years"
+          },
+          {
+            "value": "27",
+            "description": "homes are being built now"
+          },
+          {
+            "value": "50",
+            "description": "apartment complexes"
+          },
+          {
+            "value": "35",
+            "description": "business centers"
+          }
+        ]
+      }
+    },
+    "objects_section": {
+      "title": "You May Have Seen…",
+      "items": [
+        {
+          "image": "offer-1.jpg",
+          "title": "Apartment Complex",
+          "name": "Junior",
+          "location": "Chicago"
+        },
+        {
+          "image": "offer-2.jpg",
+          "title": "Apartment Complex",
+          "name": "New Riverside",
+          "location": "Saint Paul"
+        },
+        {
+          "image": "offer-3.jpg",
+          "title": "Business Center",
+          "name": "Golden Phoenix",
+          "location": "Columbus"
+        },
+        {
+          "image": "offer-4.jpg",
+          "title": "Apartment Complex",
+          "name": "Silver Stone",
+          "location": "Chicago"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "header": {
+      "style": {
+        "backgroundColor": "#366880"
+      }
+    },
+    "title": "Find a Home",
+    "objects_section": [
+      {
+        "image": "offer-1.jpg",
+        "title": "Junior",
+        "subtitle": "Apartment complex",
+        "description": [
+          "Chicago, IL 60638, USA",
+          "35 apartments for rent",
+          "from $2300 per Month"
+        ],
+        "button": "All details"
+      },
+      {
+        "image": "offer-2.jpg",
+        "title": "New Riverside",
+        "subtitle": "Apartment complex",
+        "description": [
+          "Chicago, IL 60657, USA",
+          "12 apartments for rent",
+          "from $2750 per Month"
+        ],
+        "button": "All details"
+      },
+      {
+        "image": "offer-3.jpg",
+        "title": "FreeLife",
+        "subtitle": "Apartment complex",
+        "description": [
+          "Chicago, IL 60249, USA",
+          "6 apartments for rent",
+          "from $1900 per Month"
+        ],
+        "button": "All details"
+      },
+      {
+        "image": "offer-4.jpg",
+        "title": "Scotland",
+        "subtitle": "Apartment complex",
+        "description": [
+          "Chicago, IL 60622, USA",
+          "44 apartments for rent",
+          "from $3000 per Month"
+        ],
+        "button": "All details"
+      }
+    ],
+    "apartments_section": {
+      "title": "New riverside flats",
+      "items": [
+        {
+          "image": "offer-5.jpg",
+          "title": "New Riverside",
+          "description": "Studio Apartment",
+          "price": "$300,000",
+          "location": "Chicago"
+        },
+        {
+          "image": "offer-6.jpg",
+          "title": "New Riverside",
+          "description": "One-Bedroom Apartment",
+          "price": "$380,000",
+          "location": "Chicago"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "title": "BXManufacturing",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links_style": {
+      "color": "#0E264C",
+      "&:hover": {
+        "color": "#F1CA00"
+      }
+    },
+    "separator_color": "#F1CA00"
+  },
+  "button": {
+    "style": {
+      "backgroundColor": "#0E264C",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#F1CA00"
+      }
+    },
+    "secondary_style": {
+      "backgroundColor": "#F1CA00",
+      "color": "#2C3741",
+      "&:hover": {
+        "backgroundColor": "#D1B210"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#0E264C",
+      "color": "#0E264C",
+      "&:hover": {
+        "background": "#0E264C",
+        "color": "#fff"
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#2C3741"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#F1CA00"
+        }
+      },
+      "links": [
+        "About",
+        "Products",
+        "Services",
+        "Terms of use",
+        "Contacts"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#2C3741",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_number": "800 568 9678"
+  },
+  "copyright": {
+    "style": {
+      "backgroundColor": "#0E264C"
+    },
+    "info": {
+      "style": {
+        "color": "#fff"
+      },
+      "text": "© BXManufacturing, 2022.  All rights reserved."
+    }
+  },
+  "home_page": {
+    "header": {
+      "navigation": {
+        "style": {
+          "backgroundColor": "#0E264C"
+        },
+        "links": {
+          "style": {
+            "color": "#fff",
+            "&:hover": {
+              "color": "#F1CA00"
+            }
+          },
+          "items": [
+            "Who we are",
+            "Products",
+            "Services",
+            "Capabilities",
+            "Solutions",
+            "Resources",
+            "Press & news",
+            "Contacts"
+          ]
+        }
+      }
+    },
+    "banner": {
+      "image": "banner.jpg",
+      "title": {
+        "text": "Full-cycle manufacturing",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "description": {
+        "text": "Unmatched quality and efficiency at a low cost for all industries",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "button": {
+        "text": "book a consultation"
+      }
+    },
+    "services": {
+      "title": "Professional services",
+      "services_blocks": {
+        "styles": {
+          "wrapper": {
+            "backgroundColor": "#0E264C"
+          },
+          "title": {
+            "color": "#fff"
+          },
+          "description": {
+            "color": "#fff"
+          },
+          "button": {
+            "color": "#F1CA00",
+            "&:hover": {
+              "color": "#0E264C",
+              "backgroundColor": "#F1CA00"
+            }
+          }
+        },
+        "items": [
+          {
+            "title": "Manufacturing",
+            "description": "Experience the next level of operational excellence. Our diverse team of talented employees in 15 countries is driven by a commitment to innovation and customer-driven service.",
+            "button": "more"
+          },
+          {
+            "title": "Product Sales",
+            "description": "Times are changing. Change with them. Ensure a supply line that’s on time and quality guaranteed.",
+            "button": "more"
+          },
+          {
+            "title": "Consulting",
+            "description": "The best always look to get better. Let our operational experts help improve your workflow. We specialize in optimizing complex fabrication and supply line processes.",
+            "button": "more"
+          }
+        ]
+      }
+    }
+  },
+  "admin": {
+    "style": {
+      "backgroundColor": "#EFF0F1"
+    },
+    "user_name": "John Lawson",
+    "header": {
+      "navigation": {
+        "links": {
+          "items": [
+            "Main page",
+            "Products",
+            "Settings",
+            "Accesses",
+            "Security"
+          ]
+        }
+      }
+    },
+    "title": "My services",
+    "services": [
+      {
+        "image": "admin-block-1.jpg",
+        "title": "Quality Control Systems",
+        "description": "Ensure top quality for the products that are manufactured in your production line.",
+        "button": "Go to service"
+      },
+      {
+        "image": "admin-block-2.jpg",
+        "title": "Operational Set Up of Manufacturing",
+        "description": "Get set up with the ability to manufacture products quickly.",
+        "button": "Go to service"
+      },
+      {
+        "image": "admin-block-3.jpg",
+        "title": "Production Line Audit",
+        "description": "Get consulting and advice on how to make your production line more efficient and safer.",
+        "button": "Go to service"
+      }
+    ]
+  }
+}

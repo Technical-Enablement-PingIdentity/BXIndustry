@@ -1,0 +1,10 @@
+@import "./common/base";
+@import "./common/fonts";
+@import "./common/mixins";
+@import "./components/container";
+@import "./components/hamburger-menu";
+@import "./components/dialog";
+
+.widget-container {
+    @import "node_modules/bootstrap/scss/bootstrap-grid";
+}
