@@ -1,0 +1,175 @@
+{
+  "title": "BXSports",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "backgroundColor": "#9313E1",
+      "color": "#fff",
+      "&:hover": {
+        "backgroundColor": "#7A00C8"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#9313E1",
+      "color": "#9313E1",
+      "&:hover": {
+        "background": "#9313E1",
+        "color": "#fff"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#040F28",
+        "&:hover": {
+          "color": "#3378D2"
+        }
+      }
+    },
+    "search_icon": {
+      "style": {
+        "color": "#040F28"
+      }
+    },
+    "icon_button": {
+      "style": {
+        "borderColor": "#9313E1",
+        "color": "#9313E1"
+      }
+    },
+    "navigation": {
+      "style": {
+        "backgroundColor": "#1C3445"
+      },
+      "links": {
+        "style": {
+          "color": "#040F28",
+          "&:hover": {
+            "color": "#3378D2",
+            "fontWeight": 500
+          }
+        },
+        "items": [
+          "Competitions",
+          "News",
+          "Jobs & Careers",
+          "Finances"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#040F28"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#3378D2"
+        }
+      },
+      "links": [
+        "Competitions",
+        "News",
+        "Jobs & Careers",
+        "About us",
+        "Help and support"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#040F28",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_number": "800 568 9678",
+    "copyright": "© BXSports, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "title": {
+        "text": "BXSports to launch new online platform",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "description": {
+        "text": "Order your favorite products online, and we'll deliver them to your home",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "button": "Try for free"
+    },
+    "news_section": {
+      "title": "Sports news",
+      "button": "View all",
+      "articles": [
+        {
+          "image": "cyclist.jpg",
+          "title": "Tour de Romandie: Ethan Hayter wins prologue"
+        },
+        {
+          "image": "sprinter.jpg",
+          "title": "British sprinter who won the gold medal"
+        },
+        {
+          "image": "hockey.jpg",
+          "title": "The hockey podcast: The NHL's stretch run"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "title": "My personal area",
+    "title_button": {
+      "text": "Account settings",
+      "style": {
+        "color": "#1C3445",
+        "borderColor": "#1C3445",
+        "&:hover": {
+          "backgroundColor": "#1C3445",
+          "color": "#fff"
+        }
+      }
+    },
+    "dashboard": [
+      {
+        "title": "Insurance Policies",
+        "description": "Here you can find all your policies for all types of insurance"
+      },
+      {
+        "title": "Calculations",
+        "description": "Here you can see all saved calculations"
+      },
+      {
+        "title": "Insurance Claim Status",
+        "description": "Keep track of your insurance claim status"
+      }
+    ],
+    "info_block": {
+      "title": "Take care of your car",
+      "description": "50% discount on annual car insurance"
+    }
+  }
+}

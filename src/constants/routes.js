@@ -12,6 +12,7 @@ export const NON_PROFIT_URL = '/non_profit';
 export const FINANCE_URL = '/finance';
 export const RETAIL_URL = '/retail';
 export const HEALTH_URL = '/health';
+export const SPORTS_URL = '/sports';
 export const VERTICAL_ROUTES = [
   {
     name: 'government',
@@ -77,5 +78,10 @@ export const VERTICAL_ROUTES = [
     name: 'health',
     displayName: 'Health',
     url: HEALTH_URL,
+  },
+  {
+    name: 'sports',
+    displayName: 'Sports',
+    url: SPORTS_URL,
   },
 ];
