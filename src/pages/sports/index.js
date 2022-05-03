@@ -30,13 +30,6 @@ const homePageImages = {
   articles: home_page.news_section.articles.map(article => getImage(article.image)),
 }
 
-const adminImages = {
-  // dashboard: admin.dashboard.map(({ image }) => {
-  //   return getImage(image)
-  // }),
-  // info: getImage(admin.info_block.image),
-}
-
 //json styles binding
 const useStyles = makeStyles({
   sports: {
@@ -85,18 +78,9 @@ const useStyles = makeStyles({
     },
     '& .banner-content__title': home_page.banner.title.style,
     '& .banner-content__description': home_page.banner.description.style,
-    '& .admin-title-actions__btn': {
-      ...admin.title_button.style,
-      '& path': {
-        fill: admin.title_button.style.color
-      },
-      '&:hover': {
-        ...admin.title_button.style['&:hover'],
-        '& path': {
-          fill: admin.title_button.style['&:hover'].color,
-        },
-      }
-    },
+    '& .admin-info-block-content__description': admin.info_block.description.style,
+    '& .admin-dashboard__title': admin.subtitle.style,
+    '& .admin-dashboard__tile .tile__link': admin.dashboard.link.style
   },
 });
 
@@ -118,7 +102,7 @@ export function Sports() {
           <SportsHome images={{ ...logos, ...homePageImages }} />
         )} />
         <Route exact path={SPORTS_ROUTES.ADMIN} component={() => (
-          <SportsAdmin images={{ ...logos, ...adminImages }} />
+          <SportsAdmin images={{ ...logos }} />
         )} />
         <Route exact path={SPORTS_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

@@ -141,35 +141,70 @@
   },
   "admin": {
     "user_name": "Edward Lowson",
-    "title": "My personal area",
-    "title_button": {
-      "text": "Account settings",
+    "title": "Select your premium subscription",
+    "subtitle": {
+      "text": "Subscribe and watch BXSports",
       "style": {
-        "color": "#1C3445",
-        "borderColor": "#1C3445",
-        "&:hover": {
-          "backgroundColor": "#1C3445",
-          "color": "#fff"
-        }
+        "color": "#3378D2"
       }
     },
-    "dashboard": [
-      {
-        "title": "Insurance Policies",
-        "description": "Here you can find all your policies for all types of insurance"
+    "dashboard": {
+      "link": {
+        "style": {
+          "color": "#A6ACBA"
+        }
       },
-      {
-        "title": "Calculations",
-        "description": "Here you can see all saved calculations"
-      },
-      {
-        "title": "Insurance Claim Status",
-        "description": "Keep track of your insurance claim status"
-      }
-    ],
+      "tiles": [
+        {
+          "title": "BXSports Basic",
+          "card": {
+            "heading": "Price per month",
+            "cost": "$7.99",
+            "stars": 1,
+            "style": {
+              "background": "linear-gradient(90deg, #50B7F9 -4.66%, #3476BF 107.71%)"
+            }
+          },
+          "button": "Subscribe",
+          "link": "More about basic program"
+        },
+        {
+          "title": "BXSports Standard",
+          "card": {
+            "heading": "Price per month",
+            "cost": "$9.99",
+            "stars": 3,
+            "style": {
+              "background": "linear-gradient(87.52deg, #D02ECA 19.94%, #9313E1 91.21%, #13A3E1 169.26%)"
+            }
+          },
+          "button": "Subscribe",
+          "link": "More about standard program"
+        },
+        {
+          "title": "BXSports Premium",
+          "card": {
+            "heading": "Price per month",
+            "cost": "$12.99",
+            "stars": 5,
+            "style": {
+              "background": "linear-gradient(85.75deg, #D02ECA 6.65%, #9313E1 58.49%, #13A3E1 115.26%)"
+            }
+          },
+          "button": "Subscribe",
+          "link": "More about premium program"
+        }
+      ]
+    },
     "info_block": {
-      "title": "Take care of your car",
-      "description": "50% discount on annual car insurance"
+      "title": "Donate",
+      "description": {
+        "style": {
+          "color": "#A6ACBA"
+        },
+        "text": "Thanks to your financial participation, we remain independent from the state and have the opportunity to convey information to the rest, a wide audience"
+      },
+      "button": "Support us"
     }
   }
 }
