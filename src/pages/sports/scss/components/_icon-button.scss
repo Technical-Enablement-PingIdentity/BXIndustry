@@ -1,0 +1,45 @@
+@import "../var";
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 1px;
+  border: none;
+  background: $primary;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+
+  path {
+    transition: 0.2s;
+  }
+
+  &--secondary {
+    background: $secondary;
+    color: $primary;
+  }
+
+  &--outlined {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 30px;
+    border-color: #000;
+  }
+
+  &--white {
+    border-color: #fff;
+  }
+
+  &--blue {
+    border-color: #275FAB;
+  }
+
+  &--md {
+    width: 52px;
+    height: 52px;
+  }
+}

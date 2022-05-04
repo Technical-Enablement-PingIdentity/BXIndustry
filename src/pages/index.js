@@ -12,3 +12,4 @@ export * from './non_profit';
 export * from './finance';
 export * from './retail';
 export * from './health';
+export * from './sports';
