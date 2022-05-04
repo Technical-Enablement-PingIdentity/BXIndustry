@@ -9,18 +9,18 @@
   "sk_buttons": [],
   "button": {
     "style": {
-      "backgroundColor": "#9313E1",
+      "background": "linear-gradient(88.03deg, #EE271A 28.16%, #932209 105.25%)",
       "color": "#fff",
       "&:hover": {
-        "backgroundColor": "#7A00C8"
+        "background": "linear-gradient(88.38deg, #EE271A 55.18%, #932209 132.15%)"
       }
     },
     "outlined_style": {
       "background": "transparent",
-      "borderColor": "#9313E1",
-      "color": "#9313E1",
+      "borderColor": "#E12F17",
+      "color": "#E12F17",
       "&:hover": {
-        "background": "#9313E1",
+        "background": "#E12F17",
         "color": "#fff"
       }
     }
@@ -33,7 +33,7 @@
       "style": {
         "color": "#040F28",
         "&:hover": {
-          "color": "#3378D2"
+          "color": "#E12F17"
         }
       }
     },
@@ -44,8 +44,8 @@
     },
     "icon_button": {
       "style": {
-        "borderColor": "#9313E1",
-        "color": "#9313E1"
+        "borderColor": "#E12F17",
+        "color": "#E12F17"
       }
     },
     "navigation": {
@@ -56,7 +56,7 @@
         "style": {
           "color": "#040F28",
           "&:hover": {
-            "color": "#3378D2",
+            "color": "#E12F17",
             "fontWeight": 500
           }
         },
@@ -78,7 +78,7 @@
       "style": {
         "color": "#fff",
         "&:hover": {
-          "color": "#3378D2"
+          "color": "#E12F17"
         }
       },
       "links": [
@@ -145,7 +145,7 @@
     "subtitle": {
       "text": "Subscribe and watch BXSports",
       "style": {
-        "color": "#3378D2"
+        "color": "#E12F17"
       }
     },
     "dashboard": {
@@ -175,7 +175,7 @@
             "cost": "$9.99",
             "stars": 3,
             "style": {
-              "background": "linear-gradient(87.52deg, #D02ECA 19.94%, #9313E1 91.21%, #13A3E1 169.26%)"
+              "background": "linear-gradient(88.03deg, #EE271A 28.16%, #932209 105.25%)"
             }
           },
           "button": "Subscribe",
@@ -188,11 +188,29 @@
             "cost": "$12.99",
             "stars": 5,
             "style": {
-              "background": "linear-gradient(85.75deg, #D02ECA 6.65%, #9313E1 58.49%, #13A3E1 115.26%)"
+              "background": "linear-gradient(82.7deg, #EDCD23 0.09%, #DB901F 71.71%, #F11522 144.32%)"
             }
           },
           "button": "Subscribe",
           "link": "More about premium program"
+        }
+      ]
+    },
+    "news_section": {
+      "title": "Latest sports news",
+      "button": "View all",
+      "articles": [
+        {
+          "image": "boxing.png",
+          "title": "Boxing champions list 2022"
+        },
+        {
+          "image": "american-football.png",
+          "title": "NFL draft 2022: Best, worst and most surprising in 20 categories"
+        },
+        {
+          "image": "horse-racing.png",
+          "title": "Arc chief hits out at Jockey Club and BHA over plan to cull 300 races"
         }
       ]
     },

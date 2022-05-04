@@ -30,6 +30,10 @@ const homePageImages = {
   articles: home_page.news_section.articles.map(article => getImage(article.image)),
 }
 
+const adminImages = {
+  articles: admin.news_section.articles.map(article => getImage(article.image)),
+}
+
 //json styles binding
 const useStyles = makeStyles({
   sports: {
@@ -102,7 +106,7 @@ export function Sports() {
           <SportsHome images={{ ...logos, ...homePageImages }} />
         )} />
         <Route exact path={SPORTS_ROUTES.ADMIN} component={() => (
-          <SportsAdmin images={{ ...logos }} />
+          <SportsAdmin images={{ ...logos, ...adminImages }} />
         )} />
         <Route exact path={SPORTS_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

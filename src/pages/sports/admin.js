@@ -73,41 +73,63 @@ export const SportsAdmin = ({ images }) => {
               </div>
             </div>
           </div>
-          <section className="admin-dashboard">
-            <div className="container__col">
-              <h3 className="admin-dashboard__title">{admin.subtitle.text}</h3>
-              <div className="admin-dashboard__tiles">
-                  {admin.dashboard.tiles.map((tile, index) => (
-                    <div key={index} className="admin-dashboard__tile">
-                      <h3 className="tile__title">{tile.title}</h3>
-                      <div className="tile__card" style={tile.card.style}>
-                        <h5 className="tile__card__heading">{tile.card.heading}</h5>
-                        <h2 className="tile__card__cost">{tile.card.cost}</h2>
-                        <div className="tile__card__stars">
-                          {Array.from(Array(tile.card.stars), (_, i) => (
-                            <StarIcon key={i} />
-                          ))}
+          <div className="page-content">
+            <div className="page-content__main">
+              <section className="admin-dashboard">
+                <div className="container__col">
+                  <h3 className="admin-dashboard__title">{admin.subtitle.text}</h3>
+                  <div className="admin-dashboard__tiles">
+                      {admin.dashboard.tiles.map((tile, index) => (
+                        <div key={index} className="admin-dashboard__tile">
+                          <h3 className="tile__title">{tile.title}</h3>
+                          <div className="tile__card" style={tile.card.style}>
+                            <h5 className="tile__card__heading">{tile.card.heading}</h5>
+                            <h2 className="tile__card__cost">{tile.card.cost}</h2>
+                            <div className="tile__card__stars">
+                              {Array.from(Array(tile.card.stars), (_, i) => (
+                                <StarIcon key={i} />
+                              ))}
+                            </div>
+                          </div>
+                          <button type="button" className="button button--outlined">{tile.button}</button>
+                          <p className="tile__link">{tile.link}</p>
                         </div>
-                      </div>
-                      <button type="button" className="button button--outlined">{tile.button}</button>
-                      <p className="tile__link">{tile.link}</p>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </section>
-          <section className="admin-info-block-section">
-            <div className="container__col">
-              <div className="admin-info-block">
-                <div className="admin-info-block-content admin-info-block__content-side">
-                  <h1 className="admin-info-block-content__title">{info_block.title}</h1>
-                  <h2 className="admin-info-block-content__subtitle">{info_block.subtitle}</h2>
-                  <p className="admin-info-block-content__description">{info_block.description.text}</p>
-                  <button type="button" className="button button--md button--outlined">{info_block.button}</button>
+                      ))}
+                  </div>
                 </div>
-              </div>
+              </section>
+              <section className="admin-info-block-section">
+                <div className="container__col">
+                  <div className="admin-info-block">
+                    <div className="admin-info-block-content admin-info-block__content-side">
+                      <h1 className="admin-info-block-content__title">{info_block.title}</h1>
+                      <h2 className="admin-info-block-content__subtitle">{info_block.subtitle}</h2>
+                      <p className="admin-info-block-content__description">{info_block.description.text}</p>
+                      <button type="button" className="button button--md button--outlined">{info_block.button}</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
-          </section>
+            <div className="page-content__sidebar">
+              <section className="admin-news">
+                <div className="container">
+                  <div className="container__col">
+                    <div className="news-section__header">
+                      <h1 className="news-section__title">{admin.news_section.title}</h1>
+                    </div>
+                    <div className="news-section__articles content-block content-block--sidebar">
+                      {admin.news_section.articles.map((article, index) => (
+                        <div className="news-article content-block__tile" key={index} style={{backgroundImage: `url(${images.articles[index]})`}}>
+                          <div className="news-article__title">{article.title}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
         {!!sk_widget && (
           <div className="container">
