@@ -2,6 +2,9 @@ const { addBeforeLoader, loaderByName } = require("@craco/craco");
 const path = require(`path`);
 
 module.exports = {
+  eslint: {
+    enable: process.env.DISABLE_ESLINT || true,
+  },
   webpack: {
     alias: {
       '@': path.resolve(__dirname, 'src/'),
