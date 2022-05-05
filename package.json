@@ -24,8 +24,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start --max_old_space_size=400",
-    "start-no-limit": "craco start",
+    "start": "craco --max_old_space_size=425 start",
+    "start-dev": "craco start",
     "build": "craco build"
   },
   "eslintConfig": {
