@@ -24,7 +24,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start --max_old_space_size=450",
+    "start": "craco start --max_old_space_size=400",
     "start-no-limit": "craco start",
     "build": "craco build"
   },
