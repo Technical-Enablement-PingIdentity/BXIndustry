@@ -8,7 +8,7 @@ import settings from './settings.json';
 import { consolidateAdminSettings } from '@Helpers';
 
 const { header, admin } = settings;
-const { title, info_block } = admin;
+const { title } = admin;
 let { sk_widget } = admin;
 
 export const SportsAdmin = ({ images }) => {
@@ -66,79 +66,70 @@ export const SportsAdmin = ({ images }) => {
               <h1 className="admin-title-wrapper__title">{title}</h1>
               <div className="admin-title-actions admin-title-wrapper__actions">
                 {admin.sk_buttons?.length && admin.sk_buttons.map((skData, index) =>
-                  <button className="admin-title-actions__btn" key={index} onClick={handleSKButtonClick(skData)}>
+                  <button className="admin-title-actions__btn button button--outlined" key={index} onClick={handleSKButtonClick(skData)}>
                     {skData.text}
                   </button>
                 )}
               </div>
             </div>
           </div>
-          <div className="page-content">
-            <div className="page-content__main">
-              <section className="admin-dashboard">
-                <div className="container__col">
-                  <h3 className="admin-dashboard__title">{admin.subtitle.text}</h3>
-                  <div className="admin-dashboard__tiles">
-                      {admin.dashboard.tiles.map((tile, index) => (
-                        <div key={index} className="admin-dashboard__tile">
-                          <h3 className="tile__title">{tile.title}</h3>
-                          <div className="tile__card" style={tile.card.style}>
-                            <h5 className="tile__card__heading">{tile.card.heading}</h5>
-                            <h2 className="tile__card__cost">{tile.card.cost}</h2>
-                            <div className="tile__card__stars">
-                              {Array.from(Array(tile.card.stars), (_, i) => (
-                                <StarIcon key={i} />
-                              ))}
-                            </div>
-                          </div>
-                          <button type="button" className="button button--outlined">{tile.button}</button>
-                          <p className="tile__link">{tile.link}</p>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </section>
-              <section className="admin-info-block-section">
-                <div className="container__col">
-                  <div className="admin-info-block">
-                    <div className="admin-info-block-content admin-info-block__content-side">
-                      <h1 className="admin-info-block-content__title">{info_block.title}</h1>
-                      <h2 className="admin-info-block-content__subtitle">{info_block.subtitle}</h2>
-                      <p className="admin-info-block-content__description">{info_block.description.text}</p>
-                      <button type="button" className="button button--md button--outlined">{info_block.button}</button>
-                    </div>
-                  </div>
-                </div>
-              </section>
+          <section className="admin-dashboard">
+            <div className="admin-dashboard__highlight banner" style={{backgroundImage: `url(${images.jumbotron}`}}>
+              <div className="banner__gradient">
+                <h1 className="banner-content__title">{admin.dashboard.jumbotron.title}</h1>
+                <p className="banner-content__description">{admin.dashboard.jumbotron.description}</p>
+                <button className="button">{admin.dashboard.jumbotron.button}</button>
+              </div>
             </div>
-            <div className="page-content__sidebar">
-              <section className="admin-news">
-                <div className="container">
-                  <div className="container__col">
-                    <div className="news-section__header">
-                      <h1 className="news-section__title">{admin.news_section.title}</h1>
-                    </div>
-                    <div className="news-section__articles content-block content-block--sidebar">
-                      {admin.news_section.articles.map((article, index) => (
-                        <div className="news-article content-block__tile" key={index} style={{backgroundImage: `url(${images.articles[index]})`}}>
-                          <div className="news-article__title">{article.title}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-        {!!sk_widget && (
-          <div className="container">
             <div className="container__col">
-              <SKWidget companyKey={sk_widget.company_key} policyKey={sk_widget.policy_key}
-                apiKey={sk_widget.api_key} />
+              <h3 className="admin-dashboard__title">{admin.subtitle.text}</h3>
+              <div className="admin-dashboard__tiles">
+                  {admin.dashboard.tiles.map((tile, index) => (
+                    <div key={index} className="admin-dashboard__tile">
+                      <h3 className="tile__title">{tile.title}</h3>
+                      <div className="tile__card" style={tile.card.style}>
+                        <h5 className="tile__card__heading">{tile.card.heading}</h5>
+                        <h2 className="tile__card__cost">{tile.card.cost}</h2>
+                        <div className="tile__card__stars">
+                          {Array.from(Array(tile.card.stars), (_, i) => (
+                            <StarIcon key={i} />
+                          ))}
+                        </div>
+                      </div>
+                      <button type="button" className="button button--outlined" style={tile.button.style}>{tile.button.text}</button>
+                      <p className="tile__link">{tile.link}</p>
+                    </div>
+                  ))}
+              </div>
             </div>
-          </div>
-        )}
+          </section>
+          <section className="admin-news">
+            <div className="container">
+              <div className="container__col">
+                <div className="news-section__header">
+                  <h1 className="news-section__title">{admin.news_section.title}</h1>
+                </div>
+                <div className="news-section__articles content-block">
+                  {admin.news_section.articles.map((article, index) => (
+                    <div className="news-article content-block__tile" key={index} style={{backgroundImage: `url(${images.articles[index]})`}}>
+                      <div className="news-article__title">
+                        <h3>{article.title}</h3>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+          {!!sk_widget && (
+            <div className="container">
+              <div className="container__col">
+                <SKWidget companyKey={sk_widget.company_key} policyKey={sk_widget.policy_key}
+                  apiKey={sk_widget.api_key} />
+              </div>
+            </div>
+          )}
+        </div>
       </main>
       <Footer />
       <AuthDialog ref={authRef} logo={images.dialog_logo} />

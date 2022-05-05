@@ -32,6 +32,7 @@ const homePageImages = {
 
 const adminImages = {
   articles: admin.news_section.articles.map(article => getImage(article.image)),
+  jumbotron: getImage(admin.dashboard.jumbotron.image),
 }
 
 //json styles binding
@@ -82,7 +83,6 @@ const useStyles = makeStyles({
     },
     '& .banner-content__title': home_page.banner.title.style,
     '& .banner-content__description': home_page.banner.description.style,
-    '& .admin-info-block-content__description': admin.info_block.description.style,
     '& .admin-dashboard__title': admin.subtitle.style,
     '& .admin-dashboard__tile .tile__link': admin.dashboard.link.style
   },
