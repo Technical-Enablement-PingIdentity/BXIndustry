@@ -61,10 +61,10 @@
           }
         },
         "items": [
-          "Competitions",
-          "News",
-          "Jobs & Careers",
-          "Finances"
+          "Watch Live",
+          "Schedule",
+          "Originals",
+          "News"
         ]
       }
     }
@@ -82,11 +82,11 @@
         }
       },
       "links": [
-        "Competitions",
-        "News",
-        "Jobs & Careers",
-        "About us",
-        "Help and support"
+        "Sports",
+        "Subscriber Agreement",
+        "How to Stream",
+        "Privacy Policy",
+        "Help"
       ]
     },
     "button": {
@@ -107,13 +107,13 @@
     "banner": {
       "image": "banner.jpg",
       "title": {
-        "text": "BXSports to launch new online platform",
+        "text": "Watch sports whenever, wherever",
         "style": {
           "color": "#fff"
         }
       },
       "description": {
-        "text": "Order your favorite products online, and we'll deliver them to your home",
+        "text": "Enjoy real-time highlights and watch events from the top leagues and biggest tournaments around the world",
         "style": {
           "color": "#fff"
         }
@@ -121,7 +121,7 @@
       "button": "Try for free"
     },
     "news_section": {
-      "title": "Sports news",
+      "title": "Sports News",
       "button": "View all",
       "articles": [
         {
@@ -130,11 +130,11 @@
         },
         {
           "image": "sprinter.jpg",
-          "title": "British sprinter who won the gold medal"
+          "title": "Meet the British sprinter who won gold"
         },
         {
           "image": "hockey.jpg",
-          "title": "The hockey podcast: The NHL's stretch run"
+          "title": "The Puck Podcast: Chatting with the Cup Contenders"
         }
       ]
     }
