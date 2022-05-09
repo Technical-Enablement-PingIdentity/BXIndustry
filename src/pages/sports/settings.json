@@ -61,10 +61,10 @@
           }
         },
         "items": [
-          "Competitions",
-          "News",
-          "Jobs & Careers",
-          "Finances"
+          "Watch Live",
+          "Schedule",
+          "Originals",
+          "News"
         ]
       }
     }
@@ -82,11 +82,11 @@
         }
       },
       "links": [
-        "Competitions",
-        "News",
-        "Jobs & Careers",
-        "About us",
-        "Help and support"
+        "Sports",
+        "Subscriber Agreement",
+        "How to Stream",
+        "Privacy Policy",
+        "Help"
       ]
     },
     "button": {
@@ -107,13 +107,13 @@
     "banner": {
       "image": "banner.jpg",
       "title": {
-        "text": "BXSports to launch new online platform",
+        "text": "Watch sports whenever, wherever",
         "style": {
           "color": "#fff"
         }
       },
       "description": {
-        "text": "Order your favorite products online, and we'll deliver them to your home",
+        "text": "Enjoy real-time highlights and watch events from the top leagues and biggest tournaments around the world",
         "style": {
           "color": "#fff"
         }
@@ -121,7 +121,7 @@
       "button": "Try for free"
     },
     "news_section": {
-      "title": "Sports news",
+      "title": "Sports News",
       "button": "View all",
       "articles": [
         {
@@ -130,20 +130,20 @@
         },
         {
           "image": "sprinter.jpg",
-          "title": "British sprinter who won the gold medal"
+          "title": "Meet the British sprinter who won gold"
         },
         {
           "image": "hockey.jpg",
-          "title": "The hockey podcast: The NHL's stretch run"
+          "title": "The Puck Podcast: Chatting with the Cup Contenders"
         }
       ]
     }
   },
   "admin": {
     "user_name": "Edward Lowson",
-    "title": "Select your premium subscription",
+    "title": "Welcome, Edward",
     "subtitle": {
-      "text": "Subscribe and watch BXSports",
+      "text": "Upgrade your subscription to access exclusive BXSports content",
       "style": {
         "color": "#E12F17"
       }
@@ -154,32 +154,46 @@
           "color": "#A6ACBA"
         }
       },
+      "jumbotron": {
+        "image": "olympics.png",
+        "title": "What's on this Week",
+        "description": "Watch the best of The Masters, NASCAR, and find out who will compete in the NBA and NHL finals",
+        "button": "Watch Now"
+      },
       "tiles": [
         {
           "title": "BXSports Basic",
           "card": {
             "heading": "Price per month",
-            "cost": "$7.99",
+            "cost": "$0.00",
             "stars": 1,
             "style": {
               "background": "linear-gradient(90deg, #50B7F9 -4.66%, #3476BF 107.71%)"
             }
           },
-          "button": "Subscribe",
-          "link": "More about basic program"
+          "button": {
+            "text": "Subscribed",
+            "style": {
+              "backgroundColor": "#E12F17",
+              "color": "#fff"
+            }
+          },
+          "link": "Learn More"
         },
         {
           "title": "BXSports Standard",
           "card": {
             "heading": "Price per month",
-            "cost": "$9.99",
+            "cost": "$7.99",
             "stars": 3,
             "style": {
               "background": "linear-gradient(88.03deg, #EE271A 28.16%, #932209 105.25%)"
             }
           },
-          "button": "Subscribe",
-          "link": "More about standard program"
+          "button": {
+            "text": "Subscribe"
+          },
+          "link": "Learn More"
         },
         {
           "title": "BXSports Premium",
@@ -191,38 +205,30 @@
               "background": "linear-gradient(82.7deg, #EDCD23 0.09%, #DB901F 71.71%, #F11522 144.32%)"
             }
           },
-          "button": "Subscribe",
-          "link": "More about premium program"
+          "button": {
+            "text": "Subscribe"
+          },
+          "link": "Learn More"
         }
       ]
     },
     "news_section": {
-      "title": "Latest sports news",
+      "title": "Streaming Now",
       "button": "View all",
       "articles": [
         {
           "image": "boxing.png",
-          "title": "Boxing champions list 2022"
+          "title": "Watch Live: Boxing Championship 2022"
         },
         {
           "image": "american-football.png",
-          "title": "NFL draft 2022: Best, worst and most surprising in 20 categories"
+          "title": "Watch Live: NFL Draft 2022"
         },
         {
           "image": "horse-racing.png",
-          "title": "Arc chief hits out at Jockey Club and BHA over plan to cull 300 races"
+          "title": "Replay: Champion of Champions 2021"
         }
       ]
-    },
-    "info_block": {
-      "title": "Donate",
-      "description": {
-        "style": {
-          "color": "#A6ACBA"
-        },
-        "text": "Thanks to your financial participation, we remain independent from the state and have the opportunity to convey information to the rest, a wide audience"
-      },
-      "button": "Support us"
     }
   }
 }

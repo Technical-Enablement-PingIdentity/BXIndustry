@@ -22,7 +22,7 @@ export function Footer() {
                 {footer.phone_number}
               </span>
               <button className="footer-info-block__button">
-                Online support
+                Online Support
               </button>
             </div>
             <div className="footer-info-block footer-info__side">
