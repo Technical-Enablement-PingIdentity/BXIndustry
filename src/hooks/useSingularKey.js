@@ -53,9 +53,6 @@ export function useSingularKey({ containerId, dialog }) {
       dialog?.current?.close();
   }
 
-  // setTimeout(() => {
-  //   errorCallback();
-  // }, 10000);
 
     if (params) {
       props.config.parameters = params;
