@@ -10,7 +10,7 @@ const SK_WRAPPER_ID = "remix-widgetbox";
 // Dialog component for glitch remixing 
 export const RemixOnGlitchDialog = React.forwardRef((_, ref) => {
   const dialog = React.useRef(null);
-  const { startSKFlowPolicy } = useSingularKey({ containerId: SK_WRAPPER_ID });
+  const { startSKFlowPolicy } = useSingularKey({ containerId: SK_WRAPPER_ID, dialog: dialog });
 
   const openDialog = () => {
     dialog.current.open();
