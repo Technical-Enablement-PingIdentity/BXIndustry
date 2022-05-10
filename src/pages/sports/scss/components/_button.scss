@@ -1,0 +1,44 @@
+@import "../var";
+
+.button {
+  padding: 10px 32px;
+  border-radius: 30px;
+  border: none;
+  background: $primary;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &--secondary {
+    background: $secondary;
+    color: $primary;
+  }
+
+  &--outlined {
+    padding: 8px 32px;
+    background: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+
+  &--white {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &--md {
+    padding: 14px 32px;
+  }
+
+  &--with_icon {
+    padding: 8px 32px;
+    display: flex;
+    align-items: center;
+    height: 52px;
+  }
+}

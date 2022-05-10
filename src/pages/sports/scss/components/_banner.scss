@@ -1,0 +1,71 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.banner {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__gradient {
+    width: 100%;
+    background: linear-gradient(92.33deg, rgba(0, 3, 11, 0.8) 27.4%, rgba(0, 4, 14, 0) 82.41%);
+  }
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  min-height: 651px;
+  padding: 45px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media #{$mobile} {
+    min-height: 572px;
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+  } 
+
+  &__title {
+    margin-bottom: 1.5rem;
+    font-family: $secondary-font;
+    font-size: 64px;
+    line-height: 76px;
+    font-weight: 700;
+    max-width: 600px;
+    color: $secondary;
+
+    @media #{$tablet} {
+      font-size: 54px;
+      line-height: 76px;
+    }
+
+    @media #{$mobile} {
+      font-size: 32px;
+      line-height: 140%;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 1.5rem;
+    max-width: 542px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 36px;
+    color: $secondary;
+
+    @media #{$mobile} {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__button {
+    align-self: flex-start;
+  }
+}

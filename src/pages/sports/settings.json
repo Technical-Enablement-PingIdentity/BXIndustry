@@ -1,0 +1,234 @@
+{
+  "title": "BXSports",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "sk_buttons": [],
+  "button": {
+    "style": {
+      "background": "linear-gradient(88.03deg, #EE271A 28.16%, #932209 105.25%)",
+      "color": "#fff",
+      "&:hover": {
+        "background": "linear-gradient(88.38deg, #EE271A 55.18%, #932209 132.15%)"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#E12F17",
+      "color": "#E12F17",
+      "&:hover": {
+        "background": "#E12F17",
+        "color": "#fff"
+      }
+    }
+  },
+  "header": {
+    "style": {
+      "backgroundColor": "#fff"
+    },
+    "links": {
+      "style": {
+        "color": "#040F28",
+        "&:hover": {
+          "color": "#E12F17"
+        }
+      }
+    },
+    "search_icon": {
+      "style": {
+        "color": "#040F28"
+      }
+    },
+    "icon_button": {
+      "style": {
+        "borderColor": "#E12F17",
+        "color": "#E12F17"
+      }
+    },
+    "navigation": {
+      "style": {
+        "backgroundColor": "#1C3445"
+      },
+      "links": {
+        "style": {
+          "color": "#040F28",
+          "&:hover": {
+            "color": "#E12F17",
+            "fontWeight": 500
+          }
+        },
+        "items": [
+          "Watch Live",
+          "Schedule",
+          "Originals",
+          "News"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#040F28"
+    },
+    "text_color": "#fff",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#E12F17"
+        }
+      },
+      "links": [
+        "Sports",
+        "Subscriber Agreement",
+        "How to Stream",
+        "Privacy Policy",
+        "Help"
+      ]
+    },
+    "button": {
+      "style": {
+        "borderColor": "#fff",
+        "color": "#fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "color": "#040F28",
+          "backgroundColor": "#fff"
+        }
+      }
+    },
+    "phone_number": "800 568 9678",
+    "copyright": "© BXSports, 2022.  All rights reserved."
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.jpg",
+      "title": {
+        "text": "Watch sports whenever, wherever",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "description": {
+        "text": "Enjoy real-time highlights and watch events from the top leagues and biggest tournaments around the world",
+        "style": {
+          "color": "#fff"
+        }
+      },
+      "button": "Try for free"
+    },
+    "news_section": {
+      "title": "Sports News",
+      "button": "View all",
+      "articles": [
+        {
+          "image": "cyclist.jpg",
+          "title": "Tour de Romandie: Ethan Hayter wins prologue"
+        },
+        {
+          "image": "sprinter.jpg",
+          "title": "Meet the British sprinter who won gold"
+        },
+        {
+          "image": "hockey.jpg",
+          "title": "The Puck Podcast: Chatting with the Cup Contenders"
+        }
+      ]
+    }
+  },
+  "admin": {
+    "user_name": "Edward Lowson",
+    "title": "Welcome, Edward",
+    "subtitle": {
+      "text": "Upgrade your subscription to access exclusive BXSports content",
+      "style": {
+        "color": "#E12F17"
+      }
+    },
+    "dashboard": {
+      "link": {
+        "style": {
+          "color": "#A6ACBA"
+        }
+      },
+      "jumbotron": {
+        "image": "olympics.png",
+        "title": "What's on this Week",
+        "description": "Watch the best of The Masters, NASCAR, and find out who will compete in the NBA and NHL finals",
+        "button": "Watch Now"
+      },
+      "tiles": [
+        {
+          "title": "BXSports Basic",
+          "card": {
+            "heading": "Price per month",
+            "cost": "$0.00",
+            "stars": 1,
+            "style": {
+              "background": "linear-gradient(90deg, #50B7F9 -4.66%, #3476BF 107.71%)"
+            }
+          },
+          "button": {
+            "text": "Subscribed",
+            "style": {
+              "backgroundColor": "#E12F17",
+              "color": "#fff"
+            }
+          },
+          "link": "Learn More"
+        },
+        {
+          "title": "BXSports Standard",
+          "card": {
+            "heading": "Price per month",
+            "cost": "$7.99",
+            "stars": 3,
+            "style": {
+              "background": "linear-gradient(88.03deg, #EE271A 28.16%, #932209 105.25%)"
+            }
+          },
+          "button": {
+            "text": "Subscribe"
+          },
+          "link": "Learn More"
+        },
+        {
+          "title": "BXSports Premium",
+          "card": {
+            "heading": "Price per month",
+            "cost": "$12.99",
+            "stars": 5,
+            "style": {
+              "background": "linear-gradient(82.7deg, #EDCD23 0.09%, #DB901F 71.71%, #F11522 144.32%)"
+            }
+          },
+          "button": {
+            "text": "Subscribe"
+          },
+          "link": "Learn More"
+        }
+      ]
+    },
+    "news_section": {
+      "title": "Streaming Now",
+      "button": "View all",
+      "articles": [
+        {
+          "image": "boxing.png",
+          "title": "Watch Live: Boxing Championship 2022"
+        },
+        {
+          "image": "american-football.png",
+          "title": "Watch Live: NFL Draft 2022"
+        },
+        {
+          "image": "horse-racing.png",
+          "title": "Replay: Champion of Champions 2021"
+        }
+      ]
+    }
+  }
+}
