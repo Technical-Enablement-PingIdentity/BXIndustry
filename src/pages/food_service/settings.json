@@ -139,8 +139,8 @@
     }
   },
   "admin": {
-    "user_name": "Linda Lowson",
-    "title": "Hello Linda",
+    "user_name": "",
+    "title": "Welcome",
     "subtitle": "Choose a category below for increased cashback",
     "products_section": [
       {

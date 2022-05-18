@@ -167,7 +167,7 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
+    "user_name": "",
     "header": {
       "top_navigation": [
         "Services",
@@ -218,7 +218,7 @@
         }
       }
     },
-    "title": "Mr. Edward Lowson",
+    "title": "",
     "dashboard": [
       {
         "image": "dashboard-block-1.png",
