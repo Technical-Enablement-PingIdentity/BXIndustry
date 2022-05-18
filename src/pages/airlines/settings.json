@@ -147,9 +147,9 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
-    "subtitle": "Welcome on Board",
-    "title": "Mr. Edward Lowson",
+    "user_name": "",
+    "subtitle": "",
+    "title": "Welcome on Board",
     "sidebar": {
       "title": "Personal Offers",
       "items": [

@@ -140,8 +140,8 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
-    "title": "Welcome, Edward",
+    "user_name": "",
+    "title": "Welcome",
     "subtitle": {
       "text": "Upgrade your subscription to access exclusive BXSports content",
       "style": {

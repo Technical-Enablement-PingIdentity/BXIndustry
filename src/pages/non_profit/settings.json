@@ -123,8 +123,8 @@
     }
   },
   "admin": {
-    "user_name": "Alex Lowson",
-    "title": "Thanks Alex. We appreciate your contributions.",
+    "user_name": "",
+    "title": "Thank you. We appreciate your contributions.",
     "dashboard": [
       {
         "image": "money-icon.svg",

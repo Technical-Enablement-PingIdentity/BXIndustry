@@ -144,8 +144,8 @@
     }
   },
   "admin": {
-    "user_name": "John Lowson",
-    "title": "Welcome back Mr. Lowson",
+    "user_name": "",
+    "title": "Welcome Back",
     "sidebar": {
       "title": "BXHotels Loyalty Program"
     },

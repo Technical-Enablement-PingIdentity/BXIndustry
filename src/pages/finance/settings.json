@@ -148,7 +148,7 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
+    "user_name": "",
     "navigation": {
       "style": {
         "backgroundColor": "#456059"
@@ -173,7 +173,7 @@
         ]
       }
     },
-    "welcome": "Welcome, Edward",
+    "welcome": "Welcome",
     "dashboard_title": "Accounts Dashboard",
     "dashboard_dropdown": "Things I Can Do",
     "sidebar": {
