@@ -10,7 +10,7 @@ const CONTAINER_ID = 'widgetbox';
 export const AuthDialog = React.forwardRef(({ logo }, ref) => {
   const dialog = React.useRef(null);
 
-  const { startSKFlowPolicy } = useSingularKey({ containerId: CONTAINER_ID });
+  const { startSKFlowPolicy } = useSingularKey({ containerId: CONTAINER_ID, dialog: dialog });
 
   function closeDialog() {
     dialog.current.close();

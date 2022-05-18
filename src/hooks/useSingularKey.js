@@ -6,7 +6,7 @@ const DEFAULT_STATE = {
 }
 
 //Singular key hook which renders appropriate SK flow and displays it in widget box
-export function useSingularKey({ containerId }) {
+export function useSingularKey({ containerId, dialog }) {
 
   //object with "loading" key for prospect loading logic
   const [state, changeState] = React.useState(DEFAULT_STATE);
@@ -44,7 +44,15 @@ export function useSingularKey({ containerId }) {
         policyId: policyKey
       },
       useModal: false,
+      errorCallback
     };
+
+    function errorCallback(error) {
+      console.log(error);
+      window.singularkey.cleanup(document.getElementById(containerId));
+      dialog?.current?.close();
+  }
+
 
     if (params) {
       props.config.parameters = params;
@@ -59,7 +67,7 @@ export function useSingularKey({ containerId }) {
     changeState({ loading: false });
 
     return true;
-  }, [containerId]);
+  }, [containerId, dialog]);
 
   return {
     ...state,

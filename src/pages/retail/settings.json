@@ -4,7 +4,8 @@
     "favicon": "favicon.ico",
     "apple_touch_icon": "apple-touch-icon.png",
     "logo": "logo-white.svg",
-    "dialog_logo": "auth-dialog-logo.svg"
+    "dialog_logo": "auth-dialog-logo.svg",
+    "dialog_logo_background": "auth-dialog-logo.png"
   },
   "sk_buttons": [],
   "button": {
