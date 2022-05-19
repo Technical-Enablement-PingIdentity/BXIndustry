@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import {
   UserIcon, CalendarIcon, FoodIcon, PriceIcon, ErrorIcon, StarIcon
 } from './components/icons';
@@ -18,9 +18,9 @@ export const HotelsAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -67,11 +67,11 @@ export const HotelsAdmin = ({ images }) => {
           <div className="container__col">
             <div className="dashboard-section__header">
               <h1 className="dashboard-section__title">{admin.title}</h1>
-              {admin.sk_buttons?.length &&
+              {admin.dv_buttons?.length &&
                 <div>
-                  {admin.sk_buttons.map((skData, index) => 
+                  {admin.dv_buttons.map((dvData, index) => 
                     <button className="button" key={index}
-                      onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                      onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
                   )}
                 </div>
               }
@@ -182,11 +182,11 @@ export const HotelsAdmin = ({ images }) => {
           </div>
         </div>
       </section>
-      {admin.sk_widget && (
+      {admin.dv_widget && (
         <div className="container">
           <div className="container__col">
-            <SKWidget companyKey={admin.sk_widget.company_key} policyKey={admin.sk_widget.policy_key}
-              apiKey={admin.sk_widget.api_key} />
+            <DVWidget companyKey={admin.dv_widget.company_key} policyKey={admin.dv_widget.policy_key}
+              apiKey={admin.dv_widget.api_key} />
           </div>
         </div>
       )}

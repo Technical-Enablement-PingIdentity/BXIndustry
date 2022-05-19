@@ -106,10 +106,10 @@ For example:
 
 Settings files provide the ability to make quick changes for:
 - vertical colors, text and images
-- a list of auth buttons and DV flows for them ("sk_buttons")
+- a list of auth buttons and DV flows for them ("dv_buttons")
 
 ```sh
-  "sk_buttons": [
+  "dv_buttons": [
     {
       "text": "Log in",
       "policy_key": "",
@@ -148,12 +148,12 @@ The `common_images` section includes basic pictures for the specific vertical (f
 
 ## Admin Page
 
-To enable the Admin DV flow, the **global-settings.json** or **settings.json** (per vertical) file should have the following section. **NOTE** that there already exists an admin section, you just need to add the sk_widget property below:
+To enable the Admin DV flow, the **global-settings.json** or **settings.json** (per vertical) file should have the following section. **NOTE** that there already exists an admin section, you just need to add the dv_widget property below:
 
 ```sh
 {
   "admin": {
-    "sk_widget": {
+    "dv_widget": {
       "policy_key": "",
       "company_key": "",
       "api_key": ""
@@ -164,12 +164,12 @@ To enable the Admin DV flow, the **global-settings.json** or **settings.json** (
 
 Note: If `policy_key, company_key, api_key` are empty, appropriate values will be provided from the `.env` file.
 
-Similarly, sk_buttons are available on the admin page as well, it takes in an optional array of button configurations just like the home page for each vertical
+Similarly, dv_buttons are available on the admin page as well, it takes in an optional array of button configurations just like the home page for each vertical
 
 ```sh
 {
   "admin": {
-    "sk_buttons": [
+    "dv_buttons": [
       {
         "text": "",
         "policy_key": "",
@@ -191,7 +191,7 @@ The Admin section in the file includes the `"user_name"` key, which will be disp
 
 You can also enable your admin flow for all verticals by uncommenting the admin portion of globalSettings in src/global-settings.js. Make sure to set a value for REACT_APP_ADMIN_POLICY_KEY in .env if you do that as well!
 
-## SK Dialogs HTML Structure for Inheriting the Main Style of the Site
+## DV Dialogs HTML Structure for Inheriting the Main Style of the Site
 To visit the dialog examples page:
 - enter https://demo.bxindustry.org/admin
 - click on "Dialog Examples" link

@@ -7,7 +7,7 @@
     "dialog_logo": "logo.svg",
     "admin_logo": "logo-white.svg"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#332842",

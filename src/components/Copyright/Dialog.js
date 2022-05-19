@@ -1,21 +1,21 @@
 import React from 'react';
 import { Dialog } from '@Components';
 import { CloseIcon } from '@Components/icons';
-import { useSingularKey } from '@Hooks';
+import { useDaVinci } from '@Hooks';
 import { gaEvent } from '@Helpers';
 
 
-const SK_WRAPPER_ID = "remix-widgetbox";
+const DV_WRAPPER_ID = "remix-widgetbox";
 
 // Dialog component for glitch remixing 
 export const RemixOnGlitchDialog = React.forwardRef((_, ref) => {
   const dialog = React.useRef(null);
-  const { startSKFlowPolicy } = useSingularKey({ containerId: SK_WRAPPER_ID, dialog: dialog });
+  const { startDVFlowPolicy } = useDaVinci({ containerId: DV_WRAPPER_ID, dialog: dialog });
 
   const openDialog = () => {
     dialog.current.open();
     gaEvent('remix_on_glitch_clicked');
-    startSKFlowPolicy(
+    startDVFlowPolicy(
       process.env.REACT_APP_COMPANY_KEY, 
       process.env.REACT_APP_REMIX_POLICY_KEY, 
       process.env.REACT_APP_API_KEY,
@@ -40,7 +40,7 @@ export const RemixOnGlitchDialog = React.forwardRef((_, ref) => {
             <CloseIcon />
           </button>
           <div className="dialog-logo"></div>
-          <div className="dialog-content" id={SK_WRAPPER_ID}></div>
+          <div className="dialog-content" id={DV_WRAPPER_ID}></div>
         </div>
       </Dialog>
     </>

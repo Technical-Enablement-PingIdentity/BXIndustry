@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { UserIcon, BorderedAircraftIcon, CalendarIcon, TimeIcon } from './components/icons';
 import { AIRLINES_URL } from '@Constants';
 import { Footer } from './components';
@@ -13,9 +13,9 @@ export const AirlinesAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
   
@@ -70,14 +70,14 @@ export const AirlinesAdmin = ({ images }) => {
                 <p className="user-info__title">{admin.title}</p>
               </div>
               <div className="admin-user-info__side user-actions">
-                {admin.sk_buttons?.length &&
+                {admin.dv_buttons?.length &&
                   <div className="admin-user-buttons">
-                    {admin.sk_buttons.map((skData, index) => 
+                    {admin.dv_buttons.map((dvData, index) => 
                       <button className="button" key={index}
-                        onClick={handleSKButtonClick(skData)}>{skData.text}</button>)}
+                        onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>)}
                   </div>
                 }
-                {(!admin.sk_buttons?.length) && 
+                {(!admin.dv_buttons?.length) && 
                   <div className="user-info-label">
                     <div className="user-info-label__side">
                       <BorderedAircraftIcon className="user-info-label__icon" />
@@ -241,11 +241,11 @@ export const AirlinesAdmin = ({ images }) => {
           </div>
         </div>
       </section>
-      {admin.sk_widget && (
+      {admin.dv_widget && (
         <div className="container">
           <div className="container__col">
-            <SKWidget companyKey={admin.sk_widget.company_key} policyKey={admin.sk_widget.policy_key}
-              apiKey={admin.sk_widget.api_key} />
+            <DVWidget companyKey={admin.dv_widget.company_key} policyKey={admin.dv_widget.policy_key}
+              apiKey={admin.dv_widget.api_key} />
           </div>
         </div>
       )}
