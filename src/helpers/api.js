@@ -1,5 +1,5 @@
 /**
- * Helper generates SK url for getting SDK token 
+ * Helper generates DV url for getting SDK token 
  * @param {Object} obj with company_key propery, if it doesn't exist, .env variable will be provided
  * @returns {String} api url 
  */

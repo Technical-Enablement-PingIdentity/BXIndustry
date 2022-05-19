@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { UserIcon } from '@Components/icons';
 import { CartIcon, NotificationIcon } from './components/icons';
 import { RETAIL_URL } from '@Constants';
@@ -14,9 +14,9 @@ export const RetailAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -71,11 +71,11 @@ export const RetailAdmin = ({ images }) => {
         <div className="container">
           <div className="container__col admin-welcome__wrapper">
             <h1 className="admin-welcome__message">{admin.welcome}</h1>
-            {admin.sk_buttons?.length && 
+            {admin.dv_buttons?.length && 
               <div className="admin-welcome__buttons">
-                {admin.sk_buttons.map((skData, index) => 
+                {admin.dv_buttons.map((dvData, index) => 
                   <button className="button" key={index}
-                   onClick={handleSKButtonClick(skData)}>{skData.text}</button>)}
+                   onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>)}
               </div>
             }
           </div>
@@ -117,13 +117,13 @@ export const RetailAdmin = ({ images }) => {
                         {product.delivery_options.map((option, deliveryIndex) => 
                           <div key={deliveryIndex} className="product__delivery"><small>{option}</small></div>
                         )}
-                        {product.add_sk_flow &&
-                          <button className="button button--sm product__add" onClick={handleSKButtonClick(product.add_sk_flow)}>
+                        {product.add_dv_flow &&
+                          <button className="button button--sm product__add" onClick={handleDVButtonClick(product.add_dv_flow)}>
                             <CartIcon className="product__add--icon" />
-                            {product.add_sk_flow.text}
+                            {product.add_dv_flow.text}
                           </button>
                         }
-                        {!product.add_sk_flow &&
+                        {!product.add_dv_flow &&
                           <button className="button button--sm product__add"><CartIcon className="product__add--icon" /> Add</button>
                         }
                       </div>
@@ -149,11 +149,11 @@ export const RetailAdmin = ({ images }) => {
       <div className="admin-help-button">
         <button className="button">{admin.help_button}</button>
       </div>
-      {admin.sk_widget && (
+      {admin.dv_widget && (
         <div className="container">
           <div className="container__col">
-            <SKWidget companyKey={admin.sk_widget.company_key} policyKey={admin.sk_widget.policy_key}
-              apiKey={admin.sk_widget.api_key} />
+            <DVWidget companyKey={admin.dv_widget.company_key} policyKey={admin.dv_widget.policy_key}
+              apiKey={admin.dv_widget.api_key} />
           </div>
         </div>
       )}

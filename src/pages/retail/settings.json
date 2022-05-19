@@ -7,7 +7,7 @@
     "dialog_logo": "auth-dialog-logo.svg",
     "dialog_logo_background": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#177de7",

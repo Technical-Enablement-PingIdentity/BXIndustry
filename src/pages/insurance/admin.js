@@ -2,22 +2,22 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import { UserIcon, SettingsIcon } from './components/icons';
 import { Footer } from './components';
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { INSURANCE_URL } from '@Constants';
 import settings from './settings.json';
 import { consolidateAdminSettings } from '@Helpers';
 
 const { header, admin } = settings;
 const { title, title_button, dashboard, info_block } = admin;
-let { sk_widget } = admin;
+let { dv_widget } = admin;
 
 export const InsuranceAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -76,12 +76,12 @@ export const InsuranceAdmin = ({ images }) => {
             <div className="admin-title-wrapper admin-content__header">
               <h1 className="admin-title-wrapper__title">{title}</h1>
               <div className="admin-title-actions admin-title-wrapper__actions">
-                {admin.sk_buttons?.length && admin.sk_buttons.map((skData, index) =>
-                  <button className="admin-title-actions__btn" key={index} onClick={handleSKButtonClick(skData)}>
-                    {skData.text}
+                {admin.dv_buttons?.length && admin.dv_buttons.map((dvData, index) =>
+                  <button className="admin-title-actions__btn" key={index} onClick={handleDVButtonClick(dvData)}>
+                    {dvData.text}
                   </button>
                 )}
-                {!admin.sk_buttons?.length &&
+                {!admin.dv_buttons?.length &&
                   <button className="admin-title-actions__btn">
                     <SettingsIcon className="admin-title-actions__btn-icon" fill={title_button.style.color} />
                     {title_button.text}
@@ -117,11 +117,11 @@ export const InsuranceAdmin = ({ images }) => {
             </div>
           </section>
         </div>
-        {!!sk_widget && (
+        {!!dv_widget && (
           <div className="container">
             <div className="container__col">
-              <SKWidget companyKey={sk_widget.company_key} policyKey={sk_widget.policy_key}
-                apiKey={sk_widget.api_key} />
+              <DVWidget companyKey={dv_widget.company_key} policyKey={dv_widget.policy_key}
+                apiKey={dv_widget.api_key} />
             </div>
           </div>
         )}

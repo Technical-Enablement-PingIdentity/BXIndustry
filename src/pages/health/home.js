@@ -12,16 +12,16 @@ const { header, home_page } = settings;
 export const HealthHome = ({ images }) => {
   const authRef = useRef(null);
 
-  let { sk_buttons } = settings;
+  let { dv_buttons } = settings;
 
-  if (!sk_buttons || !sk_buttons.length) {
-    sk_buttons = globalSettings.sk_buttons;
+  if (!dv_buttons || !dv_buttons.length) {
+    dv_buttons = globalSettings.dv_buttons;
   }
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      if (skData.policy_key) {
-        authRef.current.openDialog(skData);
+      if (dvData.policy_key) {
+        authRef.current.openDialog(dvData);
       }
     }
   }
@@ -47,9 +47,9 @@ export const HealthHome = ({ images }) => {
                     <MessageIcon fill="#163657" className="message-icon" />
                   </div>
                   <div className="header-auth-actions__actions-wrapper">
-                    {sk_buttons.map((skData, index) => (
+                    {dv_buttons.map((dvData, index) => (
                       <button key={index} className="header-auth-actions__button"
-                        onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                        onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
                     ))}
                   </div>
                   <div className="header-auth-actions__circle-icon header-auth-actions__circle-icon--home_page">
@@ -85,7 +85,7 @@ export const HealthHome = ({ images }) => {
           <div className='container__col'>
             <span className='alert-banner__message'>{home_page.alert_banner.message}</span>
             {home_page.alert_banner.links.map((link, index) =>
-              <span key={index} className="health-link alert-banner__link" onClick={handleSKButtonClick(link)}>{link.text}</span>
+              <span key={index} className="health-link alert-banner__link" onClick={handleDVButtonClick(link)}>{link.text}</span>
             )}
           </div>
         </div>

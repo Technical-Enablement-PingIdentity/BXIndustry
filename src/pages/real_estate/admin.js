@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { SearchIcon, UserIcon } from '@Components/icons';
 import { LocationIcon, DocumentIcon } from './components/icons';
 import { REAL_ESTATE_URL } from '@Constants';
@@ -14,9 +14,9 @@ export const RealEstateAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -58,11 +58,11 @@ export const RealEstateAdmin = ({ images }) => {
           </div>
         </div>
       </header>
-      {admin.sk_buttons?.length && 
+      {admin.dv_buttons?.length && 
         <div className="container">
           <div className="container__col admin__actions">
-            {admin.sk_buttons.map((skData, index) => 
-              <button className="button" key={index} onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+            {admin.dv_buttons.map((dvData, index) => 
+              <button className="button" key={index} onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
             )}
           </div>
         </div>
@@ -147,12 +147,12 @@ export const RealEstateAdmin = ({ images }) => {
           </div>
         </div>
       </section>
-      <section className="sk-widget-section">
-        {!!admin.sk_widget && (
+      <section className="dv-widget-section">
+        {!!admin.dv_widget && (
           <div className="container">
             <div className="container__col">
-              <SKWidget companyKey={admin.sk_widget.company_key} policyKey={admin.sk_widget.policy_key}
-                apiKey={admin.sk_widget.api_key} />
+              <DVWidget companyKey={admin.dv_widget.company_key} policyKey={admin.dv_widget.policy_key}
+                apiKey={admin.dv_widget.api_key} />
             </div>
           </div>
         )}

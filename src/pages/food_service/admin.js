@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { CheckIcon } from '@Components/icons';
 import { CartIcon, FavoriteIcon, UserIcon, NotificationIcon, DocumentIcon } from './components/icons';
 import { FOOD_SERVICE_URL } from '@Constants';
@@ -14,9 +14,9 @@ export const FoodServiceAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -82,11 +82,11 @@ export const FoodServiceAdmin = ({ images }) => {
               <h1 className="admin-content__title">{admin.title}</h1>
               <p className="admin-content__description">{admin.subtitle}</p>
             </div>
-            {admin.sk_buttons?.length && 
+            {admin.dv_buttons?.length && 
               <div className="admin-content__actions">
-                {admin.sk_buttons.map((skData, index) => 
+                {admin.dv_buttons.map((dvData, index) => 
                   <button className="button" key={index}
-                    onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                    onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
                 )}
               </div>
             }
@@ -213,11 +213,11 @@ export const FoodServiceAdmin = ({ images }) => {
             </div>
           </section>
         </div>
-        {admin.sk_widget && (
+        {admin.dv_widget && (
           <div className="container">
             <div className="container__col">
-              <SKWidget companyKey={admin.sk_widget.company_key} policyKey={admin.sk_widget.policy_key}
-                apiKey={admin.sk_widget.api_key} />
+              <DVWidget companyKey={admin.dv_widget.company_key} policyKey={admin.dv_widget.policy_key}
+                apiKey={admin.dv_widget.api_key} />
             </div>
           </div>
         )}

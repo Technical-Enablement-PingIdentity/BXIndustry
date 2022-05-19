@@ -5,14 +5,14 @@ const DEFAULT_STATE = {
   loading: false,
 }
 
-//Singular key hook which renders appropriate SK flow and displays it in widget box
-export function useSingularKey({ containerId, dialog }) {
+//Singular key hook which renders appropriate DV flow and displays it in widget box
+export function useDaVinci({ containerId, dialog }) {
 
   //object with "loading" key for prospect loading logic
   const [state, changeState] = React.useState(DEFAULT_STATE);
 
   //fetch data logic
-  const startSKFlowPolicy = React.useCallback(async (companyKey, policyKey, apiKey, params) => {
+  const startDVFlowPolicy = React.useCallback(async (companyKey, policyKey, apiKey, params) => {
     if (!policyKey) {
       return false;
     }
@@ -71,6 +71,6 @@ export function useSingularKey({ containerId, dialog }) {
 
   return {
     ...state,
-    startSKFlowPolicy,
+    startDVFlowPolicy,
   }
 }
