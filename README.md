@@ -1,22 +1,22 @@
 # Introduction
 
-BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are 10 different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
+BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are 14 different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
  
 For this release, there are 14 verticals available in Glitch for you to remix:
-1. [Hotel](https://demo.bxindustry.org/hotels)
-2. [Airline](https://demo.bxindustry.org/airlines)
-3. [Government](https://demo.bxindustry.org/government)
-4. [Education](https://demo.bxindustry.org/education)
-5. [Food Service](https://demo.bxindustry.org/food_service)
-6. [Insurance](https://demo.bxindustry.org/insurance)
-7. [Volunteer](https://demo.bxindustry.org/non_profit)
-8. [Real Estate](https://demo.bxindustry.org/real_estate)
-9. [Pharmacy](https://demo.bxindustry.org/pharmacy)
-10. [Manufacturing](https://demo.bxindustry.org/manufacturing)
-11. [Finance](https://demo.bxindustry.org/finance)
+1. [Airline](https://demo.bxindustry.org/airlines)
+2. [Education](https://demo.bxindustry.org/education)
+3. [Finance](https://demo.bxindustry.org/finance)
+4. [Food Service](https://demo.bxindustry.org/food_service)
+5. [Government](https://demo.bxindustry.org/government)
+6. [Health](https://demo.bxindustry.org/health
+7. [Hotel](https://demo.bxindustry.org/hotels)
+8. [Insurance](https://demo.bxindustry.org/insurance)
+9. [Manufacturing](https://demo.bxindustry.org/manufacturing)
+10. [Pharmacy](https://demo.bxindustry.org/pharmacy)
+11. [Real Estate](https://demo.bxindustry.org/real_estate)
 12. [Retail](https://demo.bxindustry.org/retail)
-13. [Health](https://demo.bxindustry.org/health)
-14. [Sports](https://demo.bxindustry.org/sports)
+13. [Sports](https://demo.bxindustry.org/sports)
+14. [Volunteer](https://demo.bxindustry.org/non_profit)
 
 With BXIndustry, you can choose a vertical you would like to use, build your workflows and forms in DaVinci, and update the settings.json file to change text colors, text, images, configure buttons, and more! HTML templates are available for different modal forms for use in DaVinci (e.g., **src/components/AuthDialogExamples**).
 
@@ -61,17 +61,17 @@ The default vertical should be one value from the list:
 
 - airlines
 - education
+- finance
 - food_service
 - government
+- health
 - hotels
 - insurance
 - manufacturing
 - non_profit
 - pharmacy
 - real_estate
-- finance
 - retail
-- health
 - sports
 
 ## An (IMPORTANT!!) Note on Versioning
