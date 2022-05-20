@@ -2,7 +2,7 @@
 
 BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are 10 different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
  
-For this release, there are 12 verticals available in Glitch for you to remix:
+For this release, there are 14 verticals available in Glitch for you to remix:
 1. [Hotel](https://demo.bxindustry.org/hotels)
 2. [Airline](https://demo.bxindustry.org/airlines)
 3. [Government](https://demo.bxindustry.org/government)
@@ -41,12 +41,21 @@ REACT_APP_REMIX_POLICY_KEY=
 
 **Note: changing environment variables will cause your project to restart, this may take up to 5 minutes!**
 
+## Standard Flows (New with v2.5)
+
+BXIndustry now comes with standard authentication and registration flows!
+
+Registration will ask for a valid email and password. Successful completion of registration will register the user into our PingOne environment, enable MFA for the user, and enroll the provided email as an MFA device.
+
+Authentication will ask for the previously registered email and password, then prompt the user to complete MFA with the enrolled PingOne MFA email device. Successful completion of authentication will land the user on the /admin page of the vertical they are on. 
+
+
 ## Remixing
 
 To remix BXIndustry, scroll to the bottom of the page on any vertical and click the **Remix on Glitch** button.
 During the remixing process, you can modify all DaVinci API values or leave them as-is to use the default settings.
 
-**Note: The default DaVinci values are for placeholder workflows. They are not wired up for real registration or sign on.**
+**Note: The remix form will pre-populate the default authentication and registration flows. These values can be modified to import your own custom flows or leave them as-is to use the default settings.**
 
 The default vertical should be one value from the list:
 
