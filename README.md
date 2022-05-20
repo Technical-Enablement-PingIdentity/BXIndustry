@@ -8,7 +8,7 @@ For this release, there are 14 verticals available in Glitch for you to remix:
 3. [Finance](https://demo.bxindustry.org/finance)
 4. [Food Service](https://demo.bxindustry.org/food_service)
 5. [Government](https://demo.bxindustry.org/government)
-6. [Health](https://demo.bxindustry.org/health
+6. [Health](https://demo.bxindustry.org/health)
 7. [Hotel](https://demo.bxindustry.org/hotels)
 8. [Insurance](https://demo.bxindustry.org/insurance)
 9. [Manufacturing](https://demo.bxindustry.org/manufacturing)
