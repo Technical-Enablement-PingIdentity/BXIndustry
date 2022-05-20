@@ -12,15 +12,15 @@ const { header, banner, services } = home_page;
 export const ManufacturingHome = ({ images }) => {
   const authRef = useRef(null);
 
-  let { sk_buttons } = settings;
+  let { dv_buttons } = settings;
 
-  if (!sk_buttons || !sk_buttons.length) {
-    sk_buttons = globalSettings.sk_buttons;
+  if (!dv_buttons || !dv_buttons.length) {
+    dv_buttons = globalSettings.dv_buttons;
   }
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -41,11 +41,11 @@ export const ManufacturingHome = ({ images }) => {
               <div className="header__auth-actions">
                 <div className="header-auth-actions">
                   <div className="header-auth-actions__actions-wrapper">
-                    {sk_buttons.map((skData, index) => (
+                    {dv_buttons.map((dvData, index) => (
                       <Fragment key={index}>
                         <span className="header-auth-actions__separator"></span>
                         <button className="header-auth-actions__info header-auth-actions__info--action"
-                          onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                          onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
                       </Fragment>
                     ))}
                   </div>

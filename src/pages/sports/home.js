@@ -12,15 +12,15 @@ const { banner, news_section } = home_page;
 export const SportsHome = ({ images }) => {
   const authRef = useRef(null);
 
-  let { sk_buttons } = settings;
+  let { dv_buttons } = settings;
 
-  if (!sk_buttons || !sk_buttons.length) {
-    sk_buttons = globalSettings.sk_buttons;
+  if (!dv_buttons || !dv_buttons.length) {
+    dv_buttons = globalSettings.dv_buttons;
   }
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -50,9 +50,9 @@ export const SportsHome = ({ images }) => {
               <div className="header-auth-actions header__auth-actions">
                 <SearchIcon className="search-icon" />
                 <div className="header-auth-actions__actions-wrapper">
-                  {sk_buttons.map((skData, index) => (
+                  {dv_buttons.map((dvData, index) => (
                     <button key={index} className="header-auth-actions__button header-auth-actions__button--outlined"
-                      onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                      onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
                   ))}
                 </div>
                 <button className="header-auth-actions__icon-wrapper header-auth-actions__icon-wrapper--home_page">

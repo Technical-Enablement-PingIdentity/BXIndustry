@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#CF8C1A",
@@ -167,7 +167,7 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
+    "user_name": "",
     "header": {
       "top_navigation": [
         "Services",
@@ -218,7 +218,7 @@
         }
       }
     },
-    "title": "Mr. Edward Lowson",
+    "title": "",
     "dashboard": [
       {
         "image": "dashboard-block-1.png",

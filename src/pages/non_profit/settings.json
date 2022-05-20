@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#3C7157",
@@ -123,8 +123,8 @@
     }
   },
   "admin": {
-    "user_name": "Alex Lowson",
-    "title": "Thanks Alex. We appreciate your contributions.",
+    "user_name": "",
+    "title": "Thank you. We appreciate your contributions.",
     "dashboard": [
       {
         "image": "money-icon.svg",

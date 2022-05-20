@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSingularKey } from '@Hooks';
+import { useDaVinci } from '@Hooks';
 import { Dialog } from '@Components';
 import { CloseIcon } from '@Components/icons';
 import { gaEvent } from '@Helpers';
@@ -10,7 +10,7 @@ const CONTAINER_ID = 'widgetbox';
 export const AuthDialog = React.forwardRef(({ logo }, ref) => {
   const dialog = React.useRef(null);
 
-  const { startSKFlowPolicy } = useSingularKey({ containerId: CONTAINER_ID });
+  const { startDVFlowPolicy } = useDaVinci({ containerId: CONTAINER_ID, dialog: dialog });
 
   function closeDialog() {
     dialog.current.close();
@@ -22,7 +22,7 @@ export const AuthDialog = React.forwardRef(({ logo }, ref) => {
     
     dialog.current.open();
     
-    if (!(await startSKFlowPolicy(company_key, policy_key, api_key))) {
+    if (!(await startDVFlowPolicy(company_key, policy_key, api_key))) {
       dialog.current.close();
     }
   }

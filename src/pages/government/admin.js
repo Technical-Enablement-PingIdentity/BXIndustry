@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import classnames from 'classnames';
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { UserIcon, ArrowRight, PdfDocument } from './components/icons';
 import { ExpandArrow } from '@Components/icons';
 import { Copyright } from '@Components';
@@ -11,15 +11,15 @@ import { consolidateAdminSettings } from '@Helpers';
 
 const { admin, copyright } = settings;
 const { header, title, applications_section, footer, dashboard } = admin;
-let { sk_widget } = admin;
+let { dv_widget } = admin;
 
 export const GovernmentAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -83,10 +83,10 @@ export const GovernmentAdmin = ({ images }) => {
             <div className="admin-dashboard-title__container">
               <h1 className="admin-dashboard__title">{title}</h1>
               <div class="admin-dashboard__actions">
-                {admin.sk_buttons?.length && 
-                  admin.sk_buttons.map((skData, index) => 
+                {admin.dv_buttons?.length && 
+                  admin.dv_buttons.map((dvData, index) => 
                   <button className="button" key={index}
-                    onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                    onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
                 )}
               </div>
             </div>
@@ -146,11 +146,11 @@ export const GovernmentAdmin = ({ images }) => {
           </div>
         </div>
       </section>
-      {sk_widget && (
+      {dv_widget && (
         <div className="container">
           <div className="container__col">
-            <SKWidget companyKey={sk_widget.company_key} policyKey={sk_widget.policy_key}
-              apiKey={sk_widget.api_key} />
+            <DVWidget companyKey={dv_widget.company_key} policyKey={dv_widget.policy_key}
+              apiKey={dv_widget.api_key} />
           </div>
         </div>
       )}

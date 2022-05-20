@@ -4,9 +4,10 @@
     "favicon": "favicon.ico",
     "apple_touch_icon": "apple-touch-icon.png",
     "logo": "logo-white.svg",
-    "dialog_logo": "auth-dialog-logo.svg"
+    "dialog_logo": "auth-dialog-logo.svg",
+    "dialog_logo_background": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#177de7",
@@ -157,7 +158,7 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
+    "user_name": "",
     "navigation": {
       "style": {
         "backgroundColor": "#177de7"
@@ -182,7 +183,7 @@
         ]
       }
     },
-    "welcome": "Welcome, Edward",
+    "welcome": "Welcome",
     "help_button": "Chat with us",
     "sidebar": {
       "style": {

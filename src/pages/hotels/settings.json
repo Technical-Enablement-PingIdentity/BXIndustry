@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#B49732",
@@ -144,8 +144,8 @@
     }
   },
   "admin": {
-    "user_name": "John Lowson",
-    "title": "Welcome back Mr. Lowson",
+    "user_name": "",
+    "title": "Welcome Back",
     "sidebar": {
       "title": "BXHotels Loyalty Program"
     },

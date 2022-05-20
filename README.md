@@ -1,22 +1,22 @@
 # Introduction
 
-BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are 10 different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
+BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are 14 different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
  
-For this release, there are 12 verticals available in Glitch for you to remix:
-1. [Hotel](https://demo.bxindustry.org/hotels)
-2. [Airline](https://demo.bxindustry.org/airlines)
-3. [Government](https://demo.bxindustry.org/government)
-4. [Education](https://demo.bxindustry.org/education)
-5. [Food Service](https://demo.bxindustry.org/food_service)
-6. [Insurance](https://demo.bxindustry.org/insurance)
-7. [Volunteer](https://demo.bxindustry.org/non_profit)
-8. [Real Estate](https://demo.bxindustry.org/real_estate)
-9. [Pharmacy](https://demo.bxindustry.org/pharmacy)
-10. [Manufacturing](https://demo.bxindustry.org/manufacturing)
-11. [Finance](https://demo.bxindustry.org/finance)
+For this release, there are 14 verticals available in Glitch for you to remix:
+1. [Airline](https://demo.bxindustry.org/airlines)
+2. [Education](https://demo.bxindustry.org/education)
+3. [Finance](https://demo.bxindustry.org/finance)
+4. [Food Service](https://demo.bxindustry.org/food_service)
+5. [Government](https://demo.bxindustry.org/government)
+6. [Health](https://demo.bxindustry.org/health)
+7. [Hotel](https://demo.bxindustry.org/hotels)
+8. [Insurance](https://demo.bxindustry.org/insurance)
+9. [Manufacturing](https://demo.bxindustry.org/manufacturing)
+10. [Pharmacy](https://demo.bxindustry.org/pharmacy)
+11. [Real Estate](https://demo.bxindustry.org/real_estate)
 12. [Retail](https://demo.bxindustry.org/retail)
-13. [Health](https://demo.bxindustry.org/health)
-14. [Sports](https://demo.bxindustry.org/sports)
+13. [Sports](https://demo.bxindustry.org/sports)
+14. [Volunteer](https://demo.bxindustry.org/non_profit)
 
 With BXIndustry, you can choose a vertical you would like to use, build your workflows and forms in DaVinci, and update the settings.json file to change text colors, text, images, configure buttons, and more! HTML templates are available for different modal forms for use in DaVinci (e.g., **src/components/AuthDialogExamples**).
 
@@ -41,28 +41,37 @@ REACT_APP_REMIX_POLICY_KEY=
 
 **Note: changing environment variables will cause your project to restart, this may take up to 5 minutes!**
 
+## Standard Flows (New with v2.5)
+
+BXIndustry now comes with standard authentication and registration flows!
+
+Registration will ask for a valid email and password. Successful completion of registration will register the user into our PingOne environment, enable MFA for the user, and enroll the provided email as an MFA device.
+
+Authentication will ask for the previously registered email and password, then prompt the user to complete MFA with the enrolled PingOne MFA email device. Successful completion of authentication will land the user on the /admin page of the vertical they are on. 
+
+
 ## Remixing
 
 To remix BXIndustry, scroll to the bottom of the page on any vertical and click the **Remix on Glitch** button.
 During the remixing process, you can modify all DaVinci API values or leave them as-is to use the default settings.
 
-**Note: The default DaVinci values are for placeholder workflows. They are not wired up for real registration or sign on.**
+**Note: The remix form will pre-populate the default authentication and registration flows. These values can be modified to import your own custom flows or leave them as-is to use the default settings.**
 
 The default vertical should be one value from the list:
 
 - airlines
 - education
+- finance
 - food_service
 - government
+- health
 - hotels
 - insurance
 - manufacturing
 - non_profit
 - pharmacy
 - real_estate
-- finance
 - retail
-- health
 - sports
 
 ## An (IMPORTANT!!) Note on Versioning
@@ -106,10 +115,10 @@ For example:
 
 Settings files provide the ability to make quick changes for:
 - vertical colors, text and images
-- a list of auth buttons and DV flows for them ("sk_buttons")
+- a list of auth buttons and DV flows for them ("dv_buttons")
 
 ```sh
-  "sk_buttons": [
+  "dv_buttons": [
     {
       "text": "Log in",
       "policy_key": "",
@@ -148,12 +157,12 @@ The `common_images` section includes basic pictures for the specific vertical (f
 
 ## Admin Page
 
-To enable the Admin DV flow, the **global-settings.json** or **settings.json** (per vertical) file should have the following section. **NOTE** that there already exists an admin section, you just need to add the sk_widget property below:
+To enable the Admin DV flow, the **global-settings.json** or **settings.json** (per vertical) file should have the following section. **NOTE** that there already exists an admin section, you just need to add the dv_widget property below:
 
 ```sh
 {
   "admin": {
-    "sk_widget": {
+    "dv_widget": {
       "policy_key": "",
       "company_key": "",
       "api_key": ""
@@ -164,12 +173,12 @@ To enable the Admin DV flow, the **global-settings.json** or **settings.json** (
 
 Note: If `policy_key, company_key, api_key` are empty, appropriate values will be provided from the `.env` file.
 
-Similarly, sk_buttons are available on the admin page as well, it takes in an optional array of button configurations just like the home page for each vertical
+Similarly, dv_buttons are available on the admin page as well, it takes in an optional array of button configurations just like the home page for each vertical
 
 ```sh
 {
   "admin": {
-    "sk_buttons": [
+    "dv_buttons": [
       {
         "text": "",
         "policy_key": "",
@@ -191,7 +200,7 @@ The Admin section in the file includes the `"user_name"` key, which will be disp
 
 You can also enable your admin flow for all verticals by uncommenting the admin portion of globalSettings in src/global-settings.js. Make sure to set a value for REACT_APP_ADMIN_POLICY_KEY in .env if you do that as well!
 
-## SK Dialogs HTML Structure for Inheriting the Main Style of the Site
+## DV Dialogs HTML Structure for Inheriting the Main Style of the Site
 To visit the dialog examples page:
 - enter https://demo.bxindustry.org/admin
 - click on "Dialog Examples" link

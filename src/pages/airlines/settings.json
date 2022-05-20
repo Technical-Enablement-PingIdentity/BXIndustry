@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#C83E7D",
@@ -147,9 +147,9 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
-    "subtitle": "Welcome on Board",
-    "title": "Mr. Edward Lowson",
+    "user_name": "",
+    "subtitle": "",
+    "title": "Welcome on Board",
     "sidebar": {
       "title": "Personal Offers",
       "items": [

@@ -35,53 +35,11 @@ import './scss/index.scss';
 
 const VERTICAL_ROWS = [
   {
-    name: 'BXManufacturing',
-    logo: getImagePath('manufacturing', manufacturingSettings.common_images.dialog_logo),
-    homePageUrl: MANUFACTURING_ROUTES.HOME,
-    adminPageUrl: MANUFACTURING_ROUTES.ADMIN,
-    dialogExamplesUrl: MANUFACTURING_ROUTES.DIALOG_EXAMPLES
-  },
-  {
-    name: 'BXGovernment',
-    logo: getImagePath('government', governmentSettings.common_images.dialog_logo),
-    homePageUrl: GOVERNMENT_ROUTES.HOME,
-    adminPageUrl: GOVERNMENT_ROUTES.ADMIN,
-    dialogExamplesUrl: GOVERNMENT_ROUTES.DIALOG_EXAMPLES
-  },
-  {
-    name: 'BXEducation',
-    logo: getImagePath('education', educationSettings.common_images.dialog_logo),
-    homePageUrl: EDUCATION_ROUTES.HOME,
-    adminPageUrl: EDUCATION_ROUTES.ADMIN,
-    dialogExamplesUrl: EDUCATION_ROUTES.DIALOG_EXAMPLES
-  },
-  {
-    name: 'BXPharmacy',
-    logo: getImagePath('pharmacy', pharmacySettings.common_images.dialog_logo),
-    homePageUrl: PHARMACY_ROUTES.HOME,
-    adminPageUrl: PHARMACY_ROUTES.ADMIN,
-    dialogExamplesUrl: PHARMACY_ROUTES.DIALOG_EXAMPLES
-  },
-  {
     name: 'BXAirlines',
     logo: getImagePath('airlines', airlinesSettings.common_images.dialog_logo),
     homePageUrl: AIRLINES_ROUTES.HOME,
     adminPageUrl: AIRLINES_ROUTES.ADMIN,
     dialogExamplesUrl: AIRLINES_ROUTES.DIALOG_EXAMPLES
-  },
-  {
-    name: 'BXHotels',
-    logo: getImagePath('hotels', hotelsSettings.common_images.dialog_logo),
-    homePageUrl: HOTELS_ROUTES.HOME,
-    adminPageUrl: HOTELS_ROUTES.ADMIN,
-    dialogExamplesUrl: HOTELS_ROUTES.DIALOG_EXAMPLES
-  },
-  {
-    name: 'BXRealty',
-    logo: getImagePath('real_estate', realEstateSettings.common_images.dialog_logo),
-    homePageUrl: REAL_ESTATE_ROUTES.HOME,
-    adminPageUrl: REAL_ESTATE_ROUTES.ADMIN,
-    dialogExamplesUrl: REAL_ESTATE_ROUTES.DIALOG_EXAMPLES
   },
   {
     name: 'BXEats',
@@ -91,18 +49,11 @@ const VERTICAL_ROWS = [
     dialogExamplesUrl: FOOD_SERVICE_ROUTES.DIALOG_EXAMPLES
   },
   {
-    name: 'BXInsurance',
-    logo: getImagePath('insurance', insuranceSettings.common_images.dialog_logo),
-    homePageUrl: INSURANCE_ROUTES.HOME,
-    adminPageUrl: INSURANCE_ROUTES.ADMIN,
-    dialogExamplesUrl: INSURANCE_ROUTES.DIALOG_EXAMPLES
-  },
-  {
-    Name: 'BXVolunteer',
-    logo: getImagePath('non_profit', nonProfitSettings.common_images.dialog_logo),
-    homePageUrl: NON_PROFIT_ROUTES.HOME,
-    adminPageUrl: NON_PROFIT_ROUTES.ADMIN,
-    dialogExamplesUrl: NON_PROFIT_ROUTES.DIALOG_EXAMPLES
+    name: 'BXEducation',
+    logo: getImagePath('education', educationSettings.common_images.dialog_logo),
+    homePageUrl: EDUCATION_ROUTES.HOME,
+    adminPageUrl: EDUCATION_ROUTES.ADMIN,
+    dialogExamplesUrl: EDUCATION_ROUTES.DIALOG_EXAMPLES
   },
   {
     Name: 'BXFinance',
@@ -112,11 +63,11 @@ const VERTICAL_ROWS = [
     dialogExamplesUrl: FINANCE_ROUTES.DIALOG_EXAMPLES
   },
   {
-    Name: 'BXRetail',
-    logo: getImagePath('retail', retailSettings.common_images.dialog_logo),
-    homePageUrl: RETAIL_ROUTES.HOME,
-    adminPageUrl: RETAIL_ROUTES.ADMIN,
-    dialogExamplesUrl: RETAIL_ROUTES.DIALOG_EXAMPLES
+    name: 'BXGovernment',
+    logo: getImagePath('government', governmentSettings.common_images.dialog_logo),
+    homePageUrl: GOVERNMENT_ROUTES.HOME,
+    adminPageUrl: GOVERNMENT_ROUTES.ADMIN,
+    dialogExamplesUrl: GOVERNMENT_ROUTES.DIALOG_EXAMPLES
   },
   {
     Name: 'BXHealth',
@@ -126,11 +77,60 @@ const VERTICAL_ROWS = [
     dialogExamplesUrl: HEALTH_ROUTES.DIALOG_EXAMPLES
   },
   {
+    name: 'BXHotels',
+    logo: getImagePath('hotels', hotelsSettings.common_images.dialog_logo),
+    homePageUrl: HOTELS_ROUTES.HOME,
+    adminPageUrl: HOTELS_ROUTES.ADMIN,
+    dialogExamplesUrl: HOTELS_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    name: 'BXInsurance',
+    logo: getImagePath('insurance', insuranceSettings.common_images.dialog_logo),
+    homePageUrl: INSURANCE_ROUTES.HOME,
+    adminPageUrl: INSURANCE_ROUTES.ADMIN,
+    dialogExamplesUrl: INSURANCE_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    name: 'BXManufacturing',
+    logo: getImagePath('manufacturing', manufacturingSettings.common_images.dialog_logo),
+    homePageUrl: MANUFACTURING_ROUTES.HOME,
+    adminPageUrl: MANUFACTURING_ROUTES.ADMIN,
+    dialogExamplesUrl: MANUFACTURING_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    name: 'BXPharmacy',
+    logo: getImagePath('pharmacy', pharmacySettings.common_images.dialog_logo),
+    homePageUrl: PHARMACY_ROUTES.HOME,
+    adminPageUrl: PHARMACY_ROUTES.ADMIN,
+    dialogExamplesUrl: PHARMACY_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    name: 'BXRealty',
+    logo: getImagePath('real_estate', realEstateSettings.common_images.dialog_logo),
+    homePageUrl: REAL_ESTATE_ROUTES.HOME,
+    adminPageUrl: REAL_ESTATE_ROUTES.ADMIN,
+    dialogExamplesUrl: REAL_ESTATE_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    Name: 'BXRetail',
+    logo: getImagePath('retail', retailSettings.common_images.dialog_logo_background),
+    homePageUrl: RETAIL_ROUTES.HOME,
+    adminPageUrl: RETAIL_ROUTES.ADMIN,
+    dialogExamplesUrl: RETAIL_ROUTES.DIALOG_EXAMPLES
+  },
+  {
     Name: 'BXSports',
     logo: getImagePath('sports', sportsSettings.common_images.dialog_logo),
     homePageUrl: SPORTS_ROUTES.HOME,
     adminPageUrl: SPORTS_ROUTES.ADMIN,
     dialogExamplesUrl: SPORTS_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    Name: 'BXVolunteer',
+    logo: getImagePath('non_profit', nonProfitSettings.common_images.dialog_logo),
+    homePageUrl: NON_PROFIT_ROUTES.HOME,
+    adminPageUrl: NON_PROFIT_ROUTES.ADMIN,
+    dialogExamplesUrl: NON_PROFIT_ROUTES.DIALOG_EXAMPLES
   },
 ]
 

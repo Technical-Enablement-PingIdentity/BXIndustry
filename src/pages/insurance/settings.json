@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#F35811",
@@ -156,7 +156,7 @@
     ]
   },
   "admin": {
-    "user_name": "Edward Lowson",
+    "user_name": "",
     "title": "My personal area",
     "title_button": {
       "text": "Account settings",

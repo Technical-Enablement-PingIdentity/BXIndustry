@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "backgroundColor": "#27BD90",
@@ -124,7 +124,7 @@
     ]
   },
   "admin": {
-    "user_name": "Edward Lowson",
+    "user_name": "",
     "title": "Key Directions",
     "articles": [
       {

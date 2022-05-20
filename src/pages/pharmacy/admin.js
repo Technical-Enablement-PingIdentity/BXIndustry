@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { UserIcon } from '@Components/icons';
 import { ArrowIcon, PdfDocument } from './components/icons';
 import { PHARMACY_URL } from '@Constants';
@@ -14,9 +14,9 @@ export const PharmacyAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -59,11 +59,11 @@ export const PharmacyAdmin = ({ images }) => {
         </div>
       </header>
       <section className="admin">
-        {admin.sk_buttons?.length &&
+        {admin.dv_buttons?.length &&
           <div className="container admin__actions">
             <div className="container__col">
-              {admin.sk_buttons.map((skData, index) => 
-                <button className="button" key={index} onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+              {admin.dv_buttons.map((dvData, index) => 
+                <button className="button" key={index} onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
               )}
             </div>
           </div>
@@ -113,11 +113,11 @@ export const PharmacyAdmin = ({ images }) => {
             </div>
           </div>
         </div>
-        {!!admin.sk_widget && (
+        {!!admin.dv_widget && (
           <div className="container">
             <div className="container__col">
-              <SKWidget companyKey={admin.sk_widget.company_key} policyKey={admin.sk_widget.policy_key}
-                apiKey={admin.sk_widget.api_key} />
+              <DVWidget companyKey={admin.dv_widget.company_key} policyKey={admin.dv_widget.policy_key}
+                apiKey={admin.dv_widget.api_key} />
             </div>
           </div>
         )}

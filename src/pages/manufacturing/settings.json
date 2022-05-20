@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "header": {
     "style": {
       "backgroundColor": "#fff"
@@ -177,7 +177,7 @@
     "style": {
       "backgroundColor": "#EFF0F1"
     },
-    "user_name": "John Lawson",
+    "user_name": "",
     "header": {
       "navigation": {
         "links": {

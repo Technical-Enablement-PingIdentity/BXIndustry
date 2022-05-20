@@ -10,15 +10,15 @@ const { header, home_page } = settings;
 export const HotelsHome = ({ images }) => {
   const authRef = useRef(null);
 
-  let { sk_buttons } = settings;
+  let { dv_buttons } = settings;
 
-  if (!sk_buttons || !sk_buttons.length) {
-    sk_buttons = globalSettings.sk_buttons;
+  if (!dv_buttons || !dv_buttons.length) {
+    dv_buttons = globalSettings.dv_buttons;
   }
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -47,10 +47,10 @@ export const HotelsHome = ({ images }) => {
               </nav>
               <div className="header-auth-actions header__actions">
                 <div className="header-auth-actions__actions-wrapper">
-                  {sk_buttons.map((skData, index) => (
+                  {dv_buttons.map((dvData, index) => (
                     <Fragment key={index}>
                       <button className="header-auth-actions__button"
-                        onClick={handleSKButtonClick(skData)}>{skData.text}</button>
+                        onClick={handleDVButtonClick(dvData)}>{dvData.text}</button>
                       <div className="header-auth-actions__line"></div>
                     </Fragment>
                   ))}

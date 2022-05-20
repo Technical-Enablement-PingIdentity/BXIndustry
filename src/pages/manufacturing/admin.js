@@ -2,21 +2,21 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import { UserIcon } from './components/icons';
 import { Footer } from './components';
-import { AuthDialog, SKWidget } from '@Components';
+import { AuthDialog, DVWidget } from '@Components';
 import { MANUFACTURING_URL } from '@Constants';
 import settings from './settings.json';
 import { consolidateAdminSettings } from '@Helpers';
 
 const { admin } = settings;
-const { header, user_name, title, services, sk_widget } = admin;
+const { header, user_name, title, services, dv_widget } = admin;
 
 export const ManufacturingAdmin = ({ images }) => {
   const authRef = useRef(null);
   consolidateAdminSettings(admin);
 
-  const handleSKButtonClick = (skData) => {
+  const handleDVButtonClick = (dvData) => {
     return () => {
-      authRef.current.openDialog(skData);
+      authRef.current.openDialog(dvData);
     }
   }
 
@@ -61,13 +61,13 @@ export const ManufacturingAdmin = ({ images }) => {
             <div className="admin-title-wrapper admin-content__header">
               <h1 className="admin-title-wrapper__title">{title}</h1>
               <div className="admin-title-actions admin-title-wrapper__actions">
-                {admin.sk_buttons?.length && admin.sk_buttons.map((skData, index) =>
+                {admin.dv_buttons?.length && admin.dv_buttons.map((dvData, index) =>
                   <button className="admin-title-actions__btn button button--outlined" key={index}
-                    onClick={handleSKButtonClick(skData)}>
-                    {skData.text}
+                    onClick={handleDVButtonClick(dvData)}>
+                    {dvData.text}
                   </button>
                 )}
-                {!admin.sk_buttons?.length &&
+                {!admin.dv_buttons?.length &&
                   <>
                     <button className="admin-title-actions__btn button button--outlined">
                       Factory information
@@ -97,11 +97,11 @@ export const ManufacturingAdmin = ({ images }) => {
             </div>
           </div>
         </div>
-        {!!sk_widget && (
+        {!!dv_widget && (
           <div className="container">
             <div className="container__col">
-              <SKWidget companyKey={sk_widget.company_key} policyKey={sk_widget.policy_key}
-                apiKey={sk_widget.api_key} />
+              <DVWidget companyKey={dv_widget.company_key} policyKey={dv_widget.policy_key}
+                apiKey={dv_widget.api_key} />
             </div>
           </div>
         )}

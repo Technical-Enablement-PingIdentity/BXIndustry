@@ -6,7 +6,7 @@
     "logo": "logo.png",
     "dialog_logo": "auth-dialog-logo.png"
   },
-  "sk_buttons": [],
+  "dv_buttons": [],
   "button": {
     "style": {
       "background": "linear-gradient(88.03deg, #EE271A 28.16%, #932209 105.25%)",
@@ -140,8 +140,8 @@
     }
   },
   "admin": {
-    "user_name": "Edward Lowson",
-    "title": "Welcome, Edward",
+    "user_name": "",
+    "title": "Welcome",
     "subtitle": {
       "text": "Upgrade your subscription to access exclusive BXSports content",
       "style": {

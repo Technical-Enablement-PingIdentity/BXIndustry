@@ -87,6 +87,30 @@
     }
   }
 
+
+  &__resend-button {
+    width: 279px;
+    display: block;
+    margin: 0 auto 10px auto;
+    background: none ;
+    border: none;
+    padding: 0;
+
+
+    @media #{$mobile} {
+      width: 100%;
+      max-width: 279px;
+    }
+
+    &--mb_5 {
+      margin-bottom: 120px;
+
+      @media #{$mobile} {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
   &__socials-block {
     margin-bottom: 35px;
   }
@@ -169,6 +193,13 @@
     font-size: 16px;
     line-height: 24px;
     color: #192130;
+  }
+
+  &__device {
+    background: none;
+    margin: 0px auto 15px auto;
+    width: 75%;
+    padding: 30px 53px;
   }
 }
 
