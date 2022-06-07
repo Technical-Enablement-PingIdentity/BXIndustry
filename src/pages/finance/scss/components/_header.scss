@@ -59,7 +59,7 @@
       height: 700px;
     }
 
-    &--admin {
+    &--dashboard {
       height: initial;
       @media #{$mobile} {
         border-bottom: 1px solid #DDE6FD;
@@ -93,7 +93,7 @@
     transition: 0.2s;
   }
 
-  &--admin {
+  &--dashboard {
     .header-nav__item {
       color: #fff;
       margin-right: 32px;
@@ -213,7 +213,7 @@
   }
 }
 
-.admin-header-nav {
+.dashboard-header-nav {
   background: #456059;
   padding-bottom: 1.5rem;
 

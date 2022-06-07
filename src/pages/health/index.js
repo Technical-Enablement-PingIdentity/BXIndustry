@@ -4,12 +4,12 @@ import { makeStyles } from '@material-ui/styles';
 import { HealthHome } from './home';
 import { HEALTH_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
-import { HealthAdmin } from './admin';
+import { HealthDashboard } from './dashboard';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, button, copyright, links, admin, common_images, telemed } = settings;
+const { title, header, home_page, footer, button, copyright, links, dashboard, common_images, telemed } = settings;
 
 function getImage(image) {
   return getImagePath('health', image)
@@ -23,17 +23,17 @@ const faviconImages = {
 const logos = {
   logo: getImage(common_images.logo),
   dialog_logo: getImage(common_images.dialog_logo),
-  admin_logo: getImage(common_images.admin_logo),
+  dashboard_logo: getImage(common_images.dashboard_logo),
 }
 
 const componentImages = {
   telemed: getImage(telemed.image),
-  sidebar_tile_banner: getImage(admin.sidebar.tile.image),
+  sidebar_tile_banner: getImage(dashboard.sidebar.tile.image),
 }
 
-const adminImages = {
-  quick_link_icons: admin.dashboard.quick_links.map(link => getImage(link.icon)),
-  action_tile_icons: admin.dashboard.action_tiles.map(tile => getImage(tile.icon)),
+const dashboardImages = {
+  quick_link_icons: dashboard.portal.quick_links.map(link => getImage(link.icon)),
+  action_tile_icons: dashboard.portal.action_tiles.map(tile => getImage(tile.icon)),
 }
 
 const homePageImages = {
@@ -45,12 +45,12 @@ const useStyles = makeStyles({
   health: {
     '& .header-wrapper': header.style,
     '& .header-nav__item, & .header-auth-actions__link': header.links.style,
-    '& .header-wrapper--admin .header-nav__item, & .header-wrapper--admin .header-auth-actions__link': admin.navigation.links.style,
+    '& .header-wrapper--dashboard .header-nav__item, & .header-wrapper--dashboard .header-auth-actions__link': dashboard.navigation.links.style,
     '& .header-auth-actions__user-name': {
       color: header.links.style.color
     },
-    '& .header-wrapper--admin .header-auth-actions__user-name': {
-      color: admin.navigation.links.style.color
+    '& .header-wrapper--dashboard .header-auth-actions__user-name': {
+      color: dashboard.navigation.links.style.color
     },
     '& .hamburger-menu__line': {
       backgroundColor: header.links.style.color
@@ -86,26 +86,26 @@ const useStyles = makeStyles({
         },
       }
     },
-    '& .header-wrapper--admin .header-auth-actions__circle-icon': {
-      ...admin.navigation.style,
+    '& .header-wrapper--dashboard .header-auth-actions__circle-icon': {
+      ...dashboard.navigation.style,
       '& path': {
-        fill: admin.navigation.style.color
+        fill: dashboard.navigation.style.color
       },
       '&:hover': {
-        ...admin.navigation.style['&:hover'],
+        ...dashboard.navigation.style['&:hover'],
         '& path': {
-          fill: admin.navigation.style['&:hover'].color,
+          fill: dashboard.navigation.style['&:hover'].color,
         },
       }
     },
-    '& .header-wrapper--admin .header-auth-actions__actions-wrapper': admin.navigation.links.style,
-    '& .admin-header-nav': admin.navigation.style,
-    '& .header-nav--admin .header-nav__item': admin.navigation.links.style,
+    '& .header-wrapper--dashboard .header-auth-actions__actions-wrapper': dashboard.navigation.links.style,
+    '& .dashboard-header-nav': dashboard.navigation.style,
+    '& .header-nav--dashboard .header-nav__item': dashboard.navigation.links.style,
     '& .telemed': telemed.style,
     '& .alert-banner': home_page.alert_banner.style,
     '& .alert-banner .alert-banner__link': home_page.alert_banner.link.style,
     '& .program-info-block__link': home_page.programs_section.links.style,
-    '& .admin-sidebar__link': admin.sidebar.style,
+    '& .dashboard-sidebar__link': dashboard.sidebar.style,
     '& .health-link': links.style,
     '& .copyright-section': copyright.style,
   },
@@ -122,16 +122,16 @@ export function Health() {
     })
   }, []);
 
-  const adminClass = window.location.pathname.includes('admin') ? ' health-admin' : '';
+  const dashboardClass = window.location.pathname.includes('dashboard') ? ' health-dashboard' : '';
 
   return (
-    <div className={`health viewport-container ${classes.health}${adminClass}`}>
+    <div className={`health viewport-container ${classes.health}${dashboardClass}`}>
       <Switch>
         <Route exact path={HEALTH_ROUTES.HOME} component={() => (
           <HealthHome images={{ ...logos, ...homePageImages, ...componentImages }} />
         )} />
-        <Route exact path={HEALTH_ROUTES.ADMIN} component={() => (
-          <HealthAdmin images={{ ...logos, ...componentImages, ...adminImages }} />
+        <Route exact path={HEALTH_ROUTES.DASHBOARD} component={() => (
+          <HealthDashboard images={{ ...logos, ...componentImages, ...dashboardImages }} />
         )} />
         <Route exact path={HEALTH_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

@@ -147,7 +147,7 @@
       ]
     }
   },
-  "admin": {
+  "dashboard": {
     "user_name": "",
     "navigation": {
       "style": {

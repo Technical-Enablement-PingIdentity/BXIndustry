@@ -61,7 +61,7 @@
     transition: 0.2s;
   }
 
-  &--admin {
+  &--dashboard {
     .header-nav__item {
       color: #fff;
       margin-right: 32px;
@@ -189,7 +189,7 @@
   }
 }
 
-.admin-header-nav {
+.dashboard-header-nav {
   background: #0A1D39;
   padding: 25px 0;
 
@@ -199,7 +199,7 @@
 }
 
 .header-wrapper {
-  &--admin {
+  &--dashboard {
     @media #{$mobile} {
       border-bottom: 1px solid #DDE6FD;
     }

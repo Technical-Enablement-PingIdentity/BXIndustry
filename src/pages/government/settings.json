@@ -166,7 +166,7 @@
       "phone_number": "800 568 9678"
     }
   },
-  "admin": {
+  "dashboard": {
     "user_name": "",
     "header": {
       "top_navigation": [
@@ -219,9 +219,9 @@
       }
     },
     "title": "",
-    "dashboard": [
+    "portal": [
       {
-        "image": "dashboard-block-1.png",
+        "image": "portal-block-1.png",
         "title": "Fines",
         "description_items": [
           "1 new fine",
@@ -230,7 +230,7 @@
         "button": "Open"
       },
       {
-        "image": "dashboard-block-2.png",
+        "image": "portal-block-2.png",
         "title": "Document Requests",
         "description_items": [
           "2 in progress"
@@ -238,7 +238,7 @@
         "button": "Open"
       },
       {
-        "image": "dashboard-block-3.png",
+        "image": "portal-block-3.png",
         "title": "Programs",
         "description_items": [
           "1 new program",
@@ -247,7 +247,7 @@
         "button": "Open"
       },
       {
-        "image": "dashboard-block-4.png",
+        "image": "portal-block-4.png",
         "title": "Utilities",
         "description_items": [
           "Electricity",

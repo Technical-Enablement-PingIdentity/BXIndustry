@@ -35,7 +35,7 @@
     }
   }
 
-  &--admin {
+  &--dashboard {
     padding: 18px 0;
 
     .header__actions {
@@ -68,7 +68,7 @@
       }
     }
     
-    .header__admin-nav {
+    .header__dashboard-nav {
       margin: 0;
 
       @media #{$hd} {
@@ -107,7 +107,7 @@
     }
   }
 
-  &--admin {
+  &--dashboard {
     justify-content: center;
 
     .header-nav__item {
@@ -255,7 +255,7 @@
   }
 }
 
-.admin-header-nav {
+.dashboard-header-nav {
   background: #070402;
   padding: 18px 0;
 
@@ -264,7 +264,7 @@
   }
 }
 
-.admin-header-main-menu {
+.dashboard-header-main-menu {
   display: flex;
   list-style: none;
   justify-content: center;

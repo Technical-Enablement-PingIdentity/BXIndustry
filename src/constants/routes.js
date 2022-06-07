@@ -1,4 +1,4 @@
-export const ADMIN_URL = '/admin';
+export const DASHBOARD_URL = '/dashboard';
 export const GOVERNMENT_URL = '/government';
 export const MANUFACTURING_URL = '/manufacturing';
 export const EDUCATION_URL = '/education';

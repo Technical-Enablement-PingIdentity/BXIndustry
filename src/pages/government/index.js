@@ -2,14 +2,14 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { GovernmentHome } from './home';
-import { GovernmentAdmin } from './admin';
+import { GovernmentDashboard } from './dashboard';
 import { GOVERNMENT_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, home_page, footer, admin, button, common_images } = settings;
+const { title, home_page, footer, dashboard, button, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('government', image)
@@ -29,8 +29,8 @@ const homePageImages = {
   banner: getImage(home_page.banner.image),
 }
 
-const adminImages = {
-  dashboard: admin.dashboard.map(({ image }) => {
+const dashboardImages = {
+  portal: dashboard.portal.map(({ image }) => {
     return getImage(image)
   }),
 }
@@ -54,7 +54,7 @@ const useStyles = makeStyles({
         }
       }
     },
-    '& .header-auth-actions__link, & .admin-header-main-menu__item': home_page.header.navigation.links.style,
+    '& .header-auth-actions__link, & .dashboard-header-main-menu__item': home_page.header.navigation.links.style,
     '& .header-auth-actions__location': {
       ...home_page.header.location.style,
       '& path, & circle': {
@@ -79,8 +79,8 @@ const useStyles = makeStyles({
     },
     '& .footer': footer.style,
     '& .footer-nav-col__title, & .footer-contacts__title, & .footer-phone-wrapper__phone, & .copyright-content__text': footer.text.style,
-    '& .footer-nav-list__item, & .admin-footer-links-list__item': footer.links.style,
-    '& .footer-phone-wrapper__button, & .footer-social-icon, & .admin-footer-content__button': {
+    '& .footer-nav-list__item, & .dashboard-footer-links-list__item': footer.links.style,
+    '& .footer-phone-wrapper__button, & .footer-social-icon, & .dashboard-footer-content__button': {
       ...footer.button.style,
       '& path': {
         fill: footer.button.style.color
@@ -95,16 +95,16 @@ const useStyles = makeStyles({
     '& .header-auth-actions__user-name': {
       color: home_page.header.navigation.links.style.color
     },
-    '& .admin-header-nav': admin.header.bottom_navigation.style,
-    '& .header-nav--admin .header-nav__item': {
-      ...admin.header.bottom_navigation.links.style,
+    '& .dashboard-header-nav': dashboard.header.bottom_navigation.style,
+    '& .header-nav--dashboard .header-nav__item': {
+      ...dashboard.header.bottom_navigation.links.style,
       '& .header-nav-item__arrow path': {
-        stroke: admin.header.bottom_navigation.links.style.color
+        stroke: dashboard.header.bottom_navigation.links.style.color
       },
       '&:hover': {
-        ...admin.header.bottom_navigation.links.style['&:hover'],
+        ...dashboard.header.bottom_navigation.links.style['&:hover'],
         '& .header-nav-item__arrow path': {
-          stroke: admin.header.bottom_navigation.links.style['&:hover'].color
+          stroke: dashboard.header.bottom_navigation.links.style['&:hover'].color
         }
       }
     }
@@ -127,8 +127,8 @@ export function Government() {
         <Route exact path={GOVERNMENT_ROUTES.HOME} component={() => (
           <GovernmentHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={GOVERNMENT_ROUTES.ADMIN} component={() => (
-          <GovernmentAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={GOVERNMENT_ROUTES.DASHBOARD} component={() => (
+          <GovernmentDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={GOVERNMENT_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dailog_logo} />

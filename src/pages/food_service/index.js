@@ -3,13 +3,13 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { FoodServiceHome } from './home';
 import { FOOD_SERVICE_ROUTES } from './constants';
-import { FoodServiceAdmin } from './admin';
+import { FoodServiceDashboard } from './dashboard';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, admin, footer, copyright, button, common_images } = settings;
+const { title, header, home_page, dashboard, footer, copyright, button, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('food_service', image)
@@ -33,8 +33,8 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  products: admin.products_section.map(({ image }) => {
+const dashboardImages = {
+  products: dashboard.products_section.map(({ image }) => {
     return getImage(image)
   })
 }
@@ -117,8 +117,8 @@ export function FoodService() {
         <Route exact path={FOOD_SERVICE_ROUTES.HOME} component={() => (
           <FoodServiceHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={FOOD_SERVICE_ROUTES.ADMIN} component={() => (
-          <FoodServiceAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={FOOD_SERVICE_ROUTES.DASHBOARD} component={() => (
+          <FoodServiceDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={FOOD_SERVICE_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

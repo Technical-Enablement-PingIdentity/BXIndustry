@@ -4,12 +4,12 @@ import { makeStyles } from '@material-ui/styles';
 import { RetailHome } from './home';
 import { RETAIL_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
-import { RetailAdmin } from './admin';
+import { RetailDashboard } from './dashboard';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, button, copyright, links, admin, common_images } = settings;
+const { title, header, home_page, footer, button, copyright, links, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('retail', image)
@@ -25,10 +25,10 @@ const logos = {
   dialog_logo: getImage(common_images.dialog_logo),
 }
 
-const adminImages = {
-  sidebar_logos: admin.sidebar.logos.map(logo => getImage(logo)),
-  product_images: admin.dashboard.products.map(product => getImage(product.image)),
-  product_rating_images: admin.dashboard.products.map(product => getImage(product.rating_image)),
+const dashboardImages = {
+  sidebar_logos: dashboard.sidebar.logos.map(logo => getImage(logo)),
+  product_images: dashboard.portal.products.map(product => getImage(product.image)),
+  product_rating_images: dashboard.portal.products.map(product => getImage(product.rating_image)),
 }
 
 const homeImages = {
@@ -85,14 +85,14 @@ const useStyles = makeStyles({
       }
     },
     '& .banner': home_page.banner.style,
-    '& .admin-header-nav': admin.navigation.style,
-    '& .header-nav--admin .header-nav__item': admin.navigation.links.style,
+    '& .dashboard-header-nav': dashboard.navigation.style,
+    '& .header-nav--dashboard .header-nav__item': dashboard.navigation.links.style,
     '& .features-info-block__link': home_page.features_section.links.style,
-    '& .admin-sidebar__link': admin.sidebar.style,
+    '& .dashboard-sidebar__link': dashboard.sidebar.style,
     '& .retail-link': links.style,
     '& .copyright-section': copyright.style,
-    '& .dashboard-content .product__badge': admin.dashboard.product_badges.style,
-    '& .dashboard-content .product__title': admin.dashboard.product_titles.style,
+    '& .portal-content .product__badge': dashboard.portal.product_badges.style,
+    '& .portal-content .product__title': dashboard.portal.product_titles.style,
   },
 });
 
@@ -107,16 +107,16 @@ export function Retail() {
     })
   }, []);
 
-  const adminClass = window.location.pathname.includes('admin') ? ' retail-admin' : '';
+  const dashboardClass = window.location.pathname.includes('dashboard') ? ' retail-dashboard' : '';
 
   return (
-    <div className={`retail viewport-container ${classes.retail}${adminClass}`}>
+    <div className={`retail viewport-container ${classes.retail}${dashboardClass}`}>
       <Switch>
         <Route exact path={RETAIL_ROUTES.HOME} component={() => (
           <RetailHome images={{ ...logos, ...homeImages }} />
         )} />
-        <Route exact path={RETAIL_ROUTES.ADMIN} component={() => (
-          <RetailAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={RETAIL_ROUTES.DASHBOARD} component={() => (
+          <RetailDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={RETAIL_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

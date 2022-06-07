@@ -2,14 +2,14 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { ManufacturingHome } from './home';
-import { ManufacturingAdmin } from './admin';
+import { ManufacturingDashboard } from './dashboard';
 import { MANUFACTURING_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, copyright, button, admin, common_images } = settings;
+const { title, header, home_page, footer, copyright, button, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('manufacturing', image)
@@ -29,8 +29,8 @@ const homePageImages = {
   banner: getImage(home_page.banner.image),
 }
 
-const adminImages = {
-  services: admin.services.map(({ image }) => {
+const dashboardImages = {
+  services: dashboard.services.map(({ image }) => {
     return getImage(image)
   }),
 }
@@ -38,13 +38,13 @@ const adminImages = {
 //json styles binding
 const useStyles = makeStyles({
   manufacturing: {
-    '& .header-wrapper, & .admin-header-wrapper': header.style,
+    '& .header-wrapper, & .dashboard-header-wrapper': header.style,
     '& .header-auth-actions__actions-wrapper': header.style,
     '& .header-auth-actions__info': {
       color: header.links_style.color,
       '&--action': header.links_style
     },
-    '& .admin-header-nav__item': header.links_style,
+    '& .dashboard-header-nav__item': header.links_style,
     '& .hamburger-menu__line': {
       backgroundColor: header.links_style.color
     },
@@ -103,7 +103,7 @@ const useStyles = makeStyles({
     },
     '& .copyright-section': copyright.style,
     '& .copyright-content__text': copyright.info.style,
-    '& .manufacturing__admin': admin.style
+    '& .manufacturing__dashboard': dashboard.style
   },
 });
 
@@ -124,8 +124,8 @@ export function Manufacturing() {
         <Route exact path={MANUFACTURING_ROUTES.HOME} component={() => (
           <ManufacturingHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={MANUFACTURING_ROUTES.ADMIN} component={() => (
-          <ManufacturingAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={MANUFACTURING_ROUTES.DASHBOARD} component={() => (
+          <ManufacturingDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={MANUFACTURING_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

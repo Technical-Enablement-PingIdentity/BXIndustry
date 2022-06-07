@@ -1,0 +1,293 @@
+@import "../var";
+@import '@Styles/common/var.scss';
+
+.dashboard-navigation-section {
+  background: #182237;
+}
+
+.dashboard-user-info {
+  padding: 16px 0 4px;
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$tablet} {
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    .user-actions {
+      justify-content: center;
+    }
+
+    .button {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__side {
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 16px;
+
+      @media #{$mobile} {
+        margin: 0;
+      }
+    }
+
+    .button:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.user-info {
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    color: #fff;
+  }
+
+  &__title {
+    font-family: $secondary-font;
+    font-size: 52px;
+    line-height: 66px;
+    font-weight: 700;
+    color: #fff;
+
+    @media #{$mobile} {
+      font-size: 38px;
+      line-height: 38px;
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.user-info-label {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding: 17px 36px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media #{$mobile} {
+    display: none;
+  }
+
+  &__icon {
+    margin-right: 13px;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #fff;
+
+    &--md {
+      font-size: 22px;
+    }
+  }
+}
+
+.dashboard-navigation-wrapper {
+  position: relative;
+
+  @media #{$mobile} {
+    overflow: auto;
+  }
+
+  &::-webkit-scrollbar {
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+
+  &__content {
+    @media #{$mobile} {
+      float: left;
+    }
+  }
+}
+
+.dashboard-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    padding: 9px 21px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.2s;
+
+    @media #{$mobile} {
+      white-space: nowrap;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    &--active {
+      background: #fff;
+      color: #182237;
+
+      &:hover {
+        color: #182237;
+      }
+    }
+  }
+}
+
+.dashboard-dashboard-section {
+  padding: 70px 0 120px;
+
+  @media #{$mobile} {
+    padding: 52px 0 70px;
+  }
+}
+
+.dashboard-dashboard {
+  display: flex;
+
+  @media #{$tablet} {
+    display: block;
+  }
+
+  &__main-info {
+    width: 100%;
+    padding-right: 40px;
+
+    @media #{$tablet} {
+      padding-right: 0;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__offers-side {
+    flex-shrink: 0;
+    width: 380px;
+
+    @media #{$tablet} {
+      width: 100%;
+    }
+  }
+
+  &__flights-list {
+    margin-bottom: 32px;
+  }
+}
+
+.flights-list-section {
+  &__head {
+    background: #182237;
+    padding: 12px 22px 14px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &__body {
+    background:#F4F1F1;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.flights-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: 19px 21px 25px;
+    border-bottom: 1px solid #B6C3CE;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.flights-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media #{$mobile} {
+    display: block;
+  }
+
+  &__side {
+    &:first-child {
+      margin-right: 16px;
+
+      @media #{$mobile} {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__button {
+    width: 148px;
+  }
+}
+
+.flights-list-item-info {
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #1E2738;
+    margin-bottom: 7px;
+  }
+}
+
+.flight-date-info {
+  display: flex;
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+
+  &__item-icon {
+    flex-shrink: 0;
+    margin-right: 6px;
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #76818B;
+  }
+}
+
+.dashboard-offers-section {
+  &__title {
+    margin-bottom: 10px;
+    font-family: $secondary-font;
+    font-size: 60px;
+    line-height: 76px;
+    font-weight: 700;
+    color: #182237;
+
+    @media #{$mobile} {
+      font-size: 38px;
+      line-height: 38px;
+      margin-bottom: 24px;
+    }
+  }
+}

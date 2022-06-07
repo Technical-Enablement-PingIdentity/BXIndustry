@@ -1,0 +1,6 @@
+@import "./base";
+
+.dashboard-main-section {
+  @import "./components/container";
+  @import "./components/dashboard";
+}

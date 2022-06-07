@@ -139,7 +139,7 @@
       ]
     }
   },
-  "admin": {
+  "dashboard": {
     "user_name": "",
     "title": "Welcome",
     "subtitle": {
@@ -148,7 +148,7 @@
         "color": "#E12F17"
       }
     },
-    "dashboard": {
+    "portal": {
       "link": {
         "style": {
           "color": "#A6ACBA"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDaVinci } from '@Hooks';
 
-//DV flow component for vertical admin page
+//DV flow component for vertical dashboard page
 export function DVWidget({ containerId = 'widgetbox', companyKey, policyKey, apiKey }) {
 
   const { startDVFlowPolicy } = useDaVinci({ containerId });
@@ -11,6 +11,6 @@ export function DVWidget({ containerId = 'widgetbox', companyKey, policyKey, api
   }, [startDVFlowPolicy, companyKey, policyKey, apiKey])
 
   return (
-    <div id={containerId} className="admin-dv-widget"></div>
+    <div id={containerId} className="dashboard-dv-widget"></div>
   )
 }

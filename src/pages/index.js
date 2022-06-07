@@ -1,4 +1,4 @@
-export * from './admin';
+export * from './dashboard';
 export * from './government';
 export * from './manufacturing';
 export * from './education';
