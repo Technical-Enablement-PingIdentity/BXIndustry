@@ -28,6 +28,7 @@ function App() {
           gaPageView();
         }} />
         <Switch>
+          <Redirect exact from='/:vertical/admin' to='/:vertical/dashboard' />
           <Route path={DASHBOARD_URL} component={Dashboard} />
           <Route path={MANUFACTURING_URL} component={Manufacturing} />
           <Route path={GOVERNMENT_URL} component={Government} />
