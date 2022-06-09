@@ -1,4 +1,4 @@
-export * from './admin';
+export * from './dashboard';
 export * from './government';
 export * from './manufacturing';
 export * from './education';
@@ -13,3 +13,4 @@ export * from './finance';
 export * from './retail';
 export * from './health';
 export * from './sports';
+export * from './company';

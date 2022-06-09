@@ -3,13 +3,13 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { HotelsHome } from './home';
 import { HOTELS_ROUTES } from './constants';
-import { HotelsAdmin } from './admin';
+import { HotelsDashboard } from './dashboard';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, admin, footer, button, common_images } = settings;
+const { title, header, home_page, dashboard, footer, button, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('hotels', image)
@@ -33,8 +33,8 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  offer: getImage(admin.offer_section.image),
+const dashboardImages = {
+  offer: getImage(dashboard.offer_section.image),
 }
 
 //json styles binding
@@ -101,8 +101,8 @@ export function Hotels() {
         <Route exact path={HOTELS_ROUTES.HOME} component={() => (
           <HotelsHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={HOTELS_ROUTES.ADMIN} component={() => (
-          <HotelsAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={HOTELS_ROUTES.DASHBOARD} component={() => (
+          <HotelsDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={HOTELS_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

@@ -4,13 +4,13 @@ import { makeStyles } from '@material-ui/styles';
 import { AuthDialogExamples } from '@Components';
 import { AirlinesHome } from './home';
 import { AIRLINES_ROUTES } from './constants';
-import { AirlinesAdmin } from './admin';
+import { AirlinesDashboard } from './dashboard';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
 //common settings
-const { title, header, home_page, admin, footer, button, common_images } = settings;
+const { title, header, home_page, dashboard, footer, button, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('airlines', image)
@@ -36,8 +36,8 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  sidebar: admin.sidebar.items.map(({ image }) => {
+const dashboardImages = {
+  sidebar: dashboard.sidebar.items.map(({ image }) => {
     return getImage(image)
   }),
 }
@@ -108,8 +108,8 @@ export function Airlines() {
         <Route exact path={AIRLINES_ROUTES.HOME} component={() => (
           <AirlinesHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={AIRLINES_ROUTES.ADMIN} component={() => (
-          <AirlinesAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={AIRLINES_ROUTES.DASHBOARD} component={() => (
+          <AirlinesDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={AIRLINES_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

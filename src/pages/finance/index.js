@@ -4,12 +4,12 @@ import { makeStyles } from '@material-ui/styles';
 import { FinanceHome } from './home';
 import { FINANCE_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
-import { FinanceAdmin } from './admin';
+import { FinanceDashboard } from './dashboard';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, button, copyright, links, admin, common_images, rewards_card } = settings;
+const { title, header, home_page, footer, button, copyright, links, dashboard, common_images, rewards_card } = settings;
 
 function getImage(image) {
   return getImagePath('finance', image)
@@ -75,13 +75,13 @@ const useStyles = makeStyles({
         },
       }
     },
-    '& .admin-header-nav': admin.navigation.style,
-    '& .header-nav--admin .header-nav__item': admin.navigation.links.style,
+    '& .dashboard-header-nav': dashboard.navigation.style,
+    '& .header-nav--dashboard .header-nav__item': dashboard.navigation.links.style,
     '& .rewards-card': rewards_card.style,
     '& .alert-banner': home_page.alert_banner.style,
     '& .program-info-block__link': home_page.programs_section.links.style,
-    '& .admin-sidebar__link': admin.sidebar.style,
-    '& .admin-dashboard .dashboard-content__tile': admin.dashboard_tiles.style,
+    '& .dashboard-sidebar__link': dashboard.sidebar.style,
+    '& .dashboard-dashboard .dashboard-content__tile': dashboard.dashboard_tiles.style,
     '& .finance-link': links.style,
     '& .copyright-section': copyright.style,
   },
@@ -98,16 +98,16 @@ export function Finance() {
     })
   }, []);
 
-  const adminClass = window.location.pathname.includes('admin') ? ' finance-admin' : '';
+  const dashboardClass = window.location.pathname.includes('dashboard') ? ' finance-dashboard' : '';
 
   return (
-    <div className={`finance viewport-container ${classes.finance}${adminClass}`}>
+    <div className={`finance viewport-container ${classes.finance}${dashboardClass}`}>
       <Switch>
         <Route exact path={FINANCE_ROUTES.HOME} component={() => (
           <FinanceHome images={{ ...logos, ...homePageImages, ...componentImages }} />
         )} />
-        <Route exact path={FINANCE_ROUTES.ADMIN} component={() => (
-          <FinanceAdmin images={{ ...logos, ...componentImages }} />
+        <Route exact path={FINANCE_ROUTES.DASHBOARD} component={() => (
+          <FinanceDashboard images={{ ...logos, ...componentImages }} />
         )} />
         <Route exact path={FINANCE_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

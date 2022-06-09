@@ -143,14 +143,14 @@
       ]
     }
   },
-  "admin": {
+  "dashboard": {
     "user_name": "",
     "title": "Welcome Back",
     "sidebar": {
       "title": "BXHotels Loyalty Program"
     },
     "offer_section": {
-      "image": "admin-ad.jpg",
+      "image": "dashboard-ad.jpg",
       "title": "50% off spa packages",
       "button": "Show details"
     }

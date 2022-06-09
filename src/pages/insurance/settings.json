@@ -155,7 +155,7 @@
       }
     ]
   },
-  "admin": {
+  "dashboard": {
     "user_name": "",
     "title": "My personal area",
     "title_button": {
@@ -169,7 +169,7 @@
         }
       }
     },
-    "dashboard": [
+    "portal": [
       {
         "image": "insurance-policy-icon.svg",
         "title": "Insurance Policies",

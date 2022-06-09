@@ -2,14 +2,14 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { InsuranceHome } from './home';
-import { InsuranceAdmin } from './admin';
+import { InsuranceDashboard } from './dashboard';
 import { INSURANCE_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, button, admin, common_images } = settings;
+const { title, header, home_page, footer, button, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('insurance', image)
@@ -32,11 +32,11 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  dashboard: admin.dashboard.map(({ image }) => {
+const dashboardImages = {
+  portal: dashboard.portal.map(({ image }) => {
     return getImage(image)
   }),
-  info: getImage(admin.info_block.image),
+  info: getImage(dashboard.info_block.image),
 }
 
 //json styles binding
@@ -85,15 +85,15 @@ const useStyles = makeStyles({
     },
     '& .banner-content__title': home_page.banner.title.style,
     '& .banner-content__description': home_page.banner.description.style,
-    '& .admin-title-actions__btn': {
-      ...admin.title_button.style,
+    '& .dashboard-title-actions__btn': {
+      ...dashboard.title_button.style,
       '& path': {
-        fill: admin.title_button.style.color
+        fill: dashboard.title_button.style.color
       },
       '&:hover': {
-        ...admin.title_button.style['&:hover'],
+        ...dashboard.title_button.style['&:hover'],
         '& path': {
-          fill: admin.title_button.style['&:hover'].color,
+          fill: dashboard.title_button.style['&:hover'].color,
         },
       }
     },
@@ -117,8 +117,8 @@ export function Insurance() {
         <Route exact path={INSURANCE_ROUTES.HOME} component={() => (
           <InsuranceHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={INSURANCE_ROUTES.ADMIN} component={() => (
-          <InsuranceAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={INSURANCE_ROUTES.DASHBOARD} component={() => (
+          <InsuranceDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={INSURANCE_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

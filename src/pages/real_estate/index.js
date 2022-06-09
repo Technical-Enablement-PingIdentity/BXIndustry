@@ -3,13 +3,13 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { RealEstateHome } from './home';
 import { REAL_ESTATE_ROUTES } from './constants';
-import { RealEstateAdmin } from './admin';
+import { RealEstateDashboard } from './dashboard';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, footer, button, home_page, admin, common_images } = settings;
+const { title, header, footer, button, home_page, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('real_estate', image)
@@ -32,11 +32,11 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  objects: admin.objects_section.map(({ image }) => {
+const dashboardImages = {
+  objects: dashboard.objects_section.map(({ image }) => {
     return getImage(image)
   }),
-  apartments: admin.apartments_section.items.map(({ image }) => {
+  apartments: dashboard.apartments_section.items.map(({ image }) => {
     return getImage(image)
   }),
 }
@@ -47,7 +47,7 @@ const useStyles = makeStyles({
     '& .header-wrapper': header.style,
     '& .header-auth-actions__actions-wrapper': {
       '@media only screen and (max-width: 767px)': {
-        ...admin.header.style
+        ...dashboard.header.style
       }
     },
     '& .hamburger-menu__line': {
@@ -73,7 +73,7 @@ const useStyles = makeStyles({
         }
       }
     },
-    '& .header-wrapper--admin': admin.header.style,
+    '& .header-wrapper--dashboard': dashboard.header.style,
     '& .banner-content__title, & .banner-info-block__description': {
       color: home_page.banner.text_color
     },
@@ -121,8 +121,8 @@ export function RealEstate() {
         <Route exact path={REAL_ESTATE_ROUTES.HOME} component={() => (
           <RealEstateHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={REAL_ESTATE_ROUTES.ADMIN} component={() => (
-          <RealEstateAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={REAL_ESTATE_ROUTES.DASHBOARD} component={() => (
+          <RealEstateDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={REAL_ESTATE_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

@@ -3,13 +3,13 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { NonProfitHome } from './home';
 import { NON_PROFIT_ROUTES } from './constants';
-import { NonProfitAdmin } from './admin';
+import { NonProfitDashboard } from './dashboard';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, footer, button, home_page, admin, common_images } = settings;
+const { title, header, footer, button, home_page, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('non_profit', image)
@@ -35,11 +35,11 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  dashboard: admin.dashboard.map(({ image }) => {
+const dashboardImages = {
+  portal: dashboard.portal.map(({ image }) => {
     return getImage(image)
   }),
-  articles: admin.articles.map(({ image }) => {
+  articles: dashboard.articles.map(({ image }) => {
     return getImage(image)
   }),
 }
@@ -57,7 +57,7 @@ const useStyles = makeStyles({
       backgroundColor: header.links.style.color
     },
     '& .header-auth-actions__button': header.auth_buttons.style,
-    '& .button, & .admin-article__icon-wrapper': {
+    '& .button, & .dashboard-article__icon-wrapper': {
       ...button.style,
       '& path': {
         fill: button.style.color
@@ -113,8 +113,8 @@ export function NonProfit() {
         <Route exact path={NON_PROFIT_ROUTES.HOME} component={() => (
           <NonProfitHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={NON_PROFIT_ROUTES.ADMIN} component={() => (
-          <NonProfitAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={NON_PROFIT_ROUTES.DASHBOARD} component={() => (
+          <NonProfitDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={NON_PROFIT_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

@@ -3,13 +3,13 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { PharmacyHome } from './home';
 import { PHARMACY_ROUTES } from './constants';
-import { PharmacyAdmin } from './admin';
+import { PharmacyDashboard } from './dashboard';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, footer, button, home_page, admin, common_images } = settings;
+const { title, header, footer, button, home_page, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('pharmacy', image)
@@ -32,8 +32,8 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  articles: admin.articles.map(({ image }) => {
+const dashboardImages = {
+  articles: dashboard.articles.map(({ image }) => {
     return getImage(image)
   }),
 }
@@ -122,8 +122,8 @@ export function Pharmacy() {
         <Route exact path={PHARMACY_ROUTES.HOME} component={() => (
           <PharmacyHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={PHARMACY_ROUTES.ADMIN} component={() => (
-          <PharmacyAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={PHARMACY_ROUTES.DASHBOARD} component={() => (
+          <PharmacyDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={PHARMACY_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

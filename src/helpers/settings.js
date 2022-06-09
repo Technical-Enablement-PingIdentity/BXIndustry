@@ -2,14 +2,14 @@ import { globalSettings } from '../global-settings';
 
 /**
  * Checks settings for vertical and adds in global settings if present
- * @param {object} verticalAdminSettings admin settings for the vertical that will be checked against globalSettings
+ * @param {object} verticalDashboardSettings dashboard settings for the vertical that will be checked against globalSettings
  */
-export function consolidateAdminSettings(verticalAdminSettings) {
-    if (!verticalAdminSettings.dv_widget && globalSettings.admin?.dv_widget) {
-        verticalAdminSettings.dv_widget = globalSettings.admin?.dv_widget;
+export function consolidateDashboardSettings(verticalDashboardSettings) {
+    if (!verticalDashboardSettings.dv_widget && globalSettings.dashboard?.dv_widget) {
+        verticalDashboardSettings.dv_widget = globalSettings.dashboard?.dv_widget;
     }
     
-    if (!verticalAdminSettings.dv_buttons && globalSettings.admin?.dv_buttons) {
-        verticalAdminSettings.dv_buttons = globalSettings.admin?.dv_buttons;
+    if (!verticalDashboardSettings.dv_buttons && globalSettings.dashboard?.dv_buttons) {
+        verticalDashboardSettings.dv_buttons = globalSettings.dashboard?.dv_buttons;
     }
 }
