@@ -1,0 +1,185 @@
+{
+  "title": "BXCompany",
+  "common_images": {
+    "favicon": "favicon.ico",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "logo": "logo.png",
+    "dialog_logo": "auth-dialog-logo.png"
+  },
+  "dv_buttons": [],
+  "button": {
+    "style": {
+      "background": "linear-gradient(88.03deg, #930909 -10.39%, #B55A27 106.93%)",
+      "color": "#fff",
+      "&:hover": {
+        "background": "linear-gradient(88.03deg, #930909 10.39%, #B55A27 132.93%)"
+      }
+    },
+    "outlined_style": {
+      "background": "transparent",
+      "borderColor": "#fff",
+      "color": "#fff",
+      "&:hover": {
+        "fontWeight": 500
+      }
+    }
+  },
+  "header": {
+    "links": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#930909"
+        }
+      },
+      "items": [
+        "About",
+        "Investor",
+        "Personal",
+        "FAQs",
+        "Contact"
+      ]
+    },
+    "icon_button": {
+      "style": {
+        "backgroundColor": "#930909",
+        "color": "#fff"
+      }
+    },
+    "auth_links": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#930909"
+        }
+      }
+    },
+    "auth_separator": {
+      "color": "#fff"
+    }
+  },
+  "footer": {
+    "style": {
+      "backgroundColor": "#0A0001",
+      "color": "#fff"
+    },
+    "phone_number": "800 568 9678",
+    "navigation": {
+      "style": {
+        "color": "#fff",
+        "&:hover": {
+          "color": "#930909"
+        }
+      },
+      "links": [
+        "About",
+        "Investor",
+        "Personal",
+        "FAQs",
+        "Contact"
+      ]
+    },
+    "button": {
+      "style": {
+        "color": "#fff",
+        "border": "1px solid #fff",
+        "backgroundColor": "transparent",
+        "&:hover": {
+          "backgroundColor": "#930909",
+          "borderColor": "#930909"
+        }
+      }
+    },
+    "copyright": {
+      "text": "© BXCompany, 2022.  All rights reserved.",
+      "style": {
+        "color": "#fff",
+        "opacity": 0.4
+      }
+    }
+  },
+  "home_page": {
+    "banner": {
+      "image": "banner.png",
+      "style": {
+        "backgroundColor": "#280A04",
+        "color": "#fff"
+      },
+      "supertitle": "Our Mission",
+      "title": "We are the complete solution for your company",
+      "subtitle": "We invest a tremendous amount of resources to ensure that our clients are becoming the greatest companies",
+      "button": "Get Started",
+      "video_tiles": [
+        "video-tile-1.png",
+        "video-tile-2.png",
+        "video-tile-3.png"
+      ] 
+    },
+    "main_content": {
+      "title": "Work Process",
+      "description": "The first conversation you ever have with a strategic business partner should not be about technology. It should be about your business, vision, workflow and the opportunities that exist to help you grow.",
+      "image": "laptop.png",
+      "bullets": {
+        "style": {
+          "color": "#930909"
+        },
+        "items": [
+          "Let's learn about each other. We want to learn about your vision, needs and workflow",
+          "We focus on outcome and nothing more. It's time to have a real discussion about lifeline's process",
+          "We need to understand the main profit drivers of your business.",
+          "This is the part of the process where we stop simply talking about all the things we do.",
+          "Result: Now you're free to grow with us"
+        ]
+      }
+    }
+  },
+  "dashboard": {
+    "navigation": {
+      "style": {
+        "background": "linear-gradient(90deg, rgba(59,11,10,1) 0%, rgba(22,4,1,1) 10%, rgba(22,4,1,1) 100%)"
+      }
+    },
+    "user_name": "Edward Lawson",
+    "title": "Last activity statistic",
+    "filter_header": "Filters",
+    "filters": [
+      "All client",
+      "International contract",
+      "Month"
+    ],
+    "filter_color": "#930909",
+    "filter_button": "Search",
+    "large_chart": "line-chart.png",
+    "large_chart_mobile": "line-chart-mobile.png",
+    "small_charts": [
+      "pie-chart.png",
+      "bar-chart.png"
+    ] ,
+    "components_section": {
+      "icon": {
+        "text": "+",
+        "style": {
+          "color": "#930909",
+          "background": "rgba(181, 48, 39, 0.1)"
+        }
+      },
+      "title": "No components created yet",
+      "subtitle": "To create your first componenet simply click on the button",
+      "button": { 
+        "style": {
+          "background": "#930909"
+        },
+        "text": "Add component"
+      }
+    },
+    "videos": {
+      "title": "Preview conference video",
+      "video_tiles": [
+        "dashboard-video-tile-1.png",
+        "dashboard-video-tile-2.png",
+        "dashboard-video-tile-3.png",
+        "dashboard-video-tile-4.png"
+      ]
+    }
+  }
+}

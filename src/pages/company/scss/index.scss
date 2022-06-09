@@ -1,0 +1,16 @@
+@import "./base";
+
+.company {
+  @import "./components/button";
+  @import "./components/form-group";
+  @import "./components/icon-button";
+  @import "./components/header";
+  @import "./components/banner";
+  @import "./components/main-content";
+  @import "./components/footer";
+  @import "./components/socials";
+  @import "./components/dashboard";
+  @import "./components/dialog";
+  @import "./components/dialog-example-actions";
+  @import "./components/video-tiles";
+}

@@ -1,6 +1,7 @@
 export * from './Facebook';
 export * from './Instagram';
 export * from './Twitter';
+export * from './CaretIcon';
 export * from './CloseIcon';
 export * from './ExpandArrow';
 export * from './MapMark';

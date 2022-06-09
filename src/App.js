@@ -2,12 +2,14 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect, Link } from 'react-router-dom';
 import {
   Government, Manufacturing, Education, Pharmacy, Airlines, Hotels, RealEstate,
-  FoodService, Insurance, Dashboard, NonProfit, Finance, Retail, Health, Sports
+  FoodService, Insurance, Dashboard, NonProfit, Finance, Retail, Health, Sports,
+  Company
 } from '@Pages';
 import {
   GOVERNMENT_URL, MANUFACTURING_URL, EDUCATION_URL, PHARMACY_URL, AIRLINES_URL,
   VERTICAL_ROUTES, HOTELS_URL, REAL_ESTATE_URL, FOOD_SERVICE_URL, INSURANCE_URL,
-  DASHBOARD_URL, NON_PROFIT_URL, FINANCE_URL, RETAIL_URL, HEALTH_URL, SPORTS_URL
+  DASHBOARD_URL, NON_PROFIT_URL, FINANCE_URL, RETAIL_URL, HEALTH_URL, SPORTS_URL,
+  COMPANY_URL
 } from '@Constants';
 import { SettingsIcon } from '@Components/icons'
 import { findInArrayBy, initGA, gaPageView } from '@Helpers';
@@ -41,6 +43,7 @@ function App() {
           <Route path={RETAIL_URL} component={Retail} />
           <Route path={HEALTH_URL} component={Health} />
           <Route path={SPORTS_URL} component={Sports} />
+          <Route path={COMPANY_URL} component={Company} />
           <Redirect from='*' to={activeVertical.url} />
           <Redirect exact from="/" to={activeVertical.url} />
         </Switch>

@@ -13,6 +13,7 @@ export const FINANCE_URL = '/finance';
 export const RETAIL_URL = '/retail';
 export const HEALTH_URL = '/health';
 export const SPORTS_URL = '/sports';
+export const COMPANY_URL = '/company';
 export const VERTICAL_ROUTES = [
   {
     name: 'government',
@@ -84,4 +85,9 @@ export const VERTICAL_ROUTES = [
     displayName: 'Sports',
     url: SPORTS_URL,
   },
+  {
+    name: 'company',
+    displayName: 'Company',
+    url: COMPANY_URL,
+  }
 ];

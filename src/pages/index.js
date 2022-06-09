@@ -13,3 +13,4 @@ export * from './finance';
 export * from './retail';
 export * from './health';
 export * from './sports';
+export * from './company';

@@ -16,6 +16,7 @@ import { FINANCE_ROUTES } from '@Pages/finance/constants';
 import { RETAIL_ROUTES } from '@Pages/retail/constants';
 import { HEALTH_ROUTES } from '@Pages/health/constants';
 import { SPORTS_ROUTES } from '@Pages/sports/constants';
+import { COMPANY_ROUTES } from '@Pages/company/constants';
 //vertical settings.json files
 import airlinesSettings from '@Pages/airlines/settings.json';
 import educationSettings from '@Pages/education/settings.json';
@@ -31,6 +32,7 @@ import financeSettings from '@Pages/finance/settings.json';
 import retailSettings from '@Pages/retail/settings.json';
 import healthSettings from '@Pages/health/settings.json';
 import sportsSettings from '@Pages/sports/settings.json';
+import companySettings from '@Pages/company/settings';
 import './scss/index.scss';
 
 const VERTICAL_ROWS = [
@@ -40,6 +42,13 @@ const VERTICAL_ROWS = [
     homePageUrl: AIRLINES_ROUTES.HOME,
     dashboardPageUrl: AIRLINES_ROUTES.DASHBOARD,
     dialogExamplesUrl: AIRLINES_ROUTES.DIALOG_EXAMPLES
+  },
+  {
+    name: 'BXCompany',
+    logo: getImagePath('company', companySettings.common_images.dialog_logo),
+    homePageUrl: COMPANY_ROUTES.HOME,
+    dashboardPageUrl: COMPANY_ROUTES.DASHBOARD,
+    dialogExamplesUrl: COMPANY_ROUTES.DIALOG_EXAMPLES
   },
   {
     name: 'BXEats',
