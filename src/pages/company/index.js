@@ -70,6 +70,7 @@ const useStyles = makeStyles({
       '&--outlined': button.outlined_style
     },
     '& .footer': footer.style,
+    '& .footer .footer-content': footer.content.style,
     '& .footer-menu__item': footer.navigation.style,
     '& .footer-social-icon, & .footer-contacts__button': {
       ...footer.button.style,
