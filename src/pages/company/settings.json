@@ -60,8 +60,12 @@
   },
   "footer": {
     "style": {
-      "backgroundColor": "#0A0001",
-      "color": "#fff"
+      "backgroundColor": "#0A0001"
+    },
+    "content": {
+      "style": {
+        "color": "#fff"
+      }
     },
     "phone_number": "800 568 9678",
     "navigation": {
@@ -126,8 +130,8 @@
         "items": [
           "Let's learn about each other. We want to learn about your vision, needs and workflow",
           "We focus on outcome and nothing more. It's time to have a real discussion about lifeline's process",
-          "We need to understand the main profit drivers of your business.",
-          "This is the part of the process where we stop simply talking about all the things we do.",
+          "We need to understand the main profit drivers of your business",
+          "This is the part of the process where we stop simply talking about all the things we do",
           "Result: Now you're free to grow with us"
         ]
       }
@@ -139,8 +143,8 @@
         "background": "linear-gradient(90deg, rgba(59,11,10,1) 0%, rgba(22,4,1,1) 10%, rgba(22,4,1,1) 100%)"
       }
     },
-    "user_name": "Edward Lawson",
-    "title": "Last activity statistic",
+    "user_name": "",
+    "title": "Latest Activity",
     "filter_header": "Filters",
     "filters": [
       "All client",
@@ -164,7 +168,7 @@
         }
       },
       "title": "No components created yet",
-      "subtitle": "To create your first componenet simply click on the button",
+      "subtitle": "To create your first component simply click on the button",
       "button": { 
         "style": {
           "background": "#930909"
