@@ -25,6 +25,12 @@
     }
   },
   "header": {
+    "style": {
+      "background": "transparent",
+      "@media only screen and (max-width:767px)": {
+        "background": "#930909"
+      }
+    },
     "links": {
       "style": {
         "color": "#fff",
