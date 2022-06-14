@@ -1,8 +1,8 @@
 # Introduction
 
-BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are 14 different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
+BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo-ers to bootstrap DaVinci demonstrations! It allows demo-ers to tailor the skins to highlight a number of DaVinci flows that they have developed or will be developing. There are many different industry verticals which can be cloned and adapted on Glitch to tailor to your prospect or customer for a more personalized demo in the field. 
  
-For this release, there are 14 verticals available in Glitch for you to remix:
+The following verticals are available in Glitch for you to remix:
 1. [Airline](https://demo.bxindustry.org/airlines)
 2. [Company](https://demo.bxindustry.org/company)
 3. [Education](https://demo.bxindustry.org/education)
