@@ -4,19 +4,20 @@ BXIndustry (https://demo.bxindustry.org) is a unique demo in that it allows demo
  
 For this release, there are 14 verticals available in Glitch for you to remix:
 1. [Airline](https://demo.bxindustry.org/airlines)
-2. [Education](https://demo.bxindustry.org/education)
-3. [Finance](https://demo.bxindustry.org/finance)
-4. [Food Service](https://demo.bxindustry.org/food_service)
-5. [Government](https://demo.bxindustry.org/government)
-6. [Health](https://demo.bxindustry.org/health)
-7. [Hotel](https://demo.bxindustry.org/hotels)
-8. [Insurance](https://demo.bxindustry.org/insurance)
-9. [Manufacturing](https://demo.bxindustry.org/manufacturing)
-10. [Pharmacy](https://demo.bxindustry.org/pharmacy)
-11. [Real Estate](https://demo.bxindustry.org/real_estate)
-12. [Retail](https://demo.bxindustry.org/retail)
-13. [Sports](https://demo.bxindustry.org/sports)
-14. [Volunteer](https://demo.bxindustry.org/non_profit)
+2. [Company](https://demo.bxindustry.org/company)
+3. [Education](https://demo.bxindustry.org/education)
+4. [Finance](https://demo.bxindustry.org/finance)
+5. [Food Service](https://demo.bxindustry.org/food_service)
+6. [Government](https://demo.bxindustry.org/government)
+7. [Health](https://demo.bxindustry.org/health)
+8. [Hotel](https://demo.bxindustry.org/hotels)
+9. [Insurance](https://demo.bxindustry.org/insurance)
+10. [Manufacturing](https://demo.bxindustry.org/manufacturing)
+11. [Pharmacy](https://demo.bxindustry.org/pharmacy)
+12. [Real Estate](https://demo.bxindustry.org/real_estate)
+13. [Retail](https://demo.bxindustry.org/retail)
+14. [Sports](https://demo.bxindustry.org/sports)
+15. [Volunteer](https://demo.bxindustry.org/non_profit)
 
 With BXIndustry, you can choose a vertical you would like to use, build your workflows and forms in DaVinci, and update the settings.json file to change text colors, text, images, configure buttons, and more! HTML templates are available for different modal forms for use in DaVinci (e.g., **src/components/AuthDialogExamples**).
 
@@ -60,6 +61,7 @@ During the remixing process, you can modify all DaVinci API values or leave them
 The default vertical should be one value from the list:
 
 - airlines
+- company
 - education
 - finance
 - food_service
