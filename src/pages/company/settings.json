@@ -102,6 +102,13 @@
       }
     }
   },
+  "video_tiles": {
+    "overlay": {
+      "style": {
+        "background": "linear-gradient(92.63deg, #280604 -18.67%, rgba(4, 15, 40, 0) 109.35%, rgba(40, 13, 4, 0) 109.35%)"  
+      }
+    }
+  },
   "home_page": {
     "banner": {
       "image": "banner.png",
@@ -112,7 +119,7 @@
       "supertitle": "Our Mission",
       "title": "We are the complete solution for your company",
       "subtitle": "We invest a tremendous amount of resources to ensure that our clients are becoming the greatest companies",
-      "button": "Get Started",
+      "button_text": "Get Started",
       "video_tiles": [
         "video-tile-1.png",
         "video-tile-2.png",
