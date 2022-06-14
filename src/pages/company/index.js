@@ -64,6 +64,7 @@ const useStyles = makeStyles({
       }
     },
     '& .banner': home_page.banner.style,
+    '& .video-tile__thumbnail .thumbnail-overlay': settings.video_tiles.overlay.style,
     '& .main-content .bullets .bullet__index': home_page.main_content.bullets.style,
     '& .button, & .banner-form__button': {
       ...button.style,

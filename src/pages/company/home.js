@@ -74,7 +74,7 @@ export const CompanyHome = ({ images }) => {
                   <h4 className="banner-content__super-title">{home_page.banner.supertitle}</h4>
                   <h1 className="banner-content__title">{home_page.banner.title}</h1>
                   <p className="banner-content__sub-title">{home_page.banner.subtitle}</p>
-                  <button className="button button--md">{home_page.banner.button}</button>
+                  <button className="button button--md">{home_page.banner.button_text}</button>
                 </div>
               </div>
             </div>
