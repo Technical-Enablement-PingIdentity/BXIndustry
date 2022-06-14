@@ -4,12 +4,12 @@ import { makeStyles } from '@material-ui/styles';
 import { EducationHome } from './home';
 import { EDUCATION_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
-import { EducationAdmin } from './admin';
+import { EducationDashboard } from './dashboard';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, button, admin, common_images } = settings;
+const { title, header, home_page, footer, button, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('education', image)
@@ -32,8 +32,8 @@ const homePageImages = {
   })
 }
 
-const adminImages = {
-  sidebar: admin.sidebar.items.map(({ image }) => {
+const dashboardImages = {
+  sidebar: dashboard.sidebar.items.map(({ image }) => {
     return getImage(image)
   }),
 }
@@ -98,8 +98,8 @@ const useStyles = makeStyles({
         },
       }
     },
-    '& .admin-header-nav': admin.navigation.style,
-    '& .header-nav--admin .header-nav__item': admin.navigation.links.style
+    '& .dashboard-header-nav': dashboard.navigation.style,
+    '& .header-nav--dashboard .header-nav__item': dashboard.navigation.links.style
   },
 });
 
@@ -120,8 +120,8 @@ export function Education() {
         <Route exact path={EDUCATION_ROUTES.HOME} component={() => (
           <EducationHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={EDUCATION_ROUTES.ADMIN} component={() => (
-          <EducationAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={EDUCATION_ROUTES.DASHBOARD} component={() => (
+          <EducationDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={EDUCATION_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

@@ -2,14 +2,14 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { SportsHome } from './home';
-import { SportsAdmin } from './admin';
+import { SportsDashboard } from './dashboard';
 import { SPORTS_ROUTES } from './constants';
 import { AuthDialogExamples } from '@Components';
 import { setHeadData, getImagePath } from '@Helpers';
 import settings from './settings.json';
 import './scss/index.scss';
 
-const { title, header, home_page, footer, button, admin, common_images } = settings;
+const { title, header, home_page, footer, button, dashboard, common_images } = settings;
 
 function getImage(image) {
   return getImagePath('sports', image)
@@ -30,9 +30,9 @@ const homePageImages = {
   articles: home_page.news_section.articles.map(article => getImage(article.image)),
 }
 
-const adminImages = {
-  articles: admin.news_section.articles.map(article => getImage(article.image)),
-  jumbotron: getImage(admin.dashboard.jumbotron.image),
+const dashboardImages = {
+  articles: dashboard.news_section.articles.map(article => getImage(article.image)),
+  jumbotron: getImage(dashboard.portal.jumbotron.image),
 }
 
 //json styles binding
@@ -83,8 +83,8 @@ const useStyles = makeStyles({
     },
     '& .banner-content__title': home_page.banner.title.style,
     '& .banner-content__description': home_page.banner.description.style,
-    '& .admin-dashboard__title': admin.subtitle.style,
-    '& .admin-dashboard__tile .tile__link': admin.dashboard.link.style
+    '& .dashboard-dashboard__title': dashboard.subtitle.style,
+    '& .dashboard-dashboard__tile .tile__link': dashboard.portal.link.style
   },
 });
 
@@ -105,8 +105,8 @@ export function Sports() {
         <Route exact path={SPORTS_ROUTES.HOME} component={() => (
           <SportsHome images={{ ...logos, ...homePageImages }} />
         )} />
-        <Route exact path={SPORTS_ROUTES.ADMIN} component={() => (
-          <SportsAdmin images={{ ...logos, ...adminImages }} />
+        <Route exact path={SPORTS_ROUTES.DASHBOARD} component={() => (
+          <SportsDashboard images={{ ...logos, ...dashboardImages }} />
         )} />
         <Route exact path={SPORTS_ROUTES.DIALOG_EXAMPLES} component={() => (
           <AuthDialogExamples logo={logos.dialog_logo} />

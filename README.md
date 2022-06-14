@@ -34,7 +34,7 @@ REACT_APP_DV_JS_URL=
 REACT_APP_COMPANY_KEY=
 REACT_APP_LOGIN_POLICY_KEY=
 REACT_APP_REGISTRATION_POLICY_KEY=
-REACT_APP_ADMIN_POLICY_KEY=
+REACT_APP_DASHBOARD_POLICY_KEY=
 REACT_APP_ACTIVE_VERTICAL=
 REACT_APP_REMIX_POLICY_KEY=
 ```
@@ -47,7 +47,7 @@ BXIndustry now comes with standard authentication and registration flows!
 
 Registration will ask for a valid email and password. Successful completion of registration will register the user into our PingOne environment, enable MFA for the user, and enroll the provided email as an MFA device.
 
-Authentication will ask for the previously registered email and password, then prompt the user to complete MFA with the enrolled PingOne MFA email device. Successful completion of authentication will land the user on the /admin page of the vertical they are on. 
+Authentication will ask for the previously registered email and password, then prompt the user to complete MFA with the enrolled PingOne MFA email device. Successful completion of authentication will land the user on the /dashboard page of the vertical they are on. 
 
 
 ## Remixing
@@ -155,13 +155,13 @@ The `common_images` section includes basic pictures for the specific vertical (f
   },
 ```
 
-## Admin Page
+## Dashboard Page
 
-To enable the Admin DV flow, the **global-settings.json** or **settings.json** (per vertical) file should have the following section. **NOTE** that there already exists an admin section, you just need to add the dv_widget property below:
+To enable the Dashboard DV flow, the **global-settings.json** or **settings.json** (per vertical) file should have the following section. **NOTE** that there already exists an dashboard section, you just need to add the dv_widget property below:
 
 ```sh
 {
-  "admin": {
+  "dashboard": {
     "dv_widget": {
       "policy_key": "",
       "company_key": "",
@@ -173,11 +173,11 @@ To enable the Admin DV flow, the **global-settings.json** or **settings.json** (
 
 Note: If `policy_key, company_key, api_key` are empty, appropriate values will be provided from the `.env` file.
 
-Similarly, dv_buttons are available on the admin page as well, it takes in an optional array of button configurations just like the home page for each vertical
+Similarly, dv_buttons are available on the dashboard page as well, it takes in an optional array of button configurations just like the home page for each vertical
 
 ```sh
 {
-  "admin": {
+  "dashboard": {
     "dv_buttons": [
       {
         "text": "",
@@ -196,13 +196,13 @@ Similarly, dv_buttons are available on the admin page as well, it takes in an op
 }
 ```
 
-The Admin section in the file includes the `"user_name"` key, which will be displayed in the admin page header.
+The Dashboard section in the file includes the `"user_name"` key, which will be displayed in the dashboard page header.
 
-You can also enable your admin flow for all verticals by uncommenting the admin portion of globalSettings in src/global-settings.js. Make sure to set a value for REACT_APP_ADMIN_POLICY_KEY in .env if you do that as well!
+You can also enable your dashboard flow for all verticals by uncommenting the dashboard portion of globalSettings in src/global-settings.js. Make sure to set a value for REACT_APP_DASHBOARD_POLICY_KEY in .env if you do that as well!
 
 ## DV Dialogs HTML Structure for Inheriting the Main Style of the Site
 To visit the dialog examples page:
-- enter https://demo.bxindustry.org/admin
+- enter https://demo.bxindustry.org/dashboard
 - click on "Dialog Examples" link
 
 Click on the "Dialog Elements" button to preview all the elements below:

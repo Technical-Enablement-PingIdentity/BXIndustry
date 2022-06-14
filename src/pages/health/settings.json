@@ -5,7 +5,7 @@
     "apple_touch_icon": "apple-touch-icon.png",
     "logo": "logo.svg",
     "dialog_logo": "logo.svg",
-    "admin_logo": "logo-white.svg"
+    "dashboard_logo": "logo-white.svg"
   },
   "dv_buttons": [],
   "button": {
@@ -168,7 +168,7 @@
       ]
     }
   },
-  "admin": {
+  "dashboard": {
     "user_name": "",
     "navigation": {
       "style": {
@@ -198,8 +198,8 @@
       }
     },
     "welcome": "Welcome",
-    "dashboard_title": "Your BXHealth Homebase",
-    "dashboard_dropdown": "Things I Can Do",
+    "portal_title": "Your BXHealth Homebase",
+    "portal_dropdown": "Things I Can Do",
     "sidebar": {
       "style": {
         "backgroundColor": "#fff",
@@ -221,7 +221,7 @@
         "link": "Learn More"
       }
     },
-    "dashboard": {
+    "portal": {
       "header": "My Account Info",
       "subheader": "My BXHealth Patient Number:",
       "patient_number": "123456",

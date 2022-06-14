@@ -10,12 +10,12 @@
   @import "./components/programs-section";
   @import "./components/footer";
   @import "./components/socials";
-  @import "./components/admin";
+  @import "./components/dashboard";
   @import "./components/dialog";
   @import "./components/dialog-example-actions";
   @import "./components/rewards-card";
 
-  &.finance-admin {
+  &.finance-dashboard {
     background-color: #f3f3f3;
   }
 }

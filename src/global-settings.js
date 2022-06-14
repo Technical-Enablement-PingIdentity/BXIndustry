@@ -13,9 +13,9 @@ export const globalSettings = {
             "api_key": process.env.REACT_APP_API_KEY
         }
     ],
-    admin: {
+    dashboard: {
         // dv_widget: {
-        //     policy_key: process.env.REACT_APP_ADMIN_POLICY_KEY,
+        //     policy_key: process.env.REACT_APP_DASHBOARD_POLICY_KEY,
         //     company_key: process.env.REACT_APP_COMPANY_KEY,
         //     api_key: process.env.REACT_APP_API_KEY
         // },

@@ -157,7 +157,7 @@
       ]
     }
   },
-  "admin": {
+  "dashboard": {
     "user_name": "",
     "navigation": {
       "style": {
@@ -206,7 +206,7 @@
         "logo-bxtech.svg"
       ]
     },
-    "dashboard": {
+    "portal": {
       "title": "Electronics",
       "dropdown_placeholder": "See Other Electronics",
       "product_titles": {

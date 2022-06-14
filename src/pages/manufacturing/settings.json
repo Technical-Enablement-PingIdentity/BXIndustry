@@ -173,7 +173,7 @@
       }
     }
   },
-  "admin": {
+  "dashboard": {
     "style": {
       "backgroundColor": "#EFF0F1"
     },
@@ -194,19 +194,19 @@
     "title": "My services",
     "services": [
       {
-        "image": "admin-block-1.jpg",
+        "image": "dashboard-block-1.jpg",
         "title": "Quality Control Systems",
         "description": "Ensure top quality for the products that are manufactured in your production line.",
         "button": "Go to service"
       },
       {
-        "image": "admin-block-2.jpg",
+        "image": "dashboard-block-2.jpg",
         "title": "Operational Set Up of Manufacturing",
         "description": "Get set up with the ability to manufacture products quickly.",
         "button": "Go to service"
       },
       {
-        "image": "admin-block-3.jpg",
+        "image": "dashboard-block-3.jpg",
         "title": "Production Line Audit",
         "description": "Get consulting and advice on how to make your production line more efficient and safer.",
         "button": "Go to service"
