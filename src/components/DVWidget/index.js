@@ -2,7 +2,7 @@ import React from 'react';
 import { useDaVinci } from '@Hooks';
 
 //DV flow component for vertical dashboard page
-export function DVWidget({ containerId = 'widgetbox', companyKey, policyKey, apiKey }) {
+export function DVWidget({ containerId = 'dashboard-widgetbox', companyKey, policyKey, apiKey }) {
 
   const { startDVFlowPolicy } = useDaVinci({ containerId });
 

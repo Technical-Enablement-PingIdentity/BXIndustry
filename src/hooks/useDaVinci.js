@@ -5,8 +5,14 @@ const DEFAULT_STATE = {
   loading: false,
 }
 
+const UNIQUE_CONTAINER_IDS = [];
+
 //Singular key hook which renders appropriate DV flow and displays it in widget box
 export function useDaVinci({ containerId, dialog }) {
+
+  if (!UNIQUE_CONTAINER_IDS.includes(containerId)) {
+    UNIQUE_CONTAINER_IDS.push(containerId);
+  }
 
   //object with "loading" key for prospect loading logic
   const [state, changeState] = React.useState(DEFAULT_STATE);
@@ -18,7 +24,14 @@ export function useDaVinci({ containerId, dialog }) {
     }
 
     changeState({ loading: true });
-    window.singularkey.cleanup(document.getElementById(containerId));
+
+    UNIQUE_CONTAINER_IDS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        window.singularkey.cleanup(el);
+      }
+    });
+    
     const apiUrl = getApiUrl({ company_key: companyKey });
 
     const res = await fetch(apiUrl, {
