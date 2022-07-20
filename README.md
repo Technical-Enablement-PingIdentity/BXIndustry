@@ -119,7 +119,7 @@ Settings files provide the ability to make quick changes for:
 - vertical colors, text and images
 - a list of auth buttons and DV flows for them ("dv_buttons")
 
-```sh
+```json
   "dv_buttons": [
     {
       "text": "Log in",
@@ -148,7 +148,7 @@ You can add pictures in two ways:
 
 The `common_images` section includes basic pictures for the specific vertical (favicon and logo).
 
-```sh
+```json
   "common_images": {
     "favicon": "favicon.ico",
     "apple_touch_icon": "apple-touch-icon.png",
@@ -157,11 +157,20 @@ The `common_images` section includes basic pictures for the specific vertical (f
   },
 ```
 
+If you would like to remove an image because you have rebranded, you can just set the image property to an empty string, e.g. to removed the logo from dialogs:
+
+```json
+  "common_images": {
+    ...
+    "dialog_logo": "",
+  }
+```
+
 ## Dashboard Page
 
 To enable the Dashboard DV flow, the **global-settings.json** or **settings.json** (per vertical) file should have the following section. **NOTE** that there already exists an dashboard section, you just need to add the dv_widget property below:
 
-```sh
+```json
 {
   "dashboard": {
     "dv_widget": {
@@ -177,7 +186,7 @@ Note: If `policy_key, company_key, api_key` are empty, appropriate values will b
 
 Similarly, dv_buttons are available on the dashboard page as well, it takes in an optional array of button configurations just like the home page for each vertical
 
-```sh
+```json
 {
   "dashboard": {
     "dv_buttons": [
@@ -201,6 +210,14 @@ Similarly, dv_buttons are available on the dashboard page as well, it takes in a
 The Dashboard section in the file includes the `"user_name"` key, which will be displayed in the dashboard page header.
 
 You can also enable your dashboard flow for all verticals by uncommenting the dashboard portion of globalSettings in src/global-settings.js. Make sure to set a value for REACT_APP_DASHBOARD_POLICY_KEY in .env if you do that as well!
+
+### Simulate being logged in after Login or Registration
+
+The best way to simulate a user being logged in to the dashboard is to add an Http node with Custom HTML Template action at the end of your flow, then adding the following to the JavaScript snippet:
+
+```javascript
+window.location.assign(location.pathname + '/dashboard');
+```
 
 ## DV Dialogs HTML Structure for Inheriting the Main Style of the Site
 To visit the dialog examples page:
@@ -337,14 +354,13 @@ Click on the "Dialog Elements" button to preview all the elements below:
 
 ## Loading Remix Outside of Glitch
 For faster initialization of your BXIndustry remix and easier development, you can clone your Glitch repo to your device and run it from there.
-In order to do this, you must have Git and Node.js(<=v14)/npm installed on your laptop and should have a code editor such as Visual Studio Code.
+In order to do this, you must have Git and Node.js(<=v16)/npm installed on your laptop and should have a code editor such as Visual Studio Code.
 
 [Follow this article](https://glitch.happyfox.com/kb/article/85-how-do-i-push-code-that-i-created-locally-to-my-project-on-glitch/) to get your repo locally. This will also set up your Glitch project to accept commits from other sources and you may reference it when you're ready to push changes to Glitch from your local environment. Please note that pushing to Glitch can be finicky sometimes, `git push` may take some time to complete.
 
 Once you have downloaded the repo, create a file called `.env` in the root of the repo and copy the contents of the same file from the Glitch interface into that new file.
 
 Then, run the following commands in a terminal/CMD from the root of your project:
-1. `npm install --global yarn`
-2. `yarn install`
-3. `npm run start`
-4. You should now get a browser window that shows your remix
+1. `npm install
+2. `npm run start`
+3. You should now get a browser window that shows your remix
