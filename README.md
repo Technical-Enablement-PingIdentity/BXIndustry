@@ -157,7 +157,7 @@ The `common_images` section includes basic pictures for the specific vertical (f
   },
 ```
 
-If you would like to remove an image because you have rebranded, you can just set the image property to an empty string, e.g. to removed the logo from dialogs:
+If you would like to remove an image because you have rebranded, you can just set the image property to an empty string, e.g. to remove the logo from dialogs:
 
 ```json
   "common_images": {
